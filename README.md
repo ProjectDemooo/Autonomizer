@@ -1,7 +1,7 @@
 This is the prototype of Autonomizer
 
-
 Videos
+
 Flappy bird:
 
 Training:
