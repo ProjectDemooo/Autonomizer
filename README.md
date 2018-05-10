@@ -7,10 +7,10 @@ Flappy bird:
 Training:
 https://drive.google.com/open?id=1bIp5mKc-cf-GePKPeDSqGygmMs5xUzEY
 
-Testing with internal data model:
+Testing with internal data model (4 hr):
 https://drive.google.com/open?id=1XpcJh2aBwueIeqPU233_DL2vJxjsDWoI
 
-Testing with raw image model:
+Testing with raw image model (24 hr):
 https://drive.google.com/open?id=1t-nKOteNSXnit6kmSMNTs3GlsQYz7pc8
 
 Mario:
@@ -18,10 +18,10 @@ Mario:
 Training:
 https://drive.google.com/open?id=1YrMg5BVQwlvLfNQTp8jtlw2_DmZh1XSn
 
-Testing with internal data model:
+Testing with internal data model (7 hr):
 https://drive.google.com/open?id=1GJTXUXPUgAZTjhkfMc3rQfChuOYYNsF0
 
-Testing with raw image model:
+Testing with raw image model (24 hr):
 https://drive.google.com/open?id=1Fhl5Qo13bGBNeH7zAwvNLzq51uRUPc2w
 
 Software Coverage testing:
@@ -38,11 +38,14 @@ NES-Arkanoid:
 Training:
 https://drive.google.com/open?id=1pLWjGfJptER7jWeosWvEdnglyUU5dytV
 
-Testing with internal data model:
+Testing with internal data model (12 hr):
 https://drive.google.com/open?id=1OB9L4lCjFsNddPyJvWkFTwXIifrIoVfG
 
-Testing with raw image model:
+Testing with raw image model (24 hr):
 https://drive.google.com/open?id=1NwhYYaJjd5r1IDgb06EugnvNZ5cbWZhj
+
+Testing with raw image model (48 hr):
+https://drive.google.com/open?id=1VVX6w5uq4cf2wnSOb4bBtjIX3NFh_Gq9
 
 KVM:
 0. Setup
