@@ -1,5 +1,7 @@
 This is the prototype of Autonomizer
 
+We will provide a complete guide to autonomize an application.
+
 Videos
 
 Flappy bird:
