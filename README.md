@@ -49,6 +49,10 @@ https://drive.google.com/open?id=1NwhYYaJjd5r1IDgb06EugnvNZ5cbWZhj
 Testing with raw image model (48 hr):
 https://drive.google.com/open?id=1VVX6w5uq4cf2wnSOb4bBtjIX3NFh_Gq9
 
+Torcs:
+Testing with internal data model (20 hr):
+https://drive.google.com/open?id=18Hh1rppHq1pdOMCpuWYFds6ucwYF4Ih8
+
 KVM:
 0. Setup
   - Check support:
