@@ -1,0 +1,525 @@
+==16483== Taintgrind, the taint analysis tool
+==16483== Copyright (C) 2010-2018, and GNU GPL'd, by Wei Ming Khoo.
+==16483== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==16483== Command: ../canny/a.out ../canny/lenagrey.pgm 2 0.6 0.8 1
+==16483== 
+0x10935E: main (canny_edge.c:148) | movss xmm0, dword ptr [rbp - 0x174] | Load | 0x3f19999a | {tlow}t19_13625 <- tlow:1fff0001fc
+0x502F024: sprintf (sprintf.c:27) | t30_11318 <- r32_323
+0x50269D0: vfprintf (vfprintf.c:1642) | movsd xmm0, qword ptr [rax] | Load | 0x3fe3333340000000 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff000160_unknownobj}t31_12023 <- 1fff000160_unknownobj
+0x50269D4: vfprintf (vfprintf.c:1642) | movsd qword ptr [rbp - 0x4a0], xmm0 | Store | 0x3fe3333340000000 | {the_arg}the_arg:1ffefffb20 <- t31_12023
+0x50291B0: __printf_fp_l (printf_fp.c:392) | movsd xmm0, qword ptr [rdx] | Load | 0x3fe3333340000000 | {the_arg}t3_17532 <- the_arg:1ffefffb20
+0x50291B8: __printf_fp_l (printf_fp.c:392) | Shr64 | 0x10 | t18_17840 <- t4_15137
+0x50291BE: __printf_fp_l (printf_fp.c:392) | t9_22530 <- r28_137
+0x50291C6: __printf_fp_l (printf_fp.c:392) | AndV128 | 0x0 | t18_17840 <- t19_13737
+0x50291D1: __printf_fp_l (printf_fp.c:392) | t6_16100 <- r32_323
+0x50291D9: __printf_fp_l (printf_fp.c:392) | Shr64 | 0x0 | t43_3553 <- t25_13045
+0x5029204: __printf_fp_l (printf_fp.c:392) | t59_1564 <- r28_137
+0x501E9FE: __mpn_extract_double (dbl2mpn.c:37) | t113_182 <- t10_24839
+0x501EA2B: __mpn_extract_double (dbl2mpn.c:38) | t120_143 <- t99_1127
+0x501EA2D: __mpn_extract_double (dbl2mpn.c:47) | mov qword ptr [rdi], rsi | Store | 0x3333340000000 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{fp_input[0]}fp_input[0]:1ffefff9e0 <- t15_22369
+0x501EA30: __mpn_extract_double (dbl2mpn.c:56) | t123_183 <- t102_1587
+0x501EA48: __mpn_extract_double (dbl2mpn.c:103) | t2_22086 <- r8_3613
+0x501EA5A: __mpn_extract_double (dbl2mpn.c:103) | mov qword ptr [rdi], rsi | Store | 0x13333340000000 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{fp_input[0]}fp_input[0]:1ffefff9e0 <- t0_11158
+0x5028FFB: __printf_fp_l (printf_fp.c:428) | mov ecx, dword ptr [rbp - 0x98] | Load | 0xffffffff | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.exponent}t99_1128 <- p.exponent:1ffefff9a8
+0x5029001: __printf_fp_l (printf_fp.c:441) | t200_10 <- t98_1037
+0x502904B: __printf_fp_l (printf_fp.c:433) | mov qword ptr [rbp - 0x90], rdi | Store | 0x1ffefff8a0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.frac}p.frac:1ffefff9b0 <- t55_1559
+0x5029059: __printf_fp_l (printf_fp.c:434) | mov qword ptr [rbp - 0x70], rdx | Store | 0x1ffefff860 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.tmp}p.tmp:1ffefff9d0 <- t58_2396
+0x502905D: __printf_fp_l (printf_fp.c:435) | mov qword ptr [rbp - 0x80], rax | Store | 0x1ffefff820 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.scale}p.scale:1ffefff9c0 <- t62_1150
+0x5029061: __printf_fp_l (printf_fp.c:442) | t229_4 <- t176_9
+0x5029DF8: __printf_fp_l (printf_fp.c:645) | t4_15140 <- r3_11720
+0x5029DFA: __printf_fp_l (printf_fp.c:645) | Shr64 | 0x1 | t18_17841 <- t7_18525
+0x502A3E7: __printf_fp_l (printf_fp.c:661) | t13_20553 <- r6_10445
+0x501D264: __mpn_lshift (lshift.S:48) | mov r9, qword ptr [rsi] | Load | 0x13333340000000 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{fp_input[0]}t17_15685 <- fp_input[0]:1ffefff9e0
+0x501D285: __mpn_lshift (lshift.S:58) | t0_11160 <- r11_7167
+0x501D288: __mpn_lshift (lshift.S:59) | t7_18528 <- r9_7333
+0x501D28B: __mpn_lshift (lshift.S:60) | t8_21614 <- r6_10446
+0x502A415: __printf_fp_l (printf_fp.c:662) | mov rcx, qword ptr [rbp - 0x90] | Load | 0x1ffefff8a0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.frac}t29_11177 <- p.frac:1ffefff9b0
+0x502A41C: __printf_fp_l (printf_fp.c:662) | Add64 | 0x1ffefff8a8 | t30_11383 <- t29_11177
+0x502A420: __printf_fp_l (printf_fp.c:666) | mov eax, dword ptr [rbp - 0x98] | Load | 0xffffffff | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.exponent}t38_5488 <- p.exponent:1ffefff9a8
+0x502A434: __printf_fp_l (printf_fp.c:714) | t46_4502 <- t37_7254
+0x502A43D: __printf_fp_l (printf_fp.c:666) | t53_2733 <- t50_2763
+0x502A4F2: __printf_fp_l (printf_fp.c:673) | t10_24842 <- r2_15103
+0x502A4F5: __printf_fp_l (printf_fp.c:673) | t25_13048 <- t12_25297
+0x502A4E6: __printf_fp_l (printf_fp.c:785) | t4_15143 <- r2_15103
+0x502A4E8: __printf_fp_l (printf_fp.c:785) | t19_13743 <- t7_18531
+0x502A66C: __printf_fp_l (printf_fp.c:787) | t4_15154 <- r2_15103
+0x502A66E: __printf_fp_l (printf_fp.c:787) | t19_13765 <- t7_18564
+0x502A67B: __printf_fp_l (printf_fp.c:791) | mov rsi, qword ptr [rbp - 0x90] | Load | 0x1ffefff8a0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.frac}t33_8295 <- p.frac:1ffefff9b0
+0x502A687: __printf_fp_l (printf_fp.c:791) | mov rdi, qword ptr [rbp - 0x70] | Load | 0x1ffefff860 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.tmp}t37_7255 <- p.tmp:1ffefff9d0
+0x502A68B: __printf_fp_l (printf_fp.c:791) | t39_4780 <- r6_10447
+0x501D8C0: __mpn_mul_1 (mul_1.S:32) | Sub64 | 0x1ffefff810 | t41_4392 <- t38_5489
+0x501D8C4: __mpn_mul_1 (mul_1.S:36) | mov rax, qword ptr [rsi] | Load | 0x3333340000000000 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff8a0_unknownobj}t43_3558 <- 1ffefff8a0_unknownobj (t33_8295)
+0x501D93A: __mpn_mul_1 (mul_1.S:79) | t26_12510 <- r8_3629
+0x501D94F: __mpn_mul_1 (mul_1.S:85) | Add64 | 0x1ffefff890 | t41_4393 <- t22_12058
+0x501D9C0: __mpn_mul_1 (mul_1.S:115) | t53_2735 <- r21_571
+0x501D9C2: __mpn_mul_1 (mul_1.S:117) | t21_12983 <- r9_7335
+0x501D9CC: __mpn_mul_1 (mul_1.S:120) | Add64 | 0x1ffefff860 | t33_8296 <- t21_12983
+0x501D9D7: __mpn_mul_1 (mul_1.S:124) | t14_21702 <- r6_10449
+0x501D9D8: __mpn_mul_1 (mul_1.S:127) | ret  | Load | 0x502a690 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff818_unknownobj}t16_17073 <- (t39_4782)
+0x502A697: __printf_fp_l (printf_fp.c:795) | mov rsi, qword ptr [rbp - 0x70] | Load | 0x1ffefff860 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.tmp}t29_11181 <- p.tmp:1ffefff9d0
+0x502A6A6: __printf_fp_l (printf_fp.c:795) | tzcnt rax, qword ptr [rsi] | Load | 0x80000000000 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff860_unknownobj}t6_16116 <- 1ffefff860_unknownobj (t29_11181)
+0x502A6AB: __printf_fp_l (printf_fp.c:796) | cmp dword ptr [rbp - 0x98], 4 | Load | 0x1 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.exponent}t16_17074 <- p.exponent:1ffefff9a8
+0x502A6B2: __printf_fp_l (printf_fp.c:796) | cmovle ecx, dword ptr [rbp - 0x98] | Load | 0x1 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.exponent}t18_17871 <- p.exponent:1ffefff9a8
+0x502A6BB: __printf_fp_l (printf_fp.c:796) | t96_1063 <- t72_657
+0x502B3B8: __printf_fp_l (printf_fp.c:804) | mov rdi, qword ptr [rbp - 0x90] | Load | 0x1ffefff8a0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.frac}t8_21639 <- p.frac:1ffefff9b0
+0x502B3BF: __printf_fp_l (printf_fp.c:804) | t10_24855 <- r6_10451
+0x501D398: __mpn_rshift (rshift.S:62) | t0_11174 <- r8_3631
+0x501D39B: __mpn_rshift (rshift.S:63) | Add64 | 0x1ffefff868 | t19_13771 <- t0_11174
+0x501D3B9: __mpn_rshift (rshift.S:72) | t0_11175 <- r11_7171
+0x501D3BD: __mpn_rshift (rshift.S:73) | t10_24856 <- r9_7336
+0x501D3C3: __mpn_rshift (rshift.S:75) | Add64 | 0x1ffefff8a8 | t56_2305 <- t10_24856
+0x501D3C7: __mpn_rshift (rshift.S:76) | t19_13772 <- r6_10452
+0x50297F3: __printf_fp_l (allocalim.h:27) | t22_12064 <- r6_10453
+0x50FA0EF: __libc_alloca_cutoff (alloca_cutoff.c:35) | t7_18572 <- r6_10454
+0x502980D: __printf_fp_l (printf_fp.c:928) | t9_22551 <- r6_10455
+0x5029827: __printf_fp_l (printf_fp.c:928) | mov qword ptr [rbp - 0x138], rax | Store | 0x1ffefff7f0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff908_unknownobj}1ffefff908_unknownobj <- t11_25186
+0x502982E: __printf_fp_l (printf_fp.c:932) | Add64 | 0x1ffefff7f8 | t31_12034 <- t11_25186
+0x502AF22: __printf_fp_l (printf_fp.c:950) | t25_13066 <- r2_15117
+0x502AF3E: __printf_fp_l (printf_fp.c:952) | Add64 | 0x1ffefff7fc | t34_8562 <- t25_13066
+0x502993E: __printf_fp_l (printf_fp.c:172) | mov rdi, qword ptr [rbp - 0x90] | Load | 0x1ffefff8a0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.frac}t14_21710 <- p.frac:1ffefff9b0
+0x5029AC8: __printf_fp_l (printf_fp.c:174) | t35_6069 <- r9_7338
+0x5029AD9: __printf_fp_l (printf_fp.c:174) | mov rax, qword ptr [rbx] | Load | 0x6 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff8a8_unknownobj}t38_5496 <- 1ffefff8a8_unknownobj (t31_12036)
+0x5029ADC: __printf_fp_l (printf_fp.c:174) | mov qword ptr [rbp - 0xf0], rax | Store | 0x6 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff950_unknownobj}1ffefff950_unknownobj <- t38_5496
+0x5029AE3: __printf_fp_l (printf_fp.c:175) | t43_3565 <- r6_10456
+0x501D8E1: __mpn_mul_1 (mul_1.S:48) | t4_15167 <- r21_574
+0x501D8E3: __mpn_mul_1 (mul_1.S:50) | t5_15704 <- r21_574
+0x501D8E8: __mpn_mul_1 (mul_1.S:52) | t0_11179 <- r9_7338
+0x5029AE8: __printf_fp_l (printf_fp.c:175) | t0_11180 <- r5_4491
+0x5029AEB: __printf_fp_l (printf_fp.c:175) | mov eax, dword ptr [rbp - 0xf0] | Load | 0x6 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff950_unknownobj}t18_17883 <- 1ffefff950_unknownobj
+0x50299F0: __printf_fp_l (printf_fp.c:962) | t7_18581 <- r14_3727
+0x5029B11: __printf_fp_l (printf_fp.c:974) | t6_16135 <- r14_3729
+0x5029B16: __printf_fp_l (printf_fp.c:974) | t23_18078 <- t7_18592
+0x5029B1D: __printf_fp_l (printf_fp.c:974) | t29_11193 <- t13_20587
+0x5029B2B: __printf_fp_l (printf_fp.c:975) | t18_17890 <- r6_10464
+0x5028890: hack_digit (printf_fp.c:167) | Sub64 | 0x1ffefff7e0 | t20_15524 <- t17_15731
+0x5028891: hack_digit (printf_fp.c:167) | Sub64 | 0x1ffefff7d8 | t22_12073 <- t20_15524
+0x50288B1: hack_digit (printf_fp.c:172) | mov rdi, qword ptr [rdi + 0x10] | Load | 0x1ffefff8a0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.frac}t15_22415 <- p.frac:1ffefff9b0
+0x5028978: hack_digit (printf_fp.c:174) | t34_8574 <- r9_7341
+0x5028989: hack_digit (printf_fp.c:174) | mov rbp, qword ptr [rbx] | Load | 0x0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff8a8_unknownobj}t37_7266 <- 1ffefff8a8_unknownobj (t30_11400)
+0x502898C: hack_digit (printf_fp.c:175) | t39_4791 <- r6_10468
+0x5028991: hack_digit (printf_fp.c:175) | t0_11188 <- r5_4503
+0x502899D: hack_digit (printf_fp.c:207) | pop rbx | Load | 0x2 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff7d8_unknownobj}t7_18599 <- (t1_13008)
+0x502899E: hack_digit (printf_fp.c:207) | pop rbp | Load | 0x1ffefffa40 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff7e0_unknownobj}t9_22566 <- (t23_18080)
+0x502899F: hack_digit (printf_fp.c:207) | ret  | Load | 0x5029b30 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff7e8_unknownobj}t12_25344 <- (t24_10111)
+0x5029B30: __printf_fp_l (printf_fp.c:977) | t12_25345 <- r2_15135
+0x5029B3E: __printf_fp_l (printf_fp.c:977) | And64 | 0x0 | t60_1366 <- t33_8316
+0x502AC30: __printf_fp_l (printf_fp.c:987) | mov rsi, qword ptr [rbp - 0x90] | Load | 0x1ffefff8a0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{p.frac}t7_18601 <- p.frac:1ffefff9b0
+0x502AC37: __printf_fp_l (printf_fp.c:987) | Add64 | 0x1ffefff8b0 | t9_22568 <- t7_18601
+0x502AC3D: __printf_fp_l (printf_fp.c:987) | CmpEQ64 | 0x1 | t21_13002 <- t3_17569
+0x502AC52: __printf_fp_l (printf_fp.c:987) | t8_21668 <- r8_3637
+0x502AC58: __printf_fp_l (printf_fp.c:987) | CmpEQ64 | 0x0 | t17_15736 <- t2_22121
+0x502A2C9: __printf_fp_l (rounding-mode.h:52) | t4_15189 <- r2_15135
+0x502A2CC: __printf_fp_l (rounding-mode.h:52) | t19_13791 <- t5_15726
+0x5029C9E: __printf_fp_l (printf_fp.c:1162) | mov eax, dword ptr [rbp - 0xa4] | Load | 0x0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{is_neg}t9_22574 <- is_neg:1ffefff99c
+0x5029CA4: __printf_fp_l (printf_fp.c:1162) | t31_12045 <- t8_21672
+0x5029CB1: __printf_fp_l (printf_fp.c:1162) | t37_7268 <- t17_15741
+0x5029CBF: __printf_fp_l (printf_fp.c:1164) | t18_17901 <- r14_3729
+0x5029CC2: __printf_fp_l (printf_fp.c:1164) | t2_22126 <- r16_1028
+0x5029CD9: __printf_fp_l (printf_fp.c:1164) | t67_1741 <- t39_4794
+0x5029CF8: __printf_fp_l (printf_fp.c:1166) | t4_15195 <- r3_11733
+0x5029CFA: __printf_fp_l (printf_fp.c:1166) | t19_13796 <- t7_18611
+0x5029DA0: __printf_fp_l (printf_fp.c:257) | t14_21736 <- r2_15138
+0x5029DA4: __printf_fp_l (printf_fp.c:1169) | t29_11197 <- t17_15743
+0x502A7CF: __printf_fp_l (printf_fp.c:1197) | t10_24873 <- r6_10476
+0x515869D: __strlen_avx2 (strlen-avx2.S:339) | t14_21742 <- r6_10477
+0x502A827: __printf_fp_l (printf_fp.c:1217) | t8_21681 <- r6_10478
+0x502A83B: __printf_fp_l (printf_fp.c:1217) | mov qword ptr [rbp - 0xe0], rax | Store | 0x1ffefff7d0 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff960_unknownobj}1ffefff960_unknownobj <- t10_24876
+0x502A845: __printf_fp_l (printf_fp.c:1224) | CmpLE64U | 0x0 | t30_11408 <- t16_17118 t15_22434
+0x502A84B: __printf_fp_l (printf_fp.c:1224) | t14_21743 <- r14_3729
+0x502A857: __printf_fp_l (printf_fp.c:1224) | mov rax, qword ptr [rbp - 0xe0] | Load | 0x1ffefff7d0 | {buffer}t17_15751 <- buffer:1ffefff960
+0x502A86C: __printf_fp_l (printf_fp.c:1224) | t28_11637 <- r16_1028
+0x502A894: __printf_fp_l (printf_fp.c:1225) | mov edx, dword ptr [r14] | Load | 0x30 | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff7f8_unknownobj}t30_11409 <- (t28_11637)
+0x502A881: __printf_fp_l (printf_fp.c:1230) | t0_11193 <- r2_15146
+0x502A88E: __printf_fp_l (printf_fp.c:1224) | CmpLE64U | 0x0 | t19_13804 <- t9_22582 t4_15202
+0x502A89C: __printf_fp_l (printf_fp.c:1226) | t10_24880 <- r2_15147
+0x502A8A9: __printf_fp_l (printf_fp.c:1226) | t12_25365 <- r6_10479
+0x5158AB0: __mempcpy_avx_unaligned_erms (memmove-vec-unaligned-erms.S:204) | t6_16161 <- r9_7345
+0x5158B3B: __memcpy_avx_unaligned_erms (memmove-vec-unaligned-erms.S:275) | t1_13015 <- r9_7345
+0x5158B3D: __memcpy_avx_unaligned_erms (memmove-vec-unaligned-erms.S:277) | t2_22138 <- r6_10480
+0x502A8AE: __printf_fp_l (printf_fp.c:1226) | t2_22139 <- r16_1029
+0x502A89A: __printf_fp_l (printf_fp.c:1225) | t27_11368 <- t10_24885
+0x502A878: __printf_fp_l (printf_fp.c:1227) | t6_16165 <- r4_9486
+0x502A87B: __printf_fp_l (printf_fp.c:1227) | t22_12092 <- t8_21687
+0x502A966: __printf_fp_l (printf_fp.c:1228) | mov r14, qword ptr [rbp - 0x100] | Load | 0x1ffefff7f8 | {wstartp}t14_21753 <- wstartp:1ffefff940
+0x502A96D: __printf_fp_l (printf_fp.c:1228) | mov r15, qword ptr [rbp - 0xe0] | Load | 0x1ffefff7d0 | {buffer}t17_15762 <- buffer:1ffefff960
+0x502A985: __printf_fp_l (printf_fp.c:1251) | t2_22140 <- r2_15150
+0x502A992: __printf_fp_l (printf_fp.c:1251) | CmpLE64S | 0x1 | t16_17130 <- t0_11203
+0x502AB44: __printf_fp_l (printf_fp.c:1251) | t5_15752 <- r2_15151
+0x502AB4E: __printf_fp_l (printf_fp.c:1251) | CmpEQ64 | 0x0 | t28_11641 <- t5_15752
+0x502AB83: __printf_fp_l (printf_fp.c:1251) | t18_17915 <- r17_1440
+0x502AB68: __printf_fp_l (printf_fp.c:1251) | t9_22594 <- r14_3731
+0x502AB75: __printf_fp_l (printf_fp.c:1251) | CmpEQ64 | 0x0 | t32_10708 <- t9_22594
+0x1093A2: main (canny_edge.c:152) | movss xmm0, dword ptr [rbp - 0x174] | Load | 0x3f19999a | {tlow}t21_13135 <- tlow:1fff0001fc
+0x1093D3: main (canny_edge.c:152) | t46_4535 <- r28_140
+0x1094C4: canny (canny_edge.c:174) | t48_3579 <- r32_324
+0x1096E0: canny (canny_edge.c:247) | mov edi, dword ptr [rbp - 0x58] | Load | 0x3f19999a | {tlow}t25_3231326 <- tlow:1fff000178
+0x1096F0: canny (canny_edge.c:247) | t40_14409787 <- t24_8643150
+0x1096F3: canny (canny_edge.c:247) | movss xmm0, dword ptr [rbp - 0x60] | Load | 0x3f19999a | --16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--16483-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff000170_unknownobj}t44_13445179 <- 1fff000170_unknownobj
+0x10A4FB: apply_hysteresis (hysteresis.c:55) | t38_14165395 <- r28_11889012
+0x10A85D: apply_hysteresis (hysteresis.c:122) | mulss xmm0, dword ptr [rbp - 0x2004c] | Load | 0x3f19999a | {tlow}t32_5840417 <- tlow:1ffefe0104
+0x10A869: apply_hysteresis (hysteresis.c:122) | t39_15168869 <- r28_11889012
+0x10A879: apply_hysteresis (hysteresis.c:122) | t44_13709295 <- t40_15521215
+0x10A8F9: apply_hysteresis (hysteresis.c:139) | mov eax, dword ptr [rbp - 0x20014] | Load | 0x238 | {lowthreshold}t30_8605174 <- lowthreshold:1ffefe013c
+0x10A92C: apply_hysteresis (hysteresis.c:139) | t74_5527748 <- t31_3205050
+0x10A375: follow_edges (hysteresis.c:26) | t42_17665907 <- r4_21424284
+0x10A381: follow_edges (hysteresis.c:26) | t49_7896632 <- r2_29851257
+0x10A484: follow_edges (hysteresis.c:38) | cmp word ptr [rbp - 0x84], ax | Load | 0x238 | {lowval}t4_4305807 <- lowval:1ffefe005c
+0x10A48B: follow_edges (hysteresis.c:38) | jge 0x10a4b1 | amd64g_calculate_condition | 0x1 | t21_3627475 <- t14_12112236
+0x10A494: follow_edges (hysteresis.c:40) | movsx edx, word ptr [rbp - 0x84] | Load | 0x238 | {lowval}t46_8014097 <- lowval:1ffefe005c
+0x1093FD: main (canny_edge.c:157) | movss xmm0, dword ptr [rbp - 0x174] | Load | 0x3f19999a | {tlow}t19_11696861 <- tlow:1fff0001fc
+==16483== 

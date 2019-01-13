@@ -1,0 +1,125 @@
+[Dependency root]main:sigma:NON_INPUT
+[Useful internal data]
+
+[Dependency root]main:sigma:NON_INPUT
+[Dependents]
+Set_thresholds:a2dist:non-scalar:  store i32** %call4, i32*** %a2dist, align 8
+main:smoothedimage:non-scalar:  call void @Smooth_image(float** %llvm-tmp30, i32 %llvm-tmp31, i32 %llvm-tmp32, float*** %smoothedimage, float %llvm-tmp33, i32* %kwidth, float 0x3F8EB851E0000000)
+Sub_pixel_interpolation:h1:scalar:  store float 0.000000e+00, float* %h1, align 4
+Sub_pixel_interpolation:h2:scalar:  store float %add141, float* %h2, align 4
+Set_int_image:ptr:non-scalar:  store i32* %llvm-tmp1, i32** %ptr, align 8
+Thin_edges:a:scalar:  %llvm-tmp136 = load i32, i32* %a, align 4
+Thin_edges:b:scalar:  %llvm-tmp137 = load i32, i32* %b, align 4
+Thin_edges:c:scalar:  store i32 1, i32* %c, align 4
+Thin_edges:d:scalar:  store i32 1, i32* %d, align 4
+Thin_edges:e:scalar:  store i32 1, i32* %e, align 4
+Thin_edges:f:scalar:  store i32 1, i32* %f, align 4
+Thin_edges:g:scalar:  store i32 0, i32* %g, align 4
+Thin_edges:h:scalar:  store i32 1, i32* %h, align 4
+Set_thresholds:bdist:non-scalar:  store i32** %call2, i32*** %bdist, align 8
+Set_float_image:ptr:non-scalar:  store float* %llvm-tmp1, float** %ptr, align 8
+Thin_edges:x:scalar:  %llvm-tmp82 = load i32, i32* %x, align 4
+main:kwidth:scalar:  call void @Smooth_image(float** %llvm-tmp30, i32 %llvm-tmp31, i32 %llvm-tmp32, float*** %smoothedimage, float %llvm-tmp33, i32* %kwidth, float 0x3F8EB851E0000000)
+Set_thresholds:a1th:non-scalar:  store float** %call7, float*** %a1th, align 8
+Set_thresholds:den:scalar:  store float %conv, float* %den, align 4
+Alt2_chamfer:val:scalar:  store i32 %call, i32* %val, align 4
+Set_thresholds:a2th:non-scalar:  store float** %call8, float*** %a2th, align 8
+Set_thresholds:fdist:non-scalar:  %llvm-tmp78 = load i32**, i32*** %fdist, align 8
+Sub_pixel_interpolation:fraction:scalar:  store float %conv155, float* %fraction, align 4
+main:thin:non-scalar:  call void @Set_thresholds(i32** %llvm-tmp55, float** %llvm-tmp56, float** %llvm-tmp57, float*** %thin, i32 %llvm-tmp58, i32 %llvm-tmp59, float %llvm-tmp60)
+Smooth_image:width:scalar:  store i32 %conv4, i32* %width, align 4
+Backward_chamfer:val:scalar:  store i32 %call, i32* %val, align 4
+Sub_pixel_interpolation:orient:scalar:  store i32 %conv36, i32* %orient, align 4
+Sub_pixel_interpolation:g0:non-scalar:  store float* null, float** %g0, align 8
+Smooth_image:x:scalar:  %llvm-tmp38 = load i32, i32* %x, align 4
+Smooth_image:y:scalar:  store i32 0, i32* %y, align 4
+Set_thresholds:a1dist:non-scalar:  store i32** %call3, i32*** %a1dist, align 8
+Sub_pixel_interpolation:g1:non-scalar:  store float* null, float** %g1, align 8
+Sub_pixel_interpolation:g2:non-scalar:  store float* null, float** %g2, align 8
+Smooth_image:tmp:non-scalar:  store float** %call8, float*** %tmp, align 8
+Set_kernel:s2:scalar:  store float %conv3, float* %s2, align 4
+Forward_chamfer:val:scalar:  store i32 %call, i32* %val, align 4
+main:grad:non-scalar:  call void @Compute_gradient(float** %llvm-tmp42, float** %llvm-tmp43, i32 %llvm-tmp44, i32 %llvm-tmp45, i32 %llvm-tmp46, float*** %grad)
+Alt1_chamfer:val:scalar:  store i32 %call, i32* %val, align 4
+Set_thresholds:fth:non-scalar:  store float** %call5, float*** %fth, align 8
+Set_kernel:x:scalar:  store i32 %sub, i32* %x, align 4
+Set_thresholds:bth:non-scalar:  store float** %call6, float*** %bth, align 8
+Set_thresholds:num:scalar:  store float %add59, float* %num, align 4
+Sub_pixel_interpolation:dx:non-scalar:  store float* null, float** %dx, align 8
+Sub_pixel_interpolation:dy:non-scalar:  store float* null, float** %dy, align 8
+Thin_edges:y:scalar:  %llvm-tmp84 = load i32, i32* %y, align 4
+Set_thresholds:option:scalar:  store i32 %call31, i32* %option, align 4
+Smooth_image:k_size:scalar:  store i32 %add6, i32* %k_size, align 4
+Compute_x_gradient:y:scalar:  store i32 %add, i32* %y, align 4
+Compute_x_gradient:x:scalar:  store i32 %add2, i32* %x, align 4
+main:dist:non-scalar:  call void @Sub_pixel_interpolation(float** %llvm-tmp47, float** %llvm-tmp48, float** %llvm-tmp49, i32 %llvm-tmp50, i32 %llvm-tmp51, i32 %llvm-tmp52, float %llvm-tmp53, float %llvm-tmp54, float*** %thresh, i32*** %dist, float*** %theta)
+main:dx:non-scalar:  call void @Compute_x_gradient(float** %llvm-tmp34, i32 %llvm-tmp35, i32 %llvm-tmp36, i32 %llvm-tmp37, float*** %dx)
+main:dy:non-scalar:  call void @Compute_y_gradient(float** %llvm-tmp38, i32 %llvm-tmp39, i32 %llvm-tmp40, i32 %llvm-tmp41, float*** %dy)
+Smooth_image:yy:scalar:  %llvm-tmp65 = load i32, i32* %yy, align 4
+Set_thresholds:max_gradient:scalar:  store float %llvm-tmp, float* %max_gradient, align 4
+Sub_pixel_interpolation:grad:scalar:  %llvm-tmp145 = load float, float* %grad, align 4
+Compute_gradient:x:scalar:  store i32 %inc29, i32* %x, align 4
+Compute_gradient:y:scalar:  store i32 %llvm-tmp7, i32* %y, align 4
+main:sigma:scalar:
+Thicken_threshold:j:scalar:  store i32 %sub1, i32* %j, align 4
+Thicken_threshold:i:scalar:  store i32 %sub, i32* %i, align 4
+Sub_pixel_interpolation:dnewy:scalar:  store float %mul162, float* %dnewy, align 4
+Sub_pixel_interpolation:dnewx:scalar:  store float %llvm-tmp158, float* %dnewx, align 4
+Smooth_image:xx:scalar:  %llvm-tmp24 = load i32, i32* %xx, align 4
+Compute_y_gradient:x:scalar:  store i32 %add, i32* %x, align 4
+Compute_y_gradient:y:scalar:  store i32 %add2, i32* %y, align 4
+Make_int_image:image:non-scalar:  store i32** %llvm-tmp1, i32*** %image, align 8
+main:thresh:non-scalar:  call void @Sub_pixel_interpolation(float** %llvm-tmp47, float** %llvm-tmp48, float** %llvm-tmp49, i32 %llvm-tmp50, i32 %llvm-tmp51, i32 %llvm-tmp52, float %llvm-tmp53, float %llvm-tmp54, float*** %thresh, i32*** %dist, float*** %theta)
+Set_kernel:det:scalar:  store float %conv6, float* %det, align 4
+Make_float_image:image:non-scalar:  store float** %llvm-tmp1, float*** %image, align 8
+Sub_pixel_interpolation:y:scalar:  %llvm-tmp62 = load i32, i32* %y, align 4
+Sub_pixel_interpolation:x:scalar:  %llvm-tmp257 = load i32, i32* %x, align 4
+Sub_pixel_interpolation:theta:scalar:  store float %conv30, float* %theta, align 4
+
+[Dependency root]main:low:NON_INPUT
+[Useful internal data]
+Smooth_image:tmp:non-scalar:  store float** %call8, float*** %tmp, align 8
+Sub_pixel_interpolation:dnewy:scalar:  store float %mul162, float* %dnewy, align 4
+Sub_pixel_interpolation:dnewx:scalar:  store float %llvm-tmp158, float* %dnewx, align 4
+Sub_pixel_interpolation:dx:non-scalar:  store float* null, float** %dx, align 8
+Sub_pixel_interpolation:dy:non-scalar:  store float* null, float** %dy, align 8
+Sub_pixel_interpolation:h1:scalar:  store float 0.000000e+00, float* %h1, align 4
+Sub_pixel_interpolation:fraction:scalar:  store float %conv155, float* %fraction, align 4
+
+[Dependency root]main:low:NON_INPUT
+[Dependents]
+Thin_edges:a:scalar:  %llvm-tmp136 = load i32, i32* %a, align 4
+Thin_edges:b:scalar:  %llvm-tmp137 = load i32, i32* %b, align 4
+Thin_edges:c:scalar:  store i32 1, i32* %c, align 4
+Thin_edges:d:scalar:  store i32 1, i32* %d, align 4
+Thin_edges:e:scalar:  store i32 1, i32* %e, align 4
+Thin_edges:f:scalar:  store i32 1, i32* %f, align 4
+Thin_edges:g:scalar:  store i32 0, i32* %g, align 4
+Thin_edges:h:scalar:  store i32 1, i32* %h, align 4
+main:low:scalar:
+Set_thresholds:num:scalar:  store float %add59, float* %num, align 4
+Set_thresholds:max_gradient:scalar:  store float %llvm-tmp, float* %max_gradient, align 4
+
+[Dependency root]main:alpha:NON_INPUT
+[Useful internal data]
+Smooth_image:tmp:non-scalar:  store float** %call8, float*** %tmp, align 8
+Sub_pixel_interpolation:dnewy:scalar:  store float %mul162, float* %dnewy, align 4
+Sub_pixel_interpolation:dnewx:scalar:  store float %llvm-tmp158, float* %dnewx, align 4
+Sub_pixel_interpolation:dx:non-scalar:  store float* null, float** %dx, align 8
+Sub_pixel_interpolation:dy:non-scalar:  store float* null, float** %dy, align 8
+Sub_pixel_interpolation:h1:scalar:  store float 0.000000e+00, float* %h1, align 4
+Sub_pixel_interpolation:fraction:scalar:  store float %conv155, float* %fraction, align 4
+
+[Dependency root]main:alpha:NON_INPUT
+[Dependents]
+Thin_edges:a:scalar:  %llvm-tmp136 = load i32, i32* %a, align 4
+Thin_edges:b:scalar:  %llvm-tmp137 = load i32, i32* %b, align 4
+Thin_edges:c:scalar:  store i32 1, i32* %c, align 4
+Thin_edges:d:scalar:  store i32 1, i32* %d, align 4
+Thin_edges:e:scalar:  store i32 1, i32* %e, align 4
+Thin_edges:f:scalar:  store i32 1, i32* %f, align 4
+Thin_edges:g:scalar:  store i32 0, i32* %g, align 4
+Thin_edges:h:scalar:  store i32 1, i32* %h, align 4
+main:alpha:scalar:
+Set_thresholds:num:scalar:  store float %add59, float* %num, align 4
+

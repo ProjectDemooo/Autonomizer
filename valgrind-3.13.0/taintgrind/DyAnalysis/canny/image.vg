@@ -1,0 +1,340 @@
+==3468== Taintgrind, the taint analysis tool
+==3468== Copyright (C) 2010-2018, and GNU GPL'd, by Wei Ming Khoo.
+==3468== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==3468== Command: ../canny/a.out ../canny/lenagrey.pgm 2 0.6 0.8 1
+==3468== 
+0x109F63: gaussian_smooth (canny_edge.c:468) | movzx eax, byte ptr [rax] | Load | 0x6d | {4041010_unknownobj}t108_735 <- 4041010_unknownobj
+0x109F83: gaussian_smooth (canny_edge.c:468) | t152_38 <- r28_195
+0x109F8B: gaussian_smooth (canny_edge.c:468) | Add32F0x4 | 0x0 | t156_35 <-
+0x109F94: gaussian_smooth (canny_edge.c:468) | t161_21 <- r28_195
+0x109FF0: gaussian_smooth (canny_edge.c:472) | movss xmm0, dword ptr [rbp - 0x24] | Load | 0x42857a4f | {dot}t63_1037 <- dot:1fff00013c
+0x109FF5: gaussian_smooth (canny_edge.c:472) | t69_1387 <- r28_202
+0x109FFA: gaussian_smooth (canny_edge.c:472) | t70_1229 <- r28_202
+0x10A096: gaussian_smooth (canny_edge.c:486) | movss xmm1, dword ptr [rax] | Load | 0x42de5bb1 | {4082010_unknownobj}t111_3131210 <- 4082010_unknownobj
+0x10A0B0: gaussian_smooth (canny_edge.c:486) | t144_22 <- r32_8605084
+0x10A0B8: gaussian_smooth (canny_edge.c:486) | Add32F0x4 | 0x0 | t149_2868247 <-
+0x10A0C1: gaussian_smooth (canny_edge.c:486) | t154_35 <- r28_3130564
+0x10A0FE: gaussian_smooth (canny_edge.c:490) | cvtss2sd xmm0, dword ptr [rbp - 0x24] | Load | 0x0 | {dot}
+0x10A103: gaussian_smooth (canny_edge.c:490) | t41_6288341 <- r28_3130575
+0x10A10F: gaussian_smooth (canny_edge.c:490) | Div64F0x2 | 0x0 | t45_3143443 <-
+0x10A118: gaussian_smooth (canny_edge.c:490) | Add64F0x2 | 0x0 | t49_2879025 <-
+0x10A134: gaussian_smooth (canny_edge.c:490) | t24_3410577 <- r28_3130575
+0x10A145: gaussian_smooth (canny_edge.c:490) | t86_2868521 <- r4_8899547
+0x109BED: derrivative_x_y (canny_edge.c:397) | movzx eax, word ptr [rax] | Load | 0x273a | {4183012_unknownobj}t72_3131064 <- 4183012_unknownobj
+0x109C02: derrivative_x_y (canny_edge.c:397) | movzx eax, word ptr [rax] | Load | 0x2739 | {4183010_unknownobj}t92_3130745 <- 4183010_unknownobj
+0x109C0E: derrivative_x_y (canny_edge.c:397) | t112_6261450 <- t99_3393686
+0x109C1C: derrivative_x_y (canny_edge.c:397) | t114_5998818 <- r4_17789417
+0x109C40: derrivative_x_y (canny_edge.c:400) | movzx eax, word ptr [rax] | Load | 0x273d | {4183014_unknownobj}t65_525276 <- 4183014_unknownobj
+0x109C58: derrivative_x_y (canny_edge.c:400) | movzx eax, word ptr [rax] | Load | 0x2739 | {4183010_unknownobj}t83_3131343 <- 4183010_unknownobj
+0x109C64: derrivative_x_y (canny_edge.c:400) | t154_2868261 <- t90_262708
+0x109C72: derrivative_x_y (canny_edge.c:400) | t105_3132002 <- r4_17789418
+0x109D04: derrivative_x_y (canny_edge.c:412) | movzx eax, word ptr [rax] | Load | 0x2742 | {4183410_unknownobj}t74_3393466 <- 4183410_unknownobj
+0x109D19: derrivative_x_y (canny_edge.c:412) | movzx eax, word ptr [rax] | Load | 0x2739 | {4183010_unknownobj}t94_3655284 <- 4183010_unknownobj
+0x109D25: derrivative_x_y (canny_edge.c:412) | t114_6260450 <- t101_6261860
+0x109D33: derrivative_x_y (canny_edge.c:412) | t116_523468 <- r4_18051561
+0x109D5A: derrivative_x_y (canny_edge.c:415) | movzx eax, word ptr [rax] | Load | 0x274e | {4183810_unknownobj}t79_263276 <- 4183810_unknownobj
+0x109D72: derrivative_x_y (canny_edge.c:415) | movzx eax, word ptr [rax] | Load | 0x2739 | {4183010_unknownobj}t106_6523613 <- 4183010_unknownobj
+0x109D7E: derrivative_x_y (canny_edge.c:415) | t189_20 <- t113_3130592
+0x109D8C: derrivative_x_y (canny_edge.c:415) | t128_3392047 <- r4_18051562
+0x1097F9: radian_direction (canny_edge.c:293) | movzx eax, word ptr [rax] | Load | 0x1 | {422a4d0_unknownobj}t38_12656697 <- 422a4d0_unknownobj
+0x109801: radian_direction (canny_edge.c:293) | t47_9672923 <- r28_8867011
+0x109816: radian_direction (canny_edge.c:294) | movzx eax, word ptr [rax] | Load | 0x9 | {42aa4e0_unknownobj}t64_3918084 <- 42aa4e0_unknownobj
+0x10981E: radian_direction (canny_edge.c:294) | t73_6262164 <- r28_8867011
+0x109845: radian_direction (canny_edge.c:297) | movsd xmm1, qword ptr [rbp - 0x10] | Load | 0x4022000000000000 | {dy}t27_6566746 <- dy:1fff000140
+0x10984A: radian_direction (canny_edge.c:297) | t30_6110086 <- r32_17734044
+0x109856: radian_direction (canny_edge.c:297) | t34_566315 <- r28_8867012
+0x10985B: radian_direction (canny_edge.c:299) | movsd xmm0, qword ptr [rbp - 0x10] | Load | 0xc022000000000000 | {dy}t37_12394282 <- dy:1fff000140
+0x109860: radian_direction (canny_edge.c:299) | mov rax, qword ptr [rbp - 0x18] | Load | 0x3ff0000000000000 | {dx}t40_12311972 <- dx:1fff000138
+0x109868: radian_direction (canny_edge.c:299) | mov qword ptr [rbp - 0x60], rax | Store | 0x3ff0000000000000 | --3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff0000f0_unknownobj}1fff0000f0_unknownobj <- t40_12311972
+0x10986C: radian_direction (canny_edge.c:299) | movsd xmm0, qword ptr [rbp - 0x60] | Load | 0x3ff0000000000000 | --3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--3468-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff0000f0_unknownobj}t47_9672924 <- 1fff0000f0_unknownobj
+0x1098C1: angle_radians (canny_edge.c:311) | movsd qword ptr [rbp - 0x28], xmm0 | Store | 0x3ff0000000000000 | {x}x:1fff0000b8 <- t47_9672924
+0x1098C6: angle_radians (canny_edge.c:311) | t59_3918463 <- r32_17734044
+0x1098CB: angle_radians (canny_edge.c:314) | movsd xmm1, qword ptr [rbp - 0x28] | Load | 0x3ff0000000000000 | {x}t62_1361666 <- x:1fff0000b8
+0x1098D0: angle_radians (canny_edge.c:314) | t65_786909 <- r32_17734045
+0x1098DC: angle_radians (canny_edge.c:314) | t69_5999977 <- r28_8867015
+0x1098E1: angle_radians (canny_edge.c:315) | movsd xmm1, qword ptr [rbp - 0x30] | Load | 0xc022000000000000 | {y}t72_3394233 <- y:1fff0000b0
+0x1098E6: angle_radians (canny_edge.c:315) | t75_263434 <- r32_17734046
+0x1098F2: angle_radians (canny_edge.c:315) | t79_524397 <- r28_8867016
+0x1098FB: angle_radians (canny_edge.c:317) | ucomisd xmm0, qword ptr [rbp - 0x18] | Load | 0x0 | {xu}
+0x109900: angle_radians (canny_edge.c:317) | Shr64 | 0x0 | t99_3655833 <- t85_3655284
+0x109906: angle_radians (canny_edge.c:317) | ucomisd xmm0, qword ptr [rbp - 0x18] | Load | 0x0 | {xu}
+0x10990B: angle_radians (canny_edge.c:317) | Shr64 | 0x0 | t22_9516236 <- t8_5792400
+0x109929: angle_radians (canny_edge.c:319) | movsd xmm0, qword ptr [rbp - 0x10] | Load | 0x4022000000000000 | {yu}t10_17838784 <- yu:1fff0000d0
+0x10992E: angle_radians (canny_edge.c:319) | divsd xmm0, qword ptr [rbp - 0x18] | Load | 0x3ff0000000000000 | {xu}t14_8971448 <- xu:1fff0000c8
+0x4CB555F: __atan_fma (s_atan.c:66) | t42_15702296 <- r28_8867017
+0x4CB557D: __atan_fma (s_atan.c:81) | t79_524398 <- t61_840226
+0x4CB559E: __atan_fma (s_atan.c:87) | t5_2934752 <- r28_8867017
+0x4CB55AA: __atan_fma (s_atan.c:87) | Shr64 | 0x0 | t21_96326 <- t6_1148189
+0x4CB55B4: __atan_fma (s_atan.c:88) | t3_3201179 <- r36_354
+0x4CB55C0: __atan_fma (s_atan.c:88) | Shr64 | 0x0 | t20_852085 <- t5_2934753
+0x4CB5910: __atan_fma (s_atan.c:189) | t3_3201179 <- r36_354
+0x4CB591C: __atan_fma (s_atan.c:189) | Shr64 | 0x0 | t20_852086 <- t5_2934754
+0x4CB5931: __atan_fma (s_atan.c:194) | t38_12656698 <- r36_354
+0x4CB594D: __atan_fma (s_atan.c:208) | Mul64F0x2 | 0x0 | t43_11786867 <-
+0x4CB596A: __atan_fma (s_atan.c:194) | t62_1361667 <- r32_17734048
+0x4CB5993: __atan_fma (s_atan.c:196) | vsubsd xmm1, xmm3, qword ptr [rdx] | Load | 0x3fbc0008604f58b1 | {cij}t88_5737368 <- (t83_3655632)
+0x4CB5997: __atan_fma (s_atan.c:198) | Add64 | 0x4d590d0 | t91_3393555 <- t83_3655632
+0x4CB599C: __atan_fma (s_atan.c:204) | Add64 | 0x4d590a8 | t94_3917430 <- t83_3655632
+0x4CB59A6: __atan_fma (s_atan.c:198) | Add64 | 0x4d590c8 | t104_526443 <- t83_3655632
+0x4CB59AC: __atan_fma (s_atan.c:199) | Add64 | 0x4d590c0 | t111_6262608 <- t83_3655632
+0x4CB59B2: __atan_fma (s_atan.c:200) | Add64 | 0x4d590b8 | t118_3653857 <- t83_3655632
+0x4CB59B8: __atan_fma (s_atan.c:201) | Add64 | 0x4d590b0 | t125_6522446 <- t83_3655632
+0x4CB59C3: __atan_fma (s_atan.c:205) | t2_14752976 <- r19_18906082
+0x4CB6200: __atan_fma (s_atan.c:206) | t7_11769960 <- r48_22
+0x4CB59E0: __atan_fma (s_atan.c:209) | Shr64 | 0x10 | t31_569839 <- t17_6588808
+0x4CB59E2: __atan_fma (s_atan.c:209) | t2_14752977 <- r19_18906083
+0x4CB5D20: __atan_fma (math_private_calls.h:84) | t14_8971451 <- r28_8867017
+0x4CB5D24: __atan_fma (math_private_calls.h:84) | t0_93475 <- r32_17734048
+0x4CB5D2C: __atan_fma (math_private_calls.h:84) | AndV128 | 0x0 | t7_11769960 <- t14_8971451 t5_2934756
+0x4CB5D46: __atan_fma (s_atan.c:296) | t10_17838784 <- r32_17734048
+0x109938: angle_radians (canny_edge.c:319) | t4_66456 <- r28_8867017
+0x10993D: angle_radians (canny_edge.c:319) | mov qword ptr [rbp - 8], rax | Store | 0x3ff75cbad2a40bd5 | {ang}ang:1fff0000d8 <- t4_66456
+0x109941: angle_radians (canny_edge.c:321) | movsd xmm0, qword ptr [rbp - 0x28] | Load | 0x3ff0000000000000 | {x}t10_17838786 <- x:1fff0000b8
+0x10994E: angle_radians (canny_edge.c:321) | Shr64 | 0x0 | t28_15792758 <- t14_8971452
+0x109950: angle_radians (canny_edge.c:322) | movsd xmm0, qword ptr [rbp - 0x30] | Load | 0xc022000000000000 | {y}t5_2934760 <- y:1fff0000b0
+0x10995D: angle_radians (canny_edge.c:322) | Shr64 | 0x1 | t23_14440417 <- t9_11837883
+0x10996E: angle_radians (canny_edge.c:323) | subsd xmm0, qword ptr [rbp - 8] | Load | 0x3ff75cbad2a40bd5 | {ang}t12_11858689 <- ang:1fff0000d8
+0x109883: radian_direction (canny_edge.c:299) | t7_11769962 <- r28_8867020
+0x10988E: radian_direction (canny_edge.c:299) | t39_12049225 <- r28_8867020
+0x4CB59C9: __atan_fma (s_atan.c:209) | t4_66463 <- r48_24
+0x4CB55C6: __atan_fma (s_atan.c:90) | t3_3201191 <- r36_354
+0x4CB55D2: __atan_fma (s_atan.c:90) | Shr64 | 0x0 | t20_852103 <- t5_2934774
+0x4CB5E90: __atan_fma (s_atan.c:137) | t28_15792764 <- r36_354
+0x4CB5EA3: __atan_fma (s_atan.c:137) | t33_9725749 <- r32_17734058
+0x4CB5ECC: __atan_fma (s_atan.c:139) | vsubsd xmm1, xmm2, qword ptr [rcx] | Load | 0x3fc58006352408be | {cij}t59_3918474 <- (t54_840114)
+0x4CB5ED0: __atan_fma (s_atan.c:140) | Add64 | 0x4d59418 | t62_1361674 <- t54_840114
+0x4CB5ED5: __atan_fma (s_atan.c:146) | Add64 | 0x4d593f0 | t65_786914 <- t54_840114
+0x4CB5EDA: __atan_fma (s_atan.c:140) | Add64 | 0x4d59410 | t68_6261290 <- t54_840114
+0x4CB5EE0: __atan_fma (s_atan.c:141) | Add64 | 0x4d59408 | t75_263440 <- t54_840114
+0x4CB5EE6: __atan_fma (s_atan.c:142) | Add64 | 0x4d59400 | t82_3392879 <- t54_840114
+0x4CB5EEC: __atan_fma (s_atan.c:143) | Add64 | 0x4d593f8 | t89_3131474 <- t54_840114
+0x4CB5EF6: __atan_fma (s_atan.c:147) | t122_6521567 <- t52_3968437
+0x4CB6210: __atan_fma (s_atan.c:149) | t6_1148209 <- r2_21745981
+0x4CB621B: __atan_fma (s_atan.c:149) | t22_9516257 <- t7_11769977
+0x4CB6221: __atan_fma (s_atan.c:150) | t9_11837897 <- r40_34
+0x4CB5F2D: __atan_fma (s_atan.c:161) | Shr64 | 0x10 | t40_12311981 <- t22_9516258
+0x4CB5F2F: __atan_fma (s_atan.c:161) | t2_14752988 <- r19_18906118
+0x10995F: angle_radians (canny_edge.c:322) | movsd xmm0, qword ptr [rbp - 8] | Load | 0x3fc52397843c9add | {ang}t8_5792428 <- ang:1fff0000d8
+0x4CB5EFC: __atan_fma (s_atan.c:156) | t6_1148219 <- r2_21745990
+0x4CB5F09: __atan_fma (s_atan.c:156) | t22_9516267 <- t7_11769986
+0x4CB5F13: __atan_fma (s_atan.c:161) | t6_1148219 <- r40_36
+0x109975: angle_radians (canny_edge.c:326) | movsd xmm0, qword ptr [rbp - 0x30] | Load | 0x4036000000000000 | {y}t5_2934813 <- y:1fff0000b0
+0x109982: angle_radians (canny_edge.c:326) | Shr64 | 0x0 | t23_14440450 <- t9_11837925
+0x10998C: angle_radians (canny_edge.c:326) | subsd xmm0, qword ptr [rbp - 8] | Load | 0x3ff6414d44094c7c | {ang}t12_11858711 <- ang:1fff0000d8
+0x4CB5F35: __atan_fma (s_atan.c:164) | t32_3176106 <- r4_18313771
+0x4CB5F43: __atan_fma (s_atan.c:172) | Add64 | 0x4d51880 | t9_11837959 <- t4_66536
+0x4CB5F4E: __atan_fma (s_atan.c:164) | vsubsd xmm2, xmm2, qword ptr [rcx] | Load | 0x3fb6000000000000 | {hij}t44_12361351 <- (t9_11837959)
+0x4CB5F52: __atan_fma (s_atan.c:166) | Add64 | 0x4d518f8 | t47_9672943 <- t9_11837959
+0x4CB5F57: __atan_fma (s_atan.c:172) | Add64 | 0x4d518c8 | t50_526190 <- t9_11837959
+0x4CB5F5C: __atan_fma (s_atan.c:172) | Add64 | 0x4d518d0 | t53_1363288 <- t9_11837959
+0x4CB5F69: __atan_fma (s_atan.c:166) | Add64 | 0x4d518f0 | t57_3396088 <- t9_11837959
+0x4CB5F6F: __atan_fma (s_atan.c:167) | Add64 | 0x4d518e8 | t64_3918110 <- t9_11837959
+0x4CB5F75: __atan_fma (s_atan.c:168) | Add64 | 0x4d518e0 | t71_3394313 <- t9_11837959
+0x4CB5F7B: __atan_fma (s_atan.c:169) | Add64 | 0x4d518d8 | t78_3654665 <- t9_11837959
+0x4CB5F95: __atan_fma (s_atan.c:172) | Shr64 | 0x0 | t112_6262482 <- t92_3132292
+0x4CB5F9B: __atan_fma (s_atan.c:172) | t23_14440478 <- r48_37
+0x4CB5FCA: __atan_fma (s_atan.c:173) | Add64 | 0x4d518c0 | t57_3396089 <- t7_11770039
+0x4CB5FF6: __atan_fma (s_atan.c:174) | Add64 | 0x4d518b8 | t85_3655303 <- t7_11770039
+0x4CB600C: __atan_fma (s_atan.c:174) | Shr64 | 0x0 | t110_6524113 <- t92_3132293
+0x4CB6012: __atan_fma (s_atan.c:174) | t23_14440478 <- r40_45
+0x4CB6041: __atan_fma (s_atan.c:175) | Add64 | 0x4d518b0 | t57_3396090 <- t7_11770040
+0x4CB604F: __atan_fma (s_atan.c:176) | Add64 | 0x4d518a8 | t68_6261319 <- t7_11770040
+0x4CB6083: __atan_fma (s_atan.c:176) | Shr64 | 0x0 | t110_6524114 <- t86_3653440
+0x4CB6089: __atan_fma (s_atan.c:176) | t23_14440478 <- r40_45
+0x4CB60B8: __atan_fma (s_atan.c:177) | Add64 | 0x4d518a0 | t57_3396091 <- t7_11770041
+0x4CB60C6: __atan_fma (s_atan.c:178) | Add64 | 0x4d51898 | t68_6261320 <- t7_11770041
+0x4CB60FA: __atan_fma (s_atan.c:178) | Shr64 | 0x0 | t110_6524115 <- t89_3131487
+0x4CB6100: __atan_fma (s_atan.c:178) | t23_14440478 <- r60_24
+0x4CB6133: __atan_fma (s_atan.c:178) | Add64 | 0x4d51890 | t61_840255 <- t7_11770042
+0x4CB6159: __atan_fma (s_atan.c:180) | Add64 | 0x4d51888 | t84_3655478 <- t7_11770042
+0x4CB616E: __atan_fma (s_atan.c:180) | Shr64 | 0x0 | t109_3393848 <- t91_3393569
+0x4CB6174: __atan_fma (s_atan.c:180) | t5_2934849 <- r44_31
+0x4CB6191: __atan_fma (s_atan.c:181) | t30_6110111 <- r36_355
+0x4CB61B3: __atan_fma (s_atan.c:181) | Shr64 | 0x10 | t61_840256 <- t43_11786874
+0x4CB61B9: __atan_fma (s_atan.c:181) | t2_14753029 <- r19_18906248
+0x4CB61BF: __atan_fma (math_private_calls.h:84) | t13_6116568 <- r28_8867098
+0x4CB61C7: __atan_fma (math_private_calls.h:84) | AndV128 | 0x0 | t6_1148275 <- t13_6116568
+0x4CB55D8: __atan_fma (s_atan.c:92) | t3_3201238 <- r36_355
+0x4CB55E4: __atan_fma (s_atan.c:92) | Shr64 | 0x0 | t20_852180 <- t5_2934859
+0x4CB55EA: __atan_fma (s_atan.c:99) | t12_11858734 <- r28_8867107
+0x4CB55EE: __atan_fma (s_atan.c:107) | Mul64F0x2 | 0x0 | t16_12356411 <- t14_8971496
+0x4CB55F6: __atan_fma (s_atan.c:100) | Mul64F0x2 | 0x0 | t19_5799464 <-
+0x4CB5602: __atan_fma (s_atan.c:100) | t26_6289966 <- r36_355
+0x4CB560B: __atan_fma (s_atan.c:101) | MAddF64 | 0x0 | t75_263461 <- t22_9516334
+0x4CB5614: __atan_fma (s_atan.c:102) | MAddF64 | 0x0 | t76_3655121 <-
+0x4CB561D: __atan_fma (s_atan.c:103) | MAddF64 | 0x0 | t77_3392370 <-
+0x4CB5626: __atan_fma (s_atan.c:104) | MAddF64 | 0x0 | t78_3654667 <- t43_11786874
+0x4CB5649: __atan_fma (s_atan.c:107) | Shr64 | 0x10 | t86_3653444 <- t63_3918919
+0x4CB564B: __atan_fma (s_atan.c:107) | t2_14753034 <- r19_18906265
+0x109993: angle_radians (canny_edge.c:327) | movsd xmm1, qword ptr [rbp - 8] | Load | 0x3f8d773113b1abfd | {ang}t9_11837982 <- ang:1fff0000d8
+0x109998: angle_radians (canny_edge.c:327) | t12_11858743 <- r32_17734107
+0x4CB5F0B: __atan_fma (s_atan.c:157) | t9_11847036 <- r40_1477
+0x109A45: magnitude_x_y (canny_edge.c:353) | movzx eax, word ptr [rax] | Load | 0x1 | {422a4d0_unknownobj}t61_1713229 <- 422a4d0_unknownobj
+0x109A5B: magnitude_x_y (canny_edge.c:353) | movzx eax, word ptr [rax] | Load | 0x1 | {422a4d0_unknownobj}t81_6881379 <- 422a4d0_unknownobj
+0x109A62: magnitude_x_y (canny_edge.c:353) | t94_4309088 <- t91_3777828
+0x109A75: magnitude_x_y (canny_edge.c:354) | movzx eax, word ptr [rax] | Load | 0x9 | {42aa4e0_unknownobj}t112_6453103 <- 42aa4e0_unknownobj
+0x109A8B: magnitude_x_y (canny_edge.c:354) | movzx eax, word ptr [rax] | Load | 0x9 | {42aa4e0_unknownobj}t132_2869273 <- 42aa4e0_unknownobj
+0x109A92: magnitude_x_y (canny_edge.c:354) | t145_523421 <- t142_3130390
+0x109A95: magnitude_x_y (canny_edge.c:355) | cvtsi2ss xmm1, dword ptr [rbp - 8] | Load | 0x1 | {sq1}t37_13804925 <- sq1:1fff000158
+0x109A9A: magnitude_x_y (canny_edge.c:355) | cvtsi2ss xmm0, dword ptr [rbp - 4] | Load | 0x51 | {sq2}t40_13268874 <- sq2:1fff00015c
+0x4C3AEB0: sqrt (w_sqrt_compat.c:30) | t1_4148710 <- r28_11226267
+0x4C3AEB8: sqrt (w_sqrt_compat.c:30) | Shr64 | 0x0 | t20_3326952 <- t5_5757535
+0x4C3AEBA: sqrt (math_private.h:58) | t0_1322491 <- r28_11226267
+0x109AAC: magnitude_x_y (canny_edge.c:355) | t26_7888912 <- r28_11226267
+0x109AB0: magnitude_x_y (canny_edge.c:355) | Add64F0x2 | 0x0 | t28_16738269 <-
+0x109AC3: magnitude_x_y (canny_edge.c:355) | t11_14188707 <- r28_11226268
+0x109AD3: magnitude_x_y (canny_edge.c:355) | t44_12857377 <- r4_19617361
+0x10ABA9: non_max_supp (hysteresis.c:195) | movzx eax, word ptr [rax] | Load | 0xe | {432a8f2_unknownobj}t12_13189539 <- 432a8f2_unknownobj
+0x10ABAC: non_max_supp (hysteresis.c:195) | t15_17489989 <- r2_25679845
+0x10ABB0: non_max_supp (hysteresis.c:196) | cmp word ptr [rbp - 0x62], 0 | Load | 0xe | {m00}t5_6052468 <- m00:1fff0000fe
+0x10ABB5: non_max_supp (hysteresis.c:196) | t33_10582496 <- t18_9527176
+0x10ABC4: non_max_supp (hysteresis.c:200) | movzx eax, word ptr [rax] | Load | 0xfffa | {422a8d2_unknownobj}t33_10582497 <- 422a8d2_unknownobj
+0x10ABC7: non_max_supp (hysteresis.c:200) | t36_7775267 <- r2_25679846
+0x10ABCB: non_max_supp (hysteresis.c:200) | movsx eax, word ptr [rbp - 0x66] | Load | 0xfffa | {gx}t41_15874998 <- gx:1fff0000fa
+0x10ABD5: non_max_supp (hysteresis.c:200) | movsx eax, word ptr [rbp - 0x62] | Load | 0xe | {m00}t58_5242920 <- m00:1fff0000fe
+0x10ABE1: non_max_supp (hysteresis.c:200) | t71_4475701 <- r28_11488411
+0x10ABEA: non_max_supp (hysteresis.c:201) | movzx eax, word ptr [rax] | Load | 0xd | {42aa8e2_unknownobj}t77_4533365 <- 42aa8e2_unknownobj
+0x10ABED: non_max_supp (hysteresis.c:201) | t80_7313385 <- r2_25679847
+0x10ABF1: non_max_supp (hysteresis.c:201) | movsx eax, word ptr [rbp - 0x64] | Load | 0xd | {gy}t85_4484215 <- gy:1fff0000fc
+0x10ABF9: non_max_supp (hysteresis.c:201) | movsx eax, word ptr [rbp - 0x62] | Load | 0xe | {m00}t97_4534570 <- m00:1fff0000fe
+0x10AC05: non_max_supp (hysteresis.c:201) | t110_6990526 <- r28_11488411
+0x10AC0A: non_max_supp (hysteresis.c:204) | cmp word ptr [rbp - 0x66], 0 | Load | 0xfffa | {gx}t26_7890463 <- gx:1fff0000fa
+0x10AC0F: non_max_supp (hysteresis.c:204) | Shr64 | 0x1 | t150_523808 <- t113_3809377
+0x10AFB2: non_max_supp (hysteresis.c:273) | movzx eax, word ptr [rax] | Load | 0xd | {42aa8e2_unknownobj}t12_13189540 <- 42aa8e2_unknownobj
+0x10AFB5: non_max_supp (hysteresis.c:273) | t15_17489990 <- r2_25679849
+0x10AFB9: non_max_supp (hysteresis.c:273) | cmp word ptr [rbp - 0x64], 0 | Load | 0xd | {gy}t5_6052469 <- gy:1fff0000fc
+0x10AFBE: non_max_supp (hysteresis.c:273) | Shr64 | 0x0 | t31_1406968 <- t18_9527177
+0x10AFC4: non_max_supp (hysteresis.c:275) | movsx eax, word ptr [rbp - 0x66] | Load | 0xfffa | {gx}t13_8324214 <- gx:1fff0000fa
+0x10AFCC: non_max_supp (hysteresis.c:275) | movsx eax, word ptr [rbp - 0x64] | Load | 0xd | {gy}t26_7890464 <- gy:1fff0000fc
+0x10AFD2: non_max_supp (hysteresis.c:275) | t54_1870109 <- t32_4285767
+0x10B0BC: non_max_supp (hysteresis.c:294) | movzx eax, word ptr [rax] | Load | 0x6 | {432a4f2_unknownobj}t93_7178316 <- 432a4f2_unknownobj
+0x10B0BF: non_max_supp (hysteresis.c:294) | t96_1050199 <- r2_25679851
+0x10B0E2: non_max_supp (hysteresis.c:295) | movzx eax, word ptr [rax] | Load | 0x6 | {432a4f4_unknownobj}t112_6715249 <- 432a4f4_unknownobj
+0x10B0E5: non_max_supp (hysteresis.c:295) | t115_6262005 <- r2_25679852
+0x10B0E9: non_max_supp (hysteresis.c:297) | movsx edx, word ptr [rbp - 0x5e] | Load | 0x6 | {z2}t120_931204 <- z2:1fff000102
+0x10B0ED: non_max_supp (hysteresis.c:297) | movsx eax, word ptr [rbp - 0x60] | Load | 0x6 | {z1}t125_6614229 <- z1:1fff000100
+0x10B0FC: non_max_supp (hysteresis.c:297) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3edb6db7 | {xperp}t147_784918 <- xperp:1fff000118
+0x10B101: non_max_supp (hysteresis.c:297) | movsx edx, word ptr [rbp - 0x60] | Load | 0x6 | {z1}t154_3391017 <- z1:1fff000100
+0x10B105: non_max_supp (hysteresis.c:297) | movsx eax, word ptr [rbp - 0x62] | Load | 0xe | {m00}t159_3129384 <- m00:1fff0000fe
+0x10B111: non_max_supp (hysteresis.c:297) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0x3f6db6db | {yperp}t180_3129359 <- yperp:1fff00011c
+0x10B11A: non_max_supp (hysteresis.c:297) | t188_3129360 <- r28_11488411
+0x10B132: non_max_supp (hysteresis.c:300) | movzx eax, word ptr [rax] | Load | 0x17 | {432acf2_unknownobj}t205_2868246 <- 432acf2_unknownobj
+0x10B135: non_max_supp (hysteresis.c:300) | t208_5736465 <- r2_25679853
+0x10B14F: non_max_supp (hysteresis.c:301) | movzx eax, word ptr [rax] | Load | 0x1b | {432acf0_unknownobj}t223_5736455 <- 432acf0_unknownobj
+0x10B152: non_max_supp (hysteresis.c:301) | t226_5736455 <- r2_25679854
+0x10B156: non_max_supp (hysteresis.c:303) | movsx edx, word ptr [rbp - 0x5e] | Load | 0x1b | {z2}t231_5736459 <- z2:1fff000102
+0x10B15A: non_max_supp (hysteresis.c:303) | movsx eax, word ptr [rbp - 0x60] | Load | 0x17 | {z1}t236_5736449 <- z1:1fff000100
+0x10B169: non_max_supp (hysteresis.c:303) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3edb6db7 | {xperp}t258_2868230 <- xperp:1fff000118
+0x10B16E: non_max_supp (hysteresis.c:303) | movsx edx, word ptr [rbp - 0x60] | Load | 0x17 | {z1}t265_2868225 <- z1:1fff000100
+0x10B172: non_max_supp (hysteresis.c:303) | movsx eax, word ptr [rbp - 0x62] | Load | 0xe | {m00}t270_3 <- m00:1fff0000fe
+0x10B17A: non_max_supp (hysteresis.c:303) | t12_13189542 <- r2_25679855
+0x10B17E: non_max_supp (hysteresis.c:303) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0x3f6db6db | {yperp}t18_9527180 <- yperp:1fff00011c
+0x10B187: non_max_supp (hysteresis.c:303) | t26_7890465 <- r28_11488411
+0x10B357: non_max_supp (hysteresis.c:343) | movss xmm0, dword ptr [rbp - 0x50] | Load | 0xc0edb6db | {mag1}t29_10710068 <- mag1:1fff000110
+0x10B363: non_max_supp (hysteresis.c:343) | Shr64 | 0x0 | t56_2623875 <- t33_10582499
+0x10B365: non_max_supp (hysteresis.c:343) | movss xmm0, dword ptr [rbp - 0x4c] | Load | 0x41212492 | {mag2}t5_6052470 <- mag2:1fff000114
+0x10B371: non_max_supp (hysteresis.c:343) | Shr64 | 0x0 | t28_17035244 <- t9_14122998
+0x10AFDC: non_max_supp (hysteresis.c:279) | movzx eax, word ptr [rax + 2] | Load | 0xe | {432a8f6_unknownobj}t76_4966499 <- 432a8f6_unknownobj
+0x10AFE0: non_max_supp (hysteresis.c:279) | t79_1576866 <- r2_25679863
+0x10B003: non_max_supp (hysteresis.c:280) | movzx eax, word ptr [rax] | Load | 0x9 | {432a4f6_unknownobj}t95_7356643 <- 432a4f6_unknownobj
+0x10B006: non_max_supp (hysteresis.c:280) | t98_1311277 <- r2_25679864
+0x10B00A: non_max_supp (hysteresis.c:282) | movsx edx, word ptr [rbp - 0x60] | Load | 0xe | {z1}t103_6794042 <- z1:1fff000100
+0x10B00E: non_max_supp (hysteresis.c:282) | movsx eax, word ptr [rbp - 0x62] | Load | 0x5 | {m00}t108_6467288 <- m00:1fff0000fe
+0x10B01D: non_max_supp (hysteresis.c:282) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3f800000 | {xperp}t130_6261815 <- xperp:1fff000118
+0x10B022: non_max_supp (hysteresis.c:282) | movsx edx, word ptr [rbp - 0x5e] | Load | 0x9 | {z2}t137_3391506 <- z2:1fff000102
+0x10B026: non_max_supp (hysteresis.c:282) | movsx eax, word ptr [rbp - 0x60] | Load | 0xe | {z1}t142_3392534 <- z1:1fff000100
+0x10B032: non_max_supp (hysteresis.c:282) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0x3e4ccccd | {yperp}t163_522274 <- yperp:1fff00011c
+0x10B03B: non_max_supp (hysteresis.c:282) | t171_3129366 <- r28_11488413
+0x10B044: non_max_supp (hysteresis.c:285) | movzx eax, word ptr [rax - 2] | Load | 0xe | {432a8f2_unknownobj}t179_3129367 <- 432a8f2_unknownobj
+0x10B048: non_max_supp (hysteresis.c:285) | t182_261133 <- r2_25679865
+0x10B062: non_max_supp (hysteresis.c:286) | movzx eax, word ptr [rax] | Load | 0x17 | {432acf2_unknownobj}t197_261149 <- 432acf2_unknownobj
+0x10B065: non_max_supp (hysteresis.c:286) | t200_261143 <- r2_25679866
+0x10B069: non_max_supp (hysteresis.c:288) | movsx edx, word ptr [rbp - 0x60] | Load | 0xe | {z1}t205_2868247 <- z1:1fff000100
+0x10B06D: non_max_supp (hysteresis.c:288) | movsx eax, word ptr [rbp - 0x62] | Load | 0x5 | {m00}t210_2868246 <- m00:1fff0000fe
+0x10B07C: non_max_supp (hysteresis.c:288) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3f800000 | {xperp}t232_5736453 <- xperp:1fff000118
+0x10B081: non_max_supp (hysteresis.c:288) | movsx edx, word ptr [rbp - 0x5e] | Load | 0x17 | {z2}t239_5736450 <- z2:1fff000102
+0x10B085: non_max_supp (hysteresis.c:288) | movsx eax, word ptr [rbp - 0x60] | Load | 0xe | {z1}t244_5736453 <- z1:1fff000100
+0x10B091: non_max_supp (hysteresis.c:288) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0x3e4ccccd | {yperp}t265_2868226 <- yperp:1fff00011c
+0x10B09A: non_max_supp (hysteresis.c:288) | t273_4 <- r28_11488413
+0x10B191: non_max_supp (hysteresis.c:308) | movsx eax, word ptr [rbp - 0x66] | Load | 0xfff9 | {gx}t17_9478284 <- gx:1fff0000fa
+0x10B199: non_max_supp (hysteresis.c:308) | movsx eax, word ptr [rbp - 0x64] | Load | 0xfff4 | {gy}t30_6860431 <- gy:1fff0000fc
+0x10B1A1: non_max_supp (hysteresis.c:308) | t65_1737860 <- t41_15875005
+0x10B284: non_max_supp (hysteresis.c:327) | movzx eax, word ptr [rax] | Load | 0x19 | {432acf6_unknownobj}t97_4534574 <- 432acf6_unknownobj
+0x10B287: non_max_supp (hysteresis.c:327) | t100_4496099 <- r2_25679875
+0x10B2A2: non_max_supp (hysteresis.c:328) | movzx eax, word ptr [rax] | Load | 0x27 | {432acf8_unknownobj}t117_3654386 <- 432acf8_unknownobj
+0x10B2A5: non_max_supp (hysteresis.c:328) | t120_931208 <- r2_25679876
+0x10B2A9: non_max_supp (hysteresis.c:330) | movsx edx, word ptr [rbp - 0x5e] | Load | 0x27 | {z2}t125_6614232 <- z2:1fff000102
+0x10B2AD: non_max_supp (hysteresis.c:330) | movsx eax, word ptr [rbp - 0x60] | Load | 0x19 | {z1}t130_6261816 <- z1:1fff000100
+0x10B2BC: non_max_supp (hysteresis.c:330) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3f000000 | {xperp}t152_3391022 <- xperp:1fff000118
+0x10B2C1: non_max_supp (hysteresis.c:330) | movsx edx, word ptr [rbp - 0x62] | Load | 0xe | {m00}t159_3129385 <- m00:1fff0000fe
+0x10B2C5: non_max_supp (hysteresis.c:330) | movsx eax, word ptr [rbp - 0x60] | Load | 0x19 | {z1}t164_5997598 <- z1:1fff000100
+0x10B2D1: non_max_supp (hysteresis.c:330) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0xbf5b6db7 | {yperp}t185_3129354 <- yperp:1fff00011c
+0x10B2DA: non_max_supp (hysteresis.c:330) | t193_3129362 <- r28_11488414
+0x10B2F7: non_max_supp (hysteresis.c:333) | movzx eax, word ptr [rax] | Load | 0x9 | {432a4f6_unknownobj}t207_2868256 <- 432a4f6_unknownobj
+0x10B2FA: non_max_supp (hysteresis.c:333) | t210_2868247 <- r2_25679877
+0x10B31A: non_max_supp (hysteresis.c:334) | movzx eax, word ptr [rax] | Load | 0x6 | {432a4f4_unknownobj}t223_5736456 <- 432a4f4_unknownobj
+0x10B31D: non_max_supp (hysteresis.c:334) | t226_5736456 <- r2_25679878
+0x10B321: non_max_supp (hysteresis.c:336) | movsx edx, word ptr [rbp - 0x5e] | Load | 0x6 | {z2}t231_5736460 <- z2:1fff000102
+0x10B325: non_max_supp (hysteresis.c:336) | movsx eax, word ptr [rbp - 0x60] | Load | 0x9 | {z1}t236_5736450 <- z1:1fff000100
+0x10B334: non_max_supp (hysteresis.c:336) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3f000000 | {xperp}t258_2868232 <- xperp:1fff000118
+0x10B339: non_max_supp (hysteresis.c:336) | movsx edx, word ptr [rbp - 0x62] | Load | 0xe | {m00}t265_2868227 <- m00:1fff0000fe
+0x10B33D: non_max_supp (hysteresis.c:336) | movsx eax, word ptr [rbp - 0x60] | Load | 0x9 | {z1}t270_4 <- z1:1fff000100
+0x10B349: non_max_supp (hysteresis.c:336) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0xbf5b6db7 | {yperp}t9_14123007 <- yperp:1fff00011c
+0x10B352: non_max_supp (hysteresis.c:336) | t17_9478285 <- r28_11488414
+0x10B1AB: non_max_supp (hysteresis.c:312) | movzx eax, word ptr [rax + 2] | Load | 0xa1 | {432a900_unknownobj}t75_1200885 <- 432a900_unknownobj
+0x10B1AF: non_max_supp (hysteresis.c:312) | t78_4715946 <- r2_25679923
+0x10B1CA: non_max_supp (hysteresis.c:313) | movzx eax, word ptr [rax] | Load | 0xa1 | {432ad00_unknownobj}t95_7356653 <- 432ad00_unknownobj
+0x10B1CD: non_max_supp (hysteresis.c:313) | t98_1311287 <- r2_25679924
+0x10B1D1: non_max_supp (hysteresis.c:315) | movsx edx, word ptr [rbp - 0x60] | Load | 0xa1 | {z1}t103_6794047 <- z1:1fff000100
+0x10B1D5: non_max_supp (hysteresis.c:315) | movsx eax, word ptr [rbp - 0x62] | Load | 0x65 | {m00}t108_6467298 <- m00:1fff0000fe
+0x10B1E4: non_max_supp (hysteresis.c:315) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3f4d4e93 | {xperp}t130_6261820 <- xperp:1fff000118
+0x10B1E9: non_max_supp (hysteresis.c:315) | movsx edx, word ptr [rbp - 0x60] | Load | 0xa1 | {z1}t137_3391516 <- z1:1fff000100
+0x10B1ED: non_max_supp (hysteresis.c:315) | movsx eax, word ptr [rbp - 0x5e] | Load | 0xa1 | {z2}t142_3392539 <- z2:1fff000102
+0x10B1F9: non_max_supp (hysteresis.c:315) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0xbf1a9d26 | {yperp}t163_522279 <- yperp:1fff00011c
+0x10B202: non_max_supp (hysteresis.c:315) | t171_3129371 <- r28_11488418
+0x10B20B: non_max_supp (hysteresis.c:318) | movzx eax, word ptr [rax - 2] | Load | 0x43 | {432a8fc_unknownobj}t179_3129368 <- 432a8fc_unknownobj
+0x10B20F: non_max_supp (hysteresis.c:318) | t182_261138 <- r2_25679925
+0x10B22F: non_max_supp (hysteresis.c:319) | movzx eax, word ptr [rax] | Load | 0x28 | {432a4fc_unknownobj}t195_5997597 <- 432a4fc_unknownobj
+0x10B232: non_max_supp (hysteresis.c:319) | t198_261146 <- r2_25679926
+0x10B236: non_max_supp (hysteresis.c:321) | movsx edx, word ptr [rbp - 0x60] | Load | 0x43 | {z1}t203_3129366 <- z1:1fff000100
+0x10B23A: non_max_supp (hysteresis.c:321) | movsx eax, word ptr [rbp - 0x62] | Load | 0x65 | {m00}t208_5736471 <- m00:1fff0000fe
+0x10B249: non_max_supp (hysteresis.c:321) | mulss xmm1, dword ptr [rbp - 0x48] | Load | 0x3f4d4e93 | {xperp}t230_5736460 <- xperp:1fff000118
+0x10B24E: non_max_supp (hysteresis.c:321) | movsx edx, word ptr [rbp - 0x60] | Load | 0x43 | {z1}t237_5736455 <- z1:1fff000100
+0x10B252: non_max_supp (hysteresis.c:321) | movsx eax, word ptr [rbp - 0x5e] | Load | 0x28 | {z2}t242_2868229 <- z2:1fff000102
+0x10B25E: non_max_supp (hysteresis.c:321) | mulss xmm0, dword ptr [rbp - 0x44] | Load | 0xbf1a9d26 | {yperp}t263_2868235 <- yperp:1fff00011c
+0x10B267: non_max_supp (hysteresis.c:321) | t271_7 <- r28_11488418
+0x10B380: non_max_supp (hysteresis.c:349) | ucomiss xmm0, dword ptr [rbp - 0x4c] | Load | 0x0 | {mag2}
+0x10B384: non_max_supp (hysteresis.c:349) | Shr64 | 0x0 | t26_7890495 <- t8_9009544
+0x10B38A: non_max_supp (hysteresis.c:349) | ucomiss xmm0, dword ptr [rbp - 0x4c] | Load | 0x0 | {mag2}
+0x10B38E: non_max_supp (hysteresis.c:349) | Shr64 | 0x0 | t26_7890496 <- t8_9009545
+0x10A719: apply_hysteresis (hysteresis.c:91) | movzx eax, word ptr [rax] | Load | 0xf9 | {432a904_unknownobj}t41_17160489 <- 432a904_unknownobj
+0x10A720: apply_hysteresis (hysteresis.c:91) | Shl64 | 0x3e4 | t50_2487293 <- t45_8550679
+0x10A72C: apply_hysteresis (hysteresis.c:91) | Shl64 | 0x3e4 | t65_2343842 <- t60_6146346
+0x10A8D2: apply_hysteresis (hysteresis.c:137) | movzx eax, word ptr [rax] | Load | 0xf9 | {432a904_unknownobj}t27_10143455 <- 432a904_unknownobj
+0x10A8D6: apply_hysteresis (hysteresis.c:137) | t51_4813275 <- t28_18783310
+0x10A8DC: apply_hysteresis (hysteresis.c:137) | t56_3692953 <- t36_8960908
+==3468== 

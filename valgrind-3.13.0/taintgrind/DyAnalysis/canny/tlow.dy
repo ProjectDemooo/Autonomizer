@@ -1,0 +1,5 @@
+[canny:tlow::]
+[follow_edges:lowval::]
+[apply_hysteresis:lowthreshold::]
+[apply_hysteresis:tlow::]
+[main:tlow::]

@@ -1,0 +1,56 @@
+[Dependency root]main:sigma:NON_INPUT
+[Useful internal data]
+main:image:
+
+[Dependency root]main:tlow:NON_INPUT
+[Useful internal data]
+non_max_supp:gy:scalar:  %llvm-tmp50 = load i16, i16* %gy, align 2
+non_max_supp:gx:scalar:  %llvm-tmp51 = load i16, i16* %gx, align 2
+magnitude_x_y:magnitude:non-scalar:  store i16** %magnitude, i16*** %magnitude.addr, align 8
+non_max_supp:m00:scalar:  store i16 %llvm-tmp40, i16* %m00, align 2
+gaussian_smooth:smoothedim:non-scalar:  store i16** %smoothedim, i16*** %smoothedim.addr, align 8
+gaussian_smooth:dot:scalar:  store float 0.000000e+00, float* %dot, align 4
+non_max_supp:mag2:scalar:  store float %add86, float* %mag2, align 4
+non_max_supp:mag1:scalar:  store float %add144, float* %mag1, align 4
+magnitude_x_y:sq1:scalar:  store i32 %mul13, i32* %sq1, align 4
+magnitude_x_y:sq2:scalar:  store i32 %mul20, i32* %sq2, align 4
+radian_direction:dx:scalar:  %llvm-tmp20 = load double, double* %dx, align 8
+radian_direction:dy:scalar:  store double %sub20, double* %dy, align 8
+non_max_supp:yperp:scalar:  store float %div44, float* %yperp, align 4
+derrivative_x_y:delta_x:non-scalar:  %llvm-tmp32 = load i16**, i16*** %delta_x.addr, align 8
+derrivative_x_y:delta_y:non-scalar:  store i16** %delta_y, i16*** %delta_y.addr, align 8
+gaussian_smooth:tempim:non-scalar:  store float* %llvm-tmp4, float** %tempim, align 8
+non_max_supp:xperp:scalar:  store float %div, float* %xperp, align 4
+radian_direction:dirim:non-scalar:  %llvm-tmp4 = load float*, float** %dirim, align 8
+non_max_supp:z1:scalar:  store i16 %llvm-tmp113, i16* %z1, align 2
+non_max_supp:z2:scalar:  store i16 %llvm-tmp116, i16* %z2, align 2
+apply_hysteresis:hist:non-scalar:  %arrayidx44 = getelementptr inbounds [32768 x i32], [32768 x i32]* %hist, i64 0, i64 %idxprom43
+angle_radians:y:scalar:  store double %y, double* %y.addr, align 8
+angle_radians:x:scalar:  store double %x, double* %x.addr, align 8
+
+[Dependency root]main:thigh:NON_INPUT
+[Useful internal data]
+non_max_supp:gy:scalar:  %llvm-tmp50 = load i16, i16* %gy, align 2
+non_max_supp:gx:scalar:  %llvm-tmp51 = load i16, i16* %gx, align 2
+magnitude_x_y:magnitude:non-scalar:  store i16** %magnitude, i16*** %magnitude.addr, align 8
+non_max_supp:m00:scalar:  store i16 %llvm-tmp40, i16* %m00, align 2
+gaussian_smooth:smoothedim:non-scalar:  store i16** %smoothedim, i16*** %smoothedim.addr, align 8
+gaussian_smooth:dot:scalar:  store float 0.000000e+00, float* %dot, align 4
+non_max_supp:mag2:scalar:  store float %add86, float* %mag2, align 4
+non_max_supp:mag1:scalar:  store float %add144, float* %mag1, align 4
+magnitude_x_y:sq1:scalar:  store i32 %mul13, i32* %sq1, align 4
+magnitude_x_y:sq2:scalar:  store i32 %mul20, i32* %sq2, align 4
+radian_direction:dx:scalar:  %llvm-tmp20 = load double, double* %dx, align 8
+radian_direction:dy:scalar:  store double %sub20, double* %dy, align 8
+non_max_supp:yperp:scalar:  store float %div44, float* %yperp, align 4
+derrivative_x_y:delta_x:non-scalar:  %llvm-tmp32 = load i16**, i16*** %delta_x.addr, align 8
+derrivative_x_y:delta_y:non-scalar:  store i16** %delta_y, i16*** %delta_y.addr, align 8
+gaussian_smooth:tempim:non-scalar:  store float* %llvm-tmp4, float** %tempim, align 8
+non_max_supp:xperp:scalar:  store float %div, float* %xperp, align 4
+radian_direction:dirim:non-scalar:  %llvm-tmp4 = load float*, float** %dirim, align 8
+non_max_supp:z1:scalar:  store i16 %llvm-tmp113, i16* %z1, align 2
+non_max_supp:z2:scalar:  store i16 %llvm-tmp116, i16* %z2, align 2
+apply_hysteresis:hist:non-scalar:  %arrayidx44 = getelementptr inbounds [32768 x i32], [32768 x i32]* %hist, i64 0, i64 %idxprom43
+angle_radians:y:scalar:  store double %y, double* %y.addr, align 8
+angle_radians:x:scalar:  store double %x, double* %x.addr, align 8
+

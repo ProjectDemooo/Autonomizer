@@ -1,0 +1,5 @@
+[canny:thigh::]
+[apply_hysteresis:highcount::]
+[apply_hysteresis:lowthreshold::]
+[apply_hysteresis:thigh::]
+[main:thigh::]

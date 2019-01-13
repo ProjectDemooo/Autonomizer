@@ -1,0 +1,683 @@
+digraph main_image {
+ 538 [shape=box, color=red label="non_max_supp
+resultptr
+  %resultptr = alloca i8*, align 8
+non-scalar
+"];
+ 541 [shape=box, color=red label="non_max_supp
+resultrowptr
+  store i8* %add.ptr4, i8** %resultrowptr, align 8
+non-scalar
+"];
+ 1029 [shape=box, color=red label="non_max_supp
+yperp
+  %yperp = alloca float, align 4
+scalar
+"];
+ 295 [shape=box, color=red label="non_max_supp
+magptr
+  %llvm-tmp66 = load i16*, i16** %magptr, align 8
+non-scalar
+"];
+ 294 [shape=box, color=red label="non_max_supp
+z1
+  store i16 %llvm-tmp65, i16* %z1, align 2
+scalar
+"];
+ 310 [shape=box, color=red label="non_max_supp
+z2
+  store i16 %llvm-tmp116, i16* %z2, align 2
+scalar
+"];
+ 583 [shape=box, color=red label="non_max_supp
+gx
+  %gx = alloca i16, align 2
+scalar
+"];
+ 1571 [shape=box, color=red label="non_max_supp
+colcount
+  %colcount = alloca i32, align 4
+scalar
+"];
+ 1492 [shape=box, color=red label="non_max_supp
+count
+  %count = alloca i32, align 4
+scalar
+"];
+ 578 [shape=box, color=red label="non_max_supp
+gy
+  %gy = alloca i16, align 2
+scalar
+"];
+ 1516 [shape=box, color=red label="non_max_supp
+mag2
+  %mag2 = alloca float, align 4
+scalar
+"];
+ 581 [shape=box, color=red label="non_max_supp
+m00
+  %m00 = alloca i16, align 2
+scalar
+"];
+ 576 [shape=box, color=red label="non_max_supp
+gyptr
+  %gyptr = alloca i16*, align 8
+non-scalar
+"];
+ 556 [shape=box, color=red label="non_max_supp
+gyrowptr
+  %gyrowptr = alloca i16*, align 8
+non-scalar
+"];
+ 1507 [shape=box, color=red label="non_max_supp
+mag1
+  %mag1 = alloca float, align 4
+scalar
+"];
+ 1584 [shape=box, color=red label="non_max_supp
+xperp
+  %xperp = alloca float, align 4
+scalar
+"];
+ 575 [shape=box, color=red label="non_max_supp
+gxptr
+  %gxptr = alloca i16*, align 8
+non-scalar
+"];
+ 551 [shape=box, color=red label="non_max_supp
+gxrowptr
+  %gxrowptr = alloca i16*, align 8
+non-scalar
+"];
+ 548 [shape=box, color=red label="non_max_supp
+magrowptr
+  %magrowptr = alloca i16*, align 8
+non-scalar
+"];
+ 1575 [shape=box, color=red label="non_max_supp
+rowcount
+  %rowcount = alloca i32, align 4
+scalar
+"];
+ 1364 [shape=box, color=red label="magnitude_x_y
+sq1
+  %sq1 = alloca i32, align 4
+scalar
+"];
+ 1370 [shape=box, color=red label="magnitude_x_y
+sq2
+  %sq2 = alloca i32, align 4
+scalar
+"];
+ 1753 [shape=box, color=red label="angle_radians
+retval
+  %retval = alloca double, align 8
+scalar
+"];
+ 1185 [shape=box, color=red label="write_pgm_image
+retval
+  %retval = alloca i32, align 4
+scalar
+"];
+ 10 [shape=box, color=red label="read_pgm_image
+buf
+  %arraydecay = getelementptr inbounds [71 x i8], [71 x i8]* %buf, i32 0, i32 0
+non-scalar
+"];
+ 1736 [shape=box, color=red label="apply_hysteresis
+numedges
+  %numedges = alloca i32, align 4
+scalar
+"];
+ 1706 [shape=box, color=red label="derrivative_x_y
+r
+  %llvm-tmp46 = load i32, i32* %r, align 4
+scalar
+"];
+ 62 [shape=box, color=red label="canny
+magnitude
+  call void @magnitude_x_y(i16* %llvm-tmp23, i16* %llvm-tmp24, i32 %llvm-tmp25, i32 %llvm-tmp26, i16** %magnitude)
+non-scalar
+"];
+ 46 [shape=box, color=red label="canny
+smoothedim
+  call void @gaussian_smooth(i8* %llvm-tmp, i32 %llvm-tmp1, i32 %llvm-tmp2, float %llvm-tmp3, i16** %smoothedim)
+non-scalar
+"];
+ 508 [shape=box, color=red label="read_pgm_image
+fp
+  %fp = alloca %struct._IO_FILE*, align 8
+non-scalar
+"];
+ 1178 [shape=box, color=red label="write_pgm_image
+fp
+  %fp = alloca %struct._IO_FILE*, align 8
+non-scalar
+"];
+ 1204 [shape=box, color=red label="gaussian_smooth
+r
+  %r = alloca i32, align 4
+scalar
+"];
+ 1745 [shape=box, color=red label="apply_hysteresis
+maximum_mag
+  %maximum_mag = alloca i16, align 2
+scalar
+"];
+ 1439 [shape=box, color=red label="apply_hysteresis
+highthreshold
+  %highthreshold = alloca i32, align 4
+scalar
+"];
+ 415 [shape=box, color=red label="apply_hysteresis
+r
+  store i32 %inc12, i32* %r, align 4
+scalar
+"];
+ 407 [shape=box, color=red label="apply_hysteresis
+pos
+  %llvm-tmp8 = load i32, i32* %pos, align 4
+scalar
+"];
+ 1747 [shape=box, color=red label="apply_hysteresis
+highcount
+  %llvm-tmp65 = load i32, i32* %highcount, align 4
+scalar
+"];
+ 512 [shape=box, color=red label="read_pgm_image
+retval
+  %retval = alloca i32, align 4
+scalar
+"];
+ 145 [shape=box, color=red label="derrivative_x_y
+pos
+  %llvm-tmp30 = load i32, i32* %pos, align 4
+scalar
+"];
+ 1709 [shape=box, color=red label="derrivative_x_y
+c
+  %llvm-tmp35 = load i32, i32* %c, align 4
+scalar
+"];
+ 1320 [shape=box, color=red label="radian_direction
+c
+  %c = alloca i32, align 4
+scalar
+"];
+ 1384 [shape=box, color=red label="magnitude_x_y
+c
+  %c = alloca i32, align 4
+scalar
+"];
+ 1387 [shape=box, color=red label="magnitude_x_y
+pos
+  %pos = alloca i32, align 4
+scalar
+"];
+ 1325 [shape=box, color=red label="radian_direction
+r
+  %r = alloca i32, align 4
+scalar
+"];
+ 208 [shape=box, color=red label="canny
+nms
+  %llvm-tmp35 = load i8*, i8** %nms, align 8
+non-scalar
+"];
+ 482 [shape=box, color=red label="main
+tlow
+  store float %conv19, float* %tlow, align 4
+scalar
+"];
+ 410 [shape=box, color=red label="apply_hysteresis
+c
+  %llvm-tmp11 = load i32, i32* %c, align 4
+scalar
+"];
+ 93 [shape=box, color=red label="main
+infilename
+  %llvm-tmp42 = load i8*, i8** %infilename, align 8
+non-scalar
+"];
+ 1676 [shape=box, color=red label="gaussian_smooth
+rr
+  %rr = alloca i32, align 4
+scalar
+"];
+ 1723 [shape=box, color=red label="magnitude_x_y
+r
+  %r = alloca i32, align 4
+scalar
+"];
+ 52 [shape=box, color=red label="canny
+dir_radians
+  call void @radian_direction(i16* %llvm-tmp8, i16* %llvm-tmp9, i32 %llvm-tmp10, i32 %llvm-tmp11, float** %dir_radians, i32 -1, i32 -1)
+non-scalar
+"];
+ 481 [shape=box, color=red label="main
+dirfilename
+  %dirfilename = alloca i8*, align 8
+non-scalar
+"];
+ 1746 [shape=box, color=red label="apply_hysteresis
+lowthreshold
+  %lowthreshold = alloca i32, align 4
+scalar
+"];
+ 1001 [shape=box, color=red label="gaussian_smooth
+tempim
+  store float* %llvm-tmp4, float** %tempim, align 8
+non-scalar
+"];
+ 1473 [shape=box, color=red label="make_gaussian_kernel
+sum
+  %sum = alloca float, align 4
+scalar
+"];
+ 1207 [shape=box, color=red label="gaussian_smooth
+cc
+  %cc = alloca i32, align 4
+scalar
+"];
+ 1452 [shape=box, color=red label="make_gaussian_kernel
+x
+  %x = alloca float, align 4
+scalar
+"];
+ 1446 [shape=box, color=red label="make_gaussian_kernel
+i
+  %i = alloca i32, align 4
+scalar
+"];
+ 1476 [shape=box, color=red label="gaussian_smooth
+center
+  %center = alloca i32, align 4
+scalar
+"];
+ 1477 [shape=box, color=red label="make_gaussian_kernel
+center
+  %center = alloca i32, align 4
+scalar
+"];
+ 1466 [shape=box, color=red label="make_gaussian_kernel
+fx
+  %fx = alloca float, align 4
+scalar
+"];
+ 218 [shape=box, color=red label="gaussian_smooth
+kernel
+  %llvm-tmp29 = load float*, float** %kernel, align 8
+non-scalar
+"];
+ 1480 [shape=box, color=red label="radian_direction
+dirim
+  %llvm-tmp4 = load float*, float** %dirim, align 8
+non-scalar
+"];
+ 1331 [shape=box, color=red label="radian_direction
+dy
+  %dy = alloca double, align 8
+scalar
+"];
+ 1345 [shape=box, color=red label="radian_direction
+pos
+  %pos = alloca i32, align 4
+scalar
+"];
+ 1328 [shape=box, color=red label="radian_direction
+dx
+  %dx = alloca double, align 8
+scalar
+"];
+ 37 [shape=box, color=red label="canny
+delta_y
+  %llvm-tmp32 = load i16*, i16** %delta_y, align 8
+non-scalar
+"];
+ 530 [shape=box, color=red label="main
+sigma
+  store float %conv, float* %sigma, align 4
+scalar
+"];
+ 1011 [shape=box, color=red label="follow_edges
+tempmapptr
+  %tempmapptr = alloca i8*, align 8
+non-scalar
+"];
+ 1010 [shape=box, color=red label="follow_edges
+tempmagptr
+  %tempmagptr = alloca i16*, align 8
+non-scalar
+"];
+ 1197 [shape=box, color=red label="gaussian_smooth
+sum
+  %sum = alloca float, align 4
+scalar
+"];
+ 1196 [shape=box, color=red label="gaussian_smooth
+dot
+  %dot = alloca float, align 4
+scalar
+"];
+ 1199 [shape=box, color=red label="gaussian_smooth
+c
+  %c = alloca i32, align 4
+scalar
+"];
+ 35 [shape=box, color=red label="canny
+delta_x
+  %llvm-tmp31 = load i16*, i16** %delta_x, align 8
+non-scalar
+"];
+ 0 [shape=box, color=red label="main
+image
+
+non-scalar
+"];
+ 538 -> 538 [color=black, style=solid];
+ 1196 -> 538 [color=black, style=solid];
+ 541 -> 541 [color=black, style=solid];
+ 541 -> 538 [color=black, style=solid];
+ 1196 -> 541 [color=black, style=solid];
+ 548 -> 548 [color=black, style=solid];
+ 551 -> 551 [color=black, style=solid];
+ 575 -> 575 [color=black, style=solid];
+ 556 -> 556 [color=black, style=solid];
+ 576 -> 541 [color=black, style=solid];
+ 576 -> 576 [color=black, style=solid];
+ 576 -> 538 [color=black, style=solid];
+ 1029 -> 1507 [color=black, style=solid];
+ 1029 -> 1516 [color=black, style=solid];
+ 1516 -> 1029 [color=black, style=solid];
+ 578 -> 295 [color=black, style=solid];
+ 583 -> 1507 [color=black, style=solid];
+ 583 -> 1516 [color=black, style=solid];
+ 583 -> 295 [color=black, style=solid];
+ 583 -> 294 [color=black, style=solid];
+ 583 -> 310 [color=black, style=solid];
+ 583 -> 578 [color=black, style=solid];
+ 578 -> 583 [color=black, style=solid];
+ 578 -> 578 [color=black, style=solid];
+ 578 -> 1584 [color=black, style=solid];
+ 578 -> 1029 [color=black, style=solid];
+ 578 -> 294 [color=black, style=solid];
+ 578 -> 310 [color=black, style=solid];
+ 1571 -> 1571 [color=black, style=solid];
+ 578 -> 1571 [color=black, style=solid];
+ 578 -> 575 [color=black, style=solid];
+ 578 -> 576 [color=black, style=solid];
+ 578 -> 581 [color=black, style=solid];
+ 578 -> 538 [color=black, style=solid];
+ 1492 -> 1492 [color=black, style=solid];
+ 578 -> 1492 [color=black, style=solid];
+ 578 -> 541 [color=black, style=solid];
+ 578 -> 1507 [color=black, style=solid];
+ 578 -> 1516 [color=black, style=solid];
+ 1516 -> 578 [color=black, style=solid];
+ 1516 -> 295 [color=black, style=solid];
+ 1516 -> 294 [color=black, style=solid];
+ 1516 -> 310 [color=black, style=solid];
+ 581 -> 1516 [color=black, style=solid];
+ 576 -> 581 [color=black, style=solid];
+ 576 -> 295 [color=black, style=solid];
+ 576 -> 294 [color=black, style=solid];
+ 576 -> 310 [color=black, style=solid];
+ 576 -> 1507 [color=black, style=solid];
+ 576 -> 1516 [color=black, style=solid];
+ 576 -> 578 [color=black, style=solid];
+ 556 -> 576 [color=black, style=solid];
+ 1507 -> 556 [color=black, style=solid];
+ 1507 -> 295 [color=black, style=solid];
+ 1507 -> 294 [color=black, style=solid];
+ 1507 -> 310 [color=black, style=solid];
+ 1584 -> 1507 [color=black, style=solid];
+ 575 -> 1584 [color=black, style=solid];
+ 575 -> 583 [color=black, style=solid];
+ 551 -> 575 [color=black, style=solid];
+ 548 -> 551 [color=black, style=solid];
+ 548 -> 295 [color=black, style=solid];
+ 548 -> 294 [color=black, style=solid];
+ 548 -> 310 [color=black, style=solid];
+ 1196 -> 548 [color=black, style=solid];
+ 1196 -> 295 [color=black, style=solid];
+ 1196 -> 294 [color=black, style=solid];
+ 1196 -> 310 [color=black, style=solid];
+ 1196 -> 1492 [color=black, style=solid];
+ 1196 -> 1571 [color=black, style=solid];
+ 1196 -> 575 [color=black, style=solid];
+ 1196 -> 551 [color=black, style=solid];
+ 1196 -> 576 [color=black, style=solid];
+ 1196 -> 556 [color=black, style=solid];
+ 1196 -> 1575 [color=black, style=solid];
+ 530 -> 1196 [color=black, style=solid];
+ 530 -> 1197 [color=black, style=solid];
+ 530 -> 35 [color=black, style=solid];
+ 37 -> 1364 [color=black, style=solid];
+ 37 -> 1370 [color=black, style=solid];
+ 37 -> 295 [color=black, style=solid];
+ 37 -> 294 [color=black, style=solid];
+ 37 -> 310 [color=black, style=solid];
+ 1328 -> 1328 [color=black, style=solid];
+ 1331 -> 1331 [color=black, style=solid];
+ 1331 -> 1753 [color=black, style=solid];
+ 1480 -> 295 [color=black, style=solid];
+ 1480 -> 294 [color=black, style=solid];
+ 1480 -> 310 [color=black, style=solid];
+ 1480 -> 1196 [color=black, style=solid];
+ 481 -> 481 [color=black, style=solid];
+ 481 -> 35 [color=black, style=solid];
+ 481 -> 37 [color=black, style=solid];
+ 52 -> 218 [color=black, style=solid];
+ 52 -> 295 [color=black, style=solid];
+ 52 -> 294 [color=black, style=solid];
+ 52 -> 310 [color=black, style=solid];
+ 52 -> 530 [color=black, style=solid];
+ 52 -> 481 [color=black, style=solid];
+ 1185 -> 481 [color=black, style=solid];
+ 52 -> 1185 [color=black, style=solid];
+ 93 -> 530 [color=black, style=solid];
+ 93 -> 10 [color=black, style=solid];
+ 410 -> 410 [color=black, style=solid];
+ 410 -> 35 [color=black, style=solid];
+ 410 -> 37 [color=black, style=solid];
+ 410 -> 52 [color=black, style=solid];
+ 208 -> 35 [color=black, style=solid];
+ 208 -> 37 [color=black, style=solid];
+ 208 -> 52 [color=black, style=solid];
+ 208 -> 218 [color=black, style=solid];
+ 1320 -> 1320 [color=black, style=solid];
+ 1320 -> 218 [color=black, style=solid];
+ 1709 -> 1709 [color=black, style=solid];
+ 145 -> 145 [color=black, style=solid];
+ 145 -> 10 [color=black, style=solid];
+ 145 -> 481 [color=black, style=solid];
+ 145 -> 1196 [color=black, style=solid];
+ 145 -> 1197 [color=black, style=solid];
+ 145 -> 93 [color=black, style=solid];
+ 1736 -> 1736 [color=black, style=solid];
+ 1747 -> 1736 [color=black, style=solid];
+ 1747 -> 410 [color=black, style=solid];
+ 1747 -> 295 [color=black, style=solid];
+ 1747 -> 294 [color=black, style=solid];
+ 1747 -> 310 [color=black, style=solid];
+ 1747 -> 145 [color=black, style=solid];
+ 1747 -> 35 [color=black, style=solid];
+ 1747 -> 37 [color=black, style=solid];
+ 1747 -> 52 [color=black, style=solid];
+ 407 -> 410 [color=black, style=solid];
+ 407 -> 407 [color=black, style=solid];
+ 415 -> 218 [color=black, style=solid];
+ 415 -> 410 [color=black, style=solid];
+ 415 -> 407 [color=black, style=solid];
+ 415 -> 415 [color=black, style=solid];
+ 415 -> 1199 [color=black, style=solid];
+ 1204 -> 145 [color=black, style=solid];
+ 1204 -> 410 [color=black, style=solid];
+ 1204 -> 407 [color=black, style=solid];
+ 1204 -> 415 [color=black, style=solid];
+ 1706 -> 1706 [color=black, style=solid];
+ 1204 -> 1706 [color=black, style=solid];
+ 1204 -> 10 [color=black, style=solid];
+ 1204 -> 35 [color=black, style=solid];
+ 1204 -> 37 [color=black, style=solid];
+ 1204 -> 52 [color=black, style=solid];
+ 508 -> 35 [color=black, style=solid];
+ 508 -> 37 [color=black, style=solid];
+ 508 -> 52 [color=black, style=solid];
+ 508 -> 62 [color=black, style=solid];
+ 46 -> 218 [color=black, style=solid];
+ 508 -> 46 [color=black, style=solid];
+ 1204 -> 508 [color=black, style=solid];
+ 1204 -> 93 [color=black, style=solid];
+ 1204 -> 1185 [color=black, style=solid];
+ 1204 -> 1178 [color=black, style=solid];
+ 1204 -> 62 [color=black, style=solid];
+ 1204 -> 46 [color=black, style=solid];
+ 1204 -> 1204 [color=black, style=solid];
+ 415 -> 1204 [color=black, style=solid];
+ 415 -> 295 [color=black, style=solid];
+ 415 -> 294 [color=black, style=solid];
+ 415 -> 310 [color=black, style=solid];
+ 415 -> 1745 [color=black, style=solid];
+ 415 -> 1736 [color=black, style=solid];
+ 415 -> 1439 [color=black, style=solid];
+ 407 -> 415 [color=black, style=solid];
+ 407 -> 295 [color=black, style=solid];
+ 407 -> 294 [color=black, style=solid];
+ 407 -> 310 [color=black, style=solid];
+ 1747 -> 407 [color=black, style=solid];
+ 1747 -> 415 [color=black, style=solid];
+ 1747 -> 62 [color=black, style=solid];
+ 1747 -> 46 [color=black, style=solid];
+ 145 -> 1747 [color=black, style=solid];
+ 145 -> 512 [color=black, style=solid];
+ 145 -> 508 [color=black, style=solid];
+ 145 -> 1709 [color=black, style=solid];
+ 145 -> 410 [color=black, style=solid];
+ 145 -> 407 [color=black, style=solid];
+ 145 -> 415 [color=black, style=solid];
+ 145 -> 1706 [color=black, style=solid];
+ 145 -> 218 [color=black, style=solid];
+ 145 -> 295 [color=black, style=solid];
+ 145 -> 294 [color=black, style=solid];
+ 145 -> 310 [color=black, style=solid];
+ 1709 -> 145 [color=black, style=solid];
+ 1709 -> 295 [color=black, style=solid];
+ 1709 -> 294 [color=black, style=solid];
+ 1709 -> 310 [color=black, style=solid];
+ 1320 -> 1709 [color=black, style=solid];
+ 1320 -> 145 [color=black, style=solid];
+ 1320 -> 1706 [color=black, style=solid];
+ 208 -> 1320 [color=black, style=solid];
+ 1384 -> 1384 [color=black, style=solid];
+ 1325 -> 1384 [color=black, style=solid];
+ 1325 -> 1387 [color=black, style=solid];
+ 1325 -> 1364 [color=black, style=solid];
+ 1325 -> 1370 [color=black, style=solid];
+ 208 -> 1325 [color=black, style=solid];
+ 208 -> 62 [color=black, style=solid];
+ 208 -> 46 [color=black, style=solid];
+ 208 -> 295 [color=black, style=solid];
+ 208 -> 294 [color=black, style=solid];
+ 208 -> 310 [color=black, style=solid];
+ 410 -> 208 [color=black, style=solid];
+ 410 -> 62 [color=black, style=solid];
+ 410 -> 46 [color=black, style=solid];
+ 410 -> 482 [color=black, style=solid];
+ 410 -> 10 [color=black, style=solid];
+ 410 -> 407 [color=black, style=solid];
+ 410 -> 415 [color=black, style=solid];
+ 410 -> 295 [color=black, style=solid];
+ 410 -> 294 [color=black, style=solid];
+ 410 -> 310 [color=black, style=solid];
+ 93 -> 410 [color=black, style=solid];
+ 93 -> 407 [color=black, style=solid];
+ 93 -> 415 [color=black, style=solid];
+ 93 -> 145 [color=black, style=solid];
+ 52 -> 93 [color=black, style=solid];
+ 52 -> 410 [color=black, style=solid];
+ 52 -> 407 [color=black, style=solid];
+ 52 -> 415 [color=black, style=solid];
+ 52 -> 145 [color=black, style=solid];
+ 52 -> 1676 [color=black, style=solid];
+ 52 -> 1196 [color=black, style=solid];
+ 52 -> 1204 [color=black, style=solid];
+ 52 -> 1197 [color=black, style=solid];
+ 52 -> 1384 [color=black, style=solid];
+ 52 -> 1723 [color=black, style=solid];
+ 481 -> 52 [color=black, style=solid];
+ 481 -> 62 [color=black, style=solid];
+ 481 -> 46 [color=black, style=solid];
+ 1746 -> 481 [color=black, style=solid];
+ 1746 -> 410 [color=black, style=solid];
+ 1746 -> 407 [color=black, style=solid];
+ 1746 -> 415 [color=black, style=solid];
+ 1001 -> 1746 [color=black, style=solid];
+ 218 -> 1001 [color=black, style=solid];
+ 218 -> 145 [color=black, style=solid];
+ 218 -> 1473 [color=black, style=solid];
+ 1207 -> 1207 [color=black, style=solid];
+ 1207 -> 295 [color=black, style=solid];
+ 1207 -> 294 [color=black, style=solid];
+ 1207 -> 310 [color=black, style=solid];
+ 1446 -> 1207 [color=black, style=solid];
+ 1452 -> 1207 [color=black, style=solid];
+ 1446 -> 1452 [color=black, style=solid];
+ 1446 -> 1446 [color=black, style=solid];
+ 1466 -> 1446 [color=black, style=solid];
+ 1466 -> 1001 [color=black, style=solid];
+ 1476 -> 295 [color=black, style=solid];
+ 1476 -> 294 [color=black, style=solid];
+ 1476 -> 310 [color=black, style=solid];
+ 1466 -> 1476 [color=black, style=solid];
+ 1466 -> 1477 [color=black, style=solid];
+ 1466 -> 218 [color=black, style=solid];
+ 218 -> 1466 [color=black, style=solid];
+ 218 -> 1446 [color=black, style=solid];
+ 218 -> 1452 [color=black, style=solid];
+ 1480 -> 218 [color=black, style=solid];
+ 1480 -> 145 [color=black, style=solid];
+ 1480 -> 1197 [color=black, style=solid];
+ 1331 -> 1480 [color=black, style=solid];
+ 1331 -> 1328 [color=black, style=solid];
+ 1328 -> 1331 [color=black, style=solid];
+ 1328 -> 1320 [color=black, style=solid];
+ 1328 -> 1345 [color=black, style=solid];
+ 37 -> 1328 [color=black, style=solid];
+ 37 -> 145 [color=black, style=solid];
+ 530 -> 37 [color=black, style=solid];
+ 530 -> 52 [color=black, style=solid];
+ 530 -> 62 [color=black, style=solid];
+ 530 -> 46 [color=black, style=solid];
+ 530 -> 218 [color=black, style=solid];
+ 1011 -> 530 [color=black, style=solid];
+ 1011 -> 93 [color=black, style=solid];
+ 1011 -> 410 [color=black, style=solid];
+ 1011 -> 407 [color=black, style=solid];
+ 1011 -> 415 [color=black, style=solid];
+ 1010 -> 1011 [color=black, style=solid];
+ 1197 -> 1010 [color=black, style=solid];
+ 1197 -> 410 [color=black, style=solid];
+ 1197 -> 407 [color=black, style=solid];
+ 1197 -> 415 [color=black, style=solid];
+ 1196 -> 1197 [color=black, style=solid];
+ 1196 -> 218 [color=black, style=solid];
+ 1196 -> 410 [color=black, style=solid];
+ 1196 -> 407 [color=black, style=solid];
+ 1196 -> 415 [color=black, style=solid];
+ 1199 -> 1196 [color=black, style=solid];
+ 1199 -> 1199 [color=black, style=solid];
+ 1199 -> 1207 [color=black, style=solid];
+ 1199 -> 218 [color=black, style=solid];
+ 1199 -> 1197 [color=black, style=solid];
+ 35 -> 1199 [color=black, style=solid];
+ 35 -> 1204 [color=black, style=solid];
+ 35 -> 10 [color=black, style=solid];
+ 35 -> 145 [color=black, style=solid];
+ 0 -> 35 [color=black, style=solid];
+ 0 -> 37 [color=black, style=solid];
+ 0 -> 52 [color=black, style=solid];
+ 0 -> 62 [color=black, style=solid];
+ 0 -> 46 [color=black, style=solid];
+ 0 -> 10 [color=black, style=solid];
+}

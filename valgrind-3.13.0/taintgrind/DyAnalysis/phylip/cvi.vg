@@ -1,0 +1,591 @@
+==6279== Taintgrind, the taint analysis tool
+==6279== Copyright (C) 2010-2018, and GNU GPL'd, by Wei Ming Khoo.
+==6279== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==6279== Command: ./run 0.569 0.214 0.736 2 2.5 15 dataset/220.phy_134.phy dist tree out
+==6279== 
+0x117035: predict (protdist.c:1693) | movsd xmm1, qword ptr [rip + 0x21fac3] | Load | 0x3fe2353f7ced9168 | {cvi}t21_236686 <- cvi:336b00
+0x11703D: predict (protdist.c:1693) | t25_193052 <- r32_40574
+0x117049: predict (protdist.c:1693) | t28_117103 <- r32_40574
+0x1170AE: predict (protdist.c:1693) | movsd xmm1, qword ptr [rip + 0x21fa4a] | Load | 0x3fe2353f7ced9168 | {cvi}t67_15069 <- cvi:336b00
+0x1170BA: predict (protdist.c:1693) | Sub64F0x2 | 0x0 | t73_42608 <-
+0x4C3AAA0: log (w_log_compat.c:31) | t1_134686 <- r28_147276
+0x4C3AAA8: log (w_log_compat.c:31) | Shr64 | 0x1 | t19_411949 <- t5_398629
+0x4CB3600: __ieee754_log_fma (e_log.c:58) | t33_43549 <- r28_147276
+0x4CB360E: __ieee754_log_fma (e_log.c:58) | Sar64 | 0x3fefffff | t15_338406 <- t33_43549
+0x4CB3623: __ieee754_log_fma (e_log.c:58) | t81_14734 <- t15_338406
+0x4CB3633: __ieee754_log_fma (e_log.c:58) | vmovsd qword ptr [rsp + 0x28], xmm0 | Store | 0x3feffffffffffff9 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf5
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf5
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefffa08_unknownobj}1ffefffa08_unknownobj <- t33_43549
+0x4CB363E: __ieee754_log_fma (e_log.c:81) | t86_41630 <- t68_26880
+0x4CB3644: __ieee754_log_fma (e_log.c:80) | t14_232867 <- r4_180283
+0x4CB364C: __ieee754_log_fma (e_log.c:91) | t29_83154 <- t15_338407
+0x4CB365A: __ieee754_log_fma (e_log.c:97) | t13_310783 <- r28_147276
+0x4CB366E: __ieee754_log_fma (e_log.c:97) | t6_401267 <- r44_0
+0x4CB3676: __ieee754_log_fma (e_log.c:97) | Shr64 | 0x0 | t30_79188 <- t15_338408
+0x4CB3C48: __ieee754_log_fma (e_log.c:101) | t3_211098 <- r32_40577
+0x4CB3C50: __ieee754_log_fma (e_log.c:101) | Shr64 | 0x0 | t19_411951 <- t5_398630
+0x4CB3C56: __ieee754_log_fma (e_log.c:101) | t5_398631 <- r19_537632
+0x4CB3C5C: __ieee754_log_fma (e_log.c:106) | t10_244331 <- r32_40577
+0x4CB3C7E: __ieee754_log_fma (e_log.c:108) | Shr64 | 0x0 | t41_45141 <- t23_230585
+0x4CB3C84: __ieee754_log_fma (e_log.c:108) | t15_338409 <- r56_0
+0x4CB3C9D: __ieee754_log_fma (e_log.c:110) | t31_83382 <- r32_40577
+0x4CB3CA6: __ieee754_log_fma (e_log.c:111) | MAddF64 | 0x0 | t103_3474 <- t31_83382 t27_145443 t33_43549
+0x4CB3CAF: __ieee754_log_fma (e_log.c:112) | MAddF64 | 0x0 | t104_3049 <- t31_83382 t32_70160 t38_61142
+0x4CB3CBC: __ieee754_log_fma (e_log.c:113) | MAddF64 | 0x0 | t105_4421 <- t31_83382 t37_70456
+0x4CB3CC5: __ieee754_log_fma (e_log.c:114) | MAddF64 | 0x0 | t106_3089 <- t31_83382
+0x4CB3CCE: __ieee754_log_fma (e_log.c:115) | MAddF64 | 0x0 | t107_12672 <- t31_83382
+0x4CB3CD7: __ieee754_log_fma (e_log.c:116) | MAddF64 | 0x0 | t108_3562 <- t31_83382
+0x4CB3CE0: __ieee754_log_fma (e_log.c:117) | MAddF64 | 0x0 | t109_3565 <- t31_83382 t66_4733
+0x4CB3CEE: __ieee754_log_fma (e_log.c:122) | NegF64 | 0x0 | t111_12847 <-
+0x4CB3D10: __ieee754_log_fma (e_log.c:122) | Shr64 | 0x10 | t119_2588 <- t92_19626
+0x4CB3D12: __ieee754_log_fma (e_log.c:122) | t2_246103 <- r19_537634
+0x4CB3B50: __ieee754_log_fma (e_log.c:258) | t10_244331 <- r40_2
+0x1170D3: predict (protdist.c:1693) | mulsd xmm0, qword ptr [rbp - 0x80] | Load | 0xbfe2353f7ced9168 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff000100_unknownobj}t10_244332 <- 1fff000100_unknownobj
+0x4C3B1F4: exp (w_exp_compat.c:29) | t11_268571 <- r28_147276
+0x4CB2CC3: __ieee754_exp_fma (fenv_private.h:450) | t14_232870 <- r28_147276
+0x4CB2CE4: __ieee754_exp_fma (e_exp.c:69) | t58_23883 <- t38_61144
+0x4CB2CEA: __ieee754_exp_fma (e_exp.c:71) | t51_39376 <- r28_147276
+0x4CB2D05: __ieee754_exp_fma (e_exp.c:71) | t57_55495 <- r44_0
+0x4CB2D27: __ieee754_exp_fma (e_exp.c:85) | mov qword ptr [rsp + 8], rax | Store | 0x3ff0000000000000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf6
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf6
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff0000a8_unknownobj}1fff0000a8_unknownobj <- t19_411955
+0x4CB2D2C: __ieee754_exp_fma (e_exp.c:77) | t97_9699 <- r28_147276
+0x4CB2D63: __ieee754_exp_fma (e_exp.c:83) | t153_339 <- t140_13265
+0x4CB2D74: __ieee754_exp_fma (e_exp.c:90) | Shl64 | 0xb20 | t162_23572 <- t152_1245
+0x4CB2D80: __ieee754_exp_fma (e_exp.c:82) | t17_302033 <- r40_2
+0x4CB2D8D: __ieee754_exp_fma (e_exp.c:83) | MAddF64 | 0x0 | t105_4421 <- t14_232870 t27_145443 t25_193057
+0x4CB2D96: __ieee754_exp_fma (e_exp.c:91) | t31_83384 <- r4_180285
+0x4CB2DA0: __ieee754_exp_fma (e_exp.c:91) | Shl64 | 0x8 | t43_47357 <- t39_46345
+0x4CB2DAA: __ieee754_exp_fma (e_exp.c:90) | t53_35411 <- r9_181392
+0x4CB2DD7: __ieee754_exp_fma (e_exp.c:97) | t88_19956 <- r32_40578
+0x4CB2DE4: __ieee754_exp_fma (e_exp.c:97) | Shr64 | 0x10 | t120_1772 <- t92_19629
+0x4CB2DEA: __ieee754_exp_fma (e_exp.c:97) | t2_246108 <- r19_537641
+0x4CB2DF0: __ieee754_exp_fma (e_exp.c:171) | vmulsd xmm1, xmm1, qword ptr [rsp + 8] | Load | 0x3ff0000000000000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff0000a8_unknownobj}t8_430254 <- 1fff0000a8_unknownobj
+0x4CB2E04: __ieee754_exp_fma (e_exp.c:231) | t10_244332 <- r32_40578
+0x4C3B1FF: exp (w_exp_compat.c:30) | t6_401273 <- r28_147276
+0x4C3B213: exp (w_exp_compat.c:30) | movsd xmm2, qword ptr [rsp + 8] | Load | 0x3cbfdd2f1a9fbe79 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff0000e8_unknownobj}t10_244334 <- 1fff0000e8_unknownobj
+0x4C3B221: exp (w_exp_compat.c:30) | Shr64 | 0x0 | t28_117108 <- t14_232871
+0x4C3B223: exp (w_exp_compat.c:30) | t0_185895 <- r28_147276
+0x4C3B22B: exp (w_exp_compat.c:30) | Shr64 | 0x0 | t17_302036 <- t3_211105
+0x4C3B22D: exp (w_exp_compat.c:30) | t2_246111 <- r19_537646
+0x1170DD: predict (protdist.c:1693) | t62_35887 <- r28_147276
+0x1170E2: predict (protdist.c:1693) | mov qword ptr [rip + 0x21fbef], rax | Store | 0x3ff0000000000002 | {elambdat}elambdat:336cd8 <- t62_35887
+0x1171A6: predict (protdist.c:1696) | movsd xmm1, qword ptr [rip + 0x21fb2a] | Load | 0x3ff0000000000002 | {elambdat}t137_24533 <- elambdat:336cd8
+0x1171B2: predict (protdist.c:1696) | t141_11684 <- r28_147277
+0x1171C2: predict (protdist.c:1697) | movsd xmm0, qword ptr [rip + 0x21fb16] | Load | 0x3f619ccad18ff48a | {q}t143_784 <- q:336ce0
+0x1171CE: predict (protdist.c:1697) | t147_1374 <- r28_147278
+0x1172E1: predict (protdist.c:1701) | movsd xmm2, qword ptr [rip + 0x21f817] | Load | 0x3fe2353f7ced9168 | {cvi}t102_46132 <- cvi:336b00
+0x1172ED: predict (protdist.c:1701) | Sub64F0x2 | 0x0 | t107_12674 <- t109_3567
+0x117301: predict (protdist.c:1701) | movsd xmm1, qword ptr [rip + 0x21f9d7] | Load | 0x3f619ccad18ff48a | {q}t114_2345 <- q:336ce0
+0x11730D: predict (protdist.c:1701) | Add64F0x2 | 0x0 | t119_2589 <- t115_1035 t120_1772
+0x117319: predict (protdist.c:1701) | t122_3579 <- r28_147279
+0x1173F7: predict (protdist.c:1706) | movsd xmm2, qword ptr [rip + 0x21f701] | Load | 0x3fe2353f7ced9168 | {cvi}t106_3093 <- cvi:336b00
+0x1173FF: predict (protdist.c:1706) | t109_3567 <- r36_1657
+0x11740B: predict (protdist.c:1706) | Add64F0x2 | 0x0 | t112_1968 <- t108_3564
+0x11745F: predict (protdist.c:1707) | movsd xmm2, qword ptr [rip + 0x21f699] | Load | 0x3fe2353f7ced9168 | {cvi}t147_1375 <- cvi:336b00
+0x11746B: predict (protdist.c:1707) | Sub64F0x2 | 0x0 | t152_1247 <-
+0x1174BB: predict (protdist.c:1708) | movsd xmm3, qword ptr [rip + 0x21f63d] | Load | 0x3fe2353f7ced9168 | {cvi}t184_90 <- cvi:336b00
+0x1174C7: predict (protdist.c:1708) | Sub64F0x2 | 0x0 | t189_495 <-
+0x1174D7: predict (protdist.c:1708) | t12_217930 <- r36_1662
+0x1174DF: predict (protdist.c:1708) | movsd xmm1, qword ptr [rip + 0x21f7f9] | Load | 0x3f619ccad18ff48a | {q}t17_302038 <- q:336ce0
+0x1174EB: predict (protdist.c:1706) | Add64F0x2 | 0x0 | t22_205746 <- t18_341218
+0x1174F7: predict (protdist.c:1706) | t25_193059 <- r28_147282
+0x4CB367C: __ieee754_log_fma (e_log.c:168) | t36_46824 <- r2_468772
+0x4CB36A5: __ieee754_log_fma (e_log.c:170) | mov qword ptr [rsp], rax | Store | 0x3ff30094b58ea7f8 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff9e0_unknownobj}1ffefff9e0_unknownobj <- t28_117113
+0x4CB36A9: __ieee754_log_fma (e_log.c:170) | vmovq xmm4, qword ptr [rsp] | Load | 0x3ff30094b58ea7f8 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff9e0_unknownobj}t87_5191 <- 1ffefff9e0_unknownobj
+0x4CB36AE: __ieee754_log_fma (e_log.c:170) | t33_43553 <- r44_3
+0x4CB36B6: __ieee754_log_fma (e_log.c:170) | Shr64 | 0x0 | t115_1036 <- t88_19958
+0x4CB36C3: __ieee754_log_fma (e_log.c:180) | t59_64135 <- r44_3
+0x4CB36EF: __ieee754_log_fma (e_log.c:183) | Shl64 | 0x3d8 | t81_14738 <- t77_20354
+0x4CB3706: __ieee754_log_fma (e_log.c:187) | MAddF64 | 0x0 | t108_3565 <- t106_3094 t110_2574 t109_3568
+0x4CB370F: __ieee754_log_fma (e_log.c:184) | t117_24595 <- r44_3
+0x4CB371D: __ieee754_log_fma (e_log.c:196) | t122_3580 <- r68_0
+0x4CB3739: __ieee754_log_fma (e_log.c:187) | MAddF64 | 0x0 | t149_1690 <- t109_3568
+0x4CB3755: __ieee754_log_fma (e_log.c:189) | Shl64 | 0x5e0 | t159_23626 <- t146_615
+0x4CB3761: __ieee754_log_fma (e_log.c:199) | t0_185899 <- r2_468775
+0x4CB376C: __ieee754_log_fma (e_log.c:197) | vmovsd xmm8, qword ptr [rdx] | Load | 0x3fc5ff3070a793d4 | {Lu.6766}t43_47360 <- (t7_395029)
+0x4CB3770: __ieee754_log_fma (e_log.c:198) | Add64 | 0x4d46078 | t44_47204 <- t7_395029
+0x4CB378D: __ieee754_log_fma (e_log.c:200) | Add64 | 0x4d44de8 | t51_39378 <- t15_338418
+0x4CB3792: __ieee754_log_fma (e_log.c:193) | t58_23884 <- r52_1
+0x4CB37A4: __ieee754_log_fma (e_log.c:199) | vmovsd xmm3, qword ptr [rax] | Load | 0x3f1fff8002aa9aab | {Lv.6767}t66_4741 <- (t15_338418)
+0x4CB3B20: __ieee754_log_fma (e_log.c:201) | t14_232873 <- r56_0
+0x4CB37E2: __ieee754_log_fma (e_log.c:202) | Shr64 | 0x0 | t34_68109 <- t19_411960
+0x4CB37E8: __ieee754_log_fma (e_log.c:202) | t6_401278 <- r60_2
+0x4CB380C: __ieee754_log_fma (e_log.c:203) | t23_230589 <- r40_11
+0x4CB3830: __ieee754_log_fma (e_log.c:207) | Shr64 | 0x10 | t57_55498 <- t42_29881
+0x4CB3832: __ieee754_log_fma (e_log.c:207) | t2_246116 <- r19_537662
+0x1171BA: predict (protdist.c:1697) | movsd xmm1, qword ptr [rip + 0x21f926] | Load | 0x3f619ccad18ff48a | {p}t142_11441 <- p:336ae8
+0x4CB3B78: __ieee754_log_fma (e_log.c:202) | t6_401305 <- r60_5
+0x4CB36B8: __ieee754_log_fma (e_log.c:172) | t61_22133 <- r44_27
+0x117571: predict (protdist.c:1714) | movsd xmm1, qword ptr [rip + 0x22048f] | Load | 0x3f47199eed9b9b8e | {dp}t18_341364 <- dp:337a08
+0x11757D: predict (protdist.c:1714) | t22_205872 <- r28_147454
+0x117599: predict (protdist.c:1715) | movsd xmm1, qword ptr [rip + 0x21f74f] | Load | 0xbf4c76c83c4385a0 | {d2p}t28_117262 <- d2p:336cf0
+0x1175A5: predict (protdist.c:1715) | t32_70278 <- r28_147455
+0x117BE9: makedists (protdist.c:1824) | movsd xmm1, qword ptr [rip + 0x21eef7] | Load | 0x3f6026e2de19394e | {p}t3_211307 <- p:336ae8
+0x117BF9: makedists (protdist.c:1824) | Shr64 | 0x1 | t21_236843 <- t7_395225
+0x117C26: makedists (protdist.c:1827) | mov rax, qword ptr [rip + 0x21eebb] | Load | 0x3f6026e2de19394e | {p}t41_45202 <- p:336ae8
+0x117C2D: makedists (protdist.c:1827) | mov qword ptr [rbp - 0x90], rax | Store | 0x3f6026e2de19394e | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff000190_unknownobj}1fff000190_unknownobj <- t41_45202
+0x117C34: makedists (protdist.c:1827) | movsd xmm0, qword ptr [rbp - 0x90] | Load | 0x3f6026e2de19394e | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff000190_unknownobj}t47_73729 <- 1fff000190_unknownobj
+0x117C41: makedists (protdist.c:1827) | t58_23942 <- r28_147456
+0x117C49: makedists (protdist.c:1827) | Add64F0x2 | 0x0 | t62_35947 <- t57_55574 t63_63348
+0x117C52: makedists (protdist.c:1827) | t67_15158 <- r28_147456
+0x117C71: makedists (protdist.c:1828) | movsd xmm1, qword ptr [rip + 0x21fd8f] | Load | 0x3f42281b2022c16f | {dp}t86_41680 <- dp:337a08
+0x117C7D: makedists (protdist.c:1828) | movsd xmm1, qword ptr [rip + 0x21ee63] | Load | 0x3f6026e2de19394e | {p}t90_42057 <- p:336ae8
+0x117C89: makedists (protdist.c:1828) | Add64F0x2 | 0x0 | t97_9729 <- t91_12804 t98_14518
+0x117C92: makedists (protdist.c:1828) | t102_46222 <- r28_147456
+0x117CB1: makedists (protdist.c:1829) | movsd xmm0, qword ptr [rip + 0x21f037] | Load | 0xbf465f6929392b14 | {d2p}t121_11907 <- d2p:336cf0
+0x117CB9: makedists (protdist.c:1829) | movsd xmm1, qword ptr [rip + 0x21ee27] | Load | 0x3f6026e2de19394e | {p}t122_3638 <- p:336ae8
+0x117CC5: makedists (protdist.c:1829) | movsd xmm3, qword ptr [rip + 0x21fd3b] | Load | 0x3f42281b2022c16f | {dp}t126_1672 <- dp:337a08
+0x117CCD: makedists (protdist.c:1829) | movsd xmm1, qword ptr [rip + 0x21fd33] | Load | 0x3f42281b2022c16f | {dp}t127_3621 <- dp:337a08
+0x117CD9: makedists (protdist.c:1829) | movsd xmm4, qword ptr [rip + 0x21ee07] | Load | 0x3f6026e2de19394e | {p}t131_11692 <- p:336ae8
+0x117CE1: makedists (protdist.c:1829) | movsd xmm3, qword ptr [rip + 0x21edff] | Load | 0x3f6026e2de19394e | {p}t132_1978 <- p:336ae8
+0x117CF9: makedists (protdist.c:1829) | Add64F0x2 | 0x0 | t148_2071 <- t142_11485
+0x117D02: makedists (protdist.c:1829) | t153_390 <- r28_147457
+0x117807: makedists (protdist.c:1761) | mov rax, qword ptr [rip + 0x21f302] | Load | 0x422e310 | {gnode}t90_42058 <- gnode:336b10
+0x11780E: makedists (protdist.c:1761) | Add64 | 0x422e318 | t26_157845 <- t90_42058
+0x11781D: makedists (protdist.c:1761) | mov rax, qword ptr [rax] | Load | 0x422e9a4 | {422e318_unknownobj}t103_3496 <- (t26_157845)
+0x117830: makedists (protdist.c:1762) | mov rax, qword ptr [rip + 0x21f2d9] | Load | 0x422e310 | {gnode}t122_3639 <- gnode:336b10
+0x117837: makedists (protdist.c:1762) | Add64 | 0x422e310 | t52_70552 <- t122_3639
+0x117842: makedists (protdist.c:1762) | mov rax, qword ptr [rax] | Load | 0x422e390 | {422e310_unknownobj}t135_24746 <- (t52_70552)
+0x11752D: predict (protdist.c:1711) | movsd xmm1, qword ptr [rip + 0x21f5b3] | Load | 0x3f98759de455d251 | {p}t25_195654 <- p:336ae8
+0x117539: predict (protdist.c:1711) | t29_85755 <- r28_151134
+0x117541: predict (protdist.c:1712) | movsd xmm1, qword ptr [rip + 0x21f59f] | Load | 0x3f9339a17aa3b635 | {p}t30_81528 <- p:336ae8
+0x117549: predict (protdist.c:1712) | t33_45706 <- r32_49636
+0x117555: predict (protdist.c:1712) | t35_59503 <- r28_151135
+0x117D83: makedists (protdist.c:1841) | ucomisd xmm0, qword ptr [rbp - 0x20] | Load | 0x0 | {curv}
+0x117D88: makedists (protdist.c:1841) | Shr64 | 0x0 | t23_253520 <- t8_499468
+0x117D96: makedists (protdist.c:1842) | movsd xmm0, qword ptr [rbp - 0x28] | Load | 0x4060385f0429a04e | {slope}t12_243858 <- slope:1fff0001f8
+0x117D9B: makedists (protdist.c:1842) | divsd xmm0, qword ptr [rbp - 0x20] | Load | 0xc05c8a3fc0d3802b | {curv}t16_342355 <- curv:1fff000200
+0x117DA8: makedists (protdist.c:1842) | t23_253521 <- r28_194802
+0x117DB0: makedists (protdist.c:1843) | movsd xmm0, qword ptr [rip + 0x21fbd8] | Load | 0x400117e2b9b94183 | {tt}t24_183215 <- tt:337990
+0x117DB8: makedists (protdist.c:1843) | t6_455222 <- r28_194803
+0x117DC0: makedists (protdist.c:1843) | Shr64 | 0x0 | t41_61165 <- t25_225074
+0x117E9F: makedists (protdist.c:1859) | movsd xmm1, qword ptr [rip + 0x21fae9] | Load | 0x400117e2b9b94183 | {tt}t4_410634 <- tt:337990
+0x117EA7: makedists (protdist.c:1859) | t3_266203 <- r32_152115
+0x117EB3: makedists (protdist.c:1859) | Shr64 | 0x0 | t21_278900 <- t6_455223
+0x11706A: predict (protdist.c:1693) | movsd xmm0, qword ptr [rip + 0x22091e] | Load | 0x400117e2b9b94183 | {tt}t40_79483 <- tt:337990
+0x117096: predict (protdist.c:1693) | Mul64F0x2 | 0x0 | t64_55820 <- t41_61165
+0x11729D: predict (protdist.c:1701) | movsd xmm1, qword ptr [rip + 0x2206eb] | Load | 0x400117e2b9b94183 | {tt}t75_65282 <- tt:337990
+0x1172C9: predict (protdist.c:1701) | Mul64F0x2 | 0x0 | t99_18558 <- t95_29335
+0x117437: predict (protdist.c:1707) | movsd xmm1, qword ptr [rip + 0x220551] | Load | 0x400117e2b9b94183 | {tt}t129_43182 <- tt:337990
+0x117456: predict (protdist.c:1707) | Mul64F0x2 | 0x0 | t144_3619 <- t145_10825
+0x117493: predict (protdist.c:1708) | movsd xmm1, qword ptr [rip + 0x2204f5] | Load | 0x400117e2b9b94183 | {tt}t166_39407 <- tt:337990
+0x1174B2: predict (protdist.c:1708) | Mul64F0x2 | 0x0 | t181_10754 <-
+0x117D8E: makedists (protdist.c:1842) | movsd xmm1, qword ptr [rip + 0x21fbfa] | Load | 0x400117e2b9b94183 | {tt}t9_323795 <- tt:337990
+0x4CB37BF: __ieee754_log_fma (e_log.c:201) | t14_348273 <- r56_0
+0x118097: makedists (protdist.c:1889) | movsd xmm0, qword ptr [rip + 0x21f8f1] | Load | 0x40bcae562d1564c6 | {tt}t91_485093 <- tt:337990
+0x1180B8: makedists (protdist.c:1889) | t120_272509 <- r28_1097894
+0x1180C7: makedists (protdist.c:1889) | t121_120247 <- r28_1097894
+0x118113: makedists (protdist.c:1890) | movsd xmm0, qword ptr [rdx] | Load | 0x40b13566e7d9a2de | {4236830_unknownobj}t174_133885 <- 4236830_unknownobj
+0x118117: makedists (protdist.c:1890) | movsd qword ptr [rax], xmm0 | Store | 0x40b13566e7d9a2de | {42367b8_unknownobj}42367b8_unknownobj <- t174_133885
+0x4CC38C1: __slowexp_fma (slowexp.c:47) | t47_692819 <- r28_1706156
+0x4CC27D0: __dbl_mp_fma (mpa.c:333) | t3_2029043 <- r28_1706156
+0x4CC27D8: __dbl_mp_fma (mpa.c:333) | Shr64 | 0x0 | t19_2123956 <- t5_2969353
+0x4CC27DA: __dbl_mp_fma (mpa.c:333) | t2_2686912 <- r19_5541463
+0x4CC27E0: __dbl_mp_fma (mpa.c:338) | t0_1830532 <- r28_1706156
+0x4CC27E9: __dbl_mp_fma (mpa.c:338) | Shr64 | 0x0 | t18_1799552 <- t2_2686913
+0x4CC2806: __dbl_mp_fma (mpa.c:347) | t6_2160817 <- r28_1706156
+0x4CC2812: __dbl_mp_fma (mpa.c:347) | Shr64 | 0x1 | t28_1504058 <- t14_1277322
+0x4CC2831: __dbl_mp_fma (mpa.c:349) | t6_2160817 <- r28_1706156
+0x4CC2840: __dbl_mp_fma (mpa.c:349) | Shr64 | 0x0 | t29_1137739 <- t14_1277323
+0x4CC2842: __dbl_mp_fma (mpa.c:349) | t13_1475642 <- r28_1706156
+0x4CC2855: __dbl_mp_fma (mpa.c:349) | Shr64 | 0x0 | t41_570707 <- t22_1353143
+0x4CC2848: __dbl_mp_fma (mpa.c:350) | t7_2251254 <- r28_1706156
+0x4CC2865: __dbl_mp_fma (mpa.c:356) | t1_1344758 <- r28_1706156
+0x4CC287B: __dbl_mp_fma (mpa.c:356) | mov qword ptr [rdi + 0x10], rax | Store | 0x35 | {mpx.d[1]}mpx.d[1]:1ffefff8a0 <- t11_1738378
+0x4CC2889: __dbl_mp_fma (mpa.c:356) | t1_1344758 <- r28_1706156
+0x4CC289F: __dbl_mp_fma (mpa.c:356) | mov qword ptr [rdi + 0x18], rax | Store | 0x580000 | {mpx.d[2]}mpx.d[2]:1ffefff8a8 <- t11_1738379
+0x4CC28AD: __dbl_mp_fma (mpa.c:356) | t1_1344758 <- r28_1706156
+0x4CC28C3: __dbl_mp_fma (mpa.c:356) | mov qword ptr [rdi + 0x20], rax | Store | 0x9c4 | {mpx.d[3]}mpx.d[3]:1ffefff8b0 <- t11_1738380
+0x4CC28D1: __dbl_mp_fma (mpa.c:356) | t1_1344758 <- r28_1706156
+0x4CC28D6: __dbl_mp_fma (mpa.c:356) | mov qword ptr [rdi + 0x28], rax | Store | 0x0 | {mpx.d[4]}mpx.d[4]:1ffefff8b8 <- t6_2160819
+0x40176F8: _dl_runtime_resolve_xsave (dl-trampoline.h:116) | t109_511287 <- r28_1706156
+0x4017714: _dl_runtime_resolve_xsave (dl-trampoline.h:133) | r28_1706157 <-
+0x4CC5EB1: __mpexp_fma (mpexp.c:80) | mov rax, qword ptr [r12 + 0x10] | Load | 0x35 | {mpx.d[1]}t115_264759 <- mpx.d[1]:1ffefff8a0
+0x4CC5EBC: __mpexp_fma (mpexp.c:82) | CmpLE64S | 0x1 | t133_592999 <- t115_264759
+0x4CC5EBE: __mpexp_fma (mpexp.c:82) | t2_2686958 <- r2_3460652
+0x4CC5ECC: __mpexp_fma (mpexp.c:82) | CmpLE64S | 0x1 | t24_1035739 <- t0_1830576
+0x4CC5EC0: __mpexp_fma (mpexp.c:83) | t2_2686959 <- r2_3460653
+0x4CC5ECE: __mpexp_fma (mpexp.c:84) | t0_1830582 <- r2_3460670
+0x4CC5ED4: __mpexp_fma (mpexp.c:84) | CmpEQ64 | 0x0 | t11_1738450 <- t0_1830582
+0x4CC3144: __mul_fma (mpa.c:631) | mov rdx, qword ptr [rbx + rax*8 + 8] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpx.d[4]}t12_1068671 <- mpx.d[4]:1ffefff8b8
+0x4CC3128: __mul_fma (mpa.c:632) | t2_2686971 <- r4_2118449
+0x4CC312B: __mul_fma (mpa.c:632) | CmpEQ64 | 0x1 | t11_1738466 <- t2_2686971
+0x4CC31D8: __mul_fma (mpa.c:681) | mov rdx, qword ptr [rbx + rax*8 + 8] | Load | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpx.d[1]}t37_875834 <- mpx.d[1]:1ffefff8a0
+0x4CC31DD: __mul_fma (mpa.c:681) | Mul64 | 0x35 | t10_1391791 <- t37_875834
+0x4CC31E6: __mul_fma (mpa.c:682) | mov qword ptr [rdi + rax*8], rcx | Store | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefff208_unknownobj}1ffefff208_unknownobj <- t10_1391791
+0x4CC32BC: __mul_fma (mpa.c:685) | t15_1925926 <- r3_1146919
+0x4CC32C9: __mul_fma (mpa.c:685) | t12_1068683 <- r3_1146919
+0x4CC32D7: __mul_fma (mpa.c:685) | t12_1068684 <- r3_1146919
+0x4CC33E0: __mul_fma (mpa.c:728) | mov rdx, qword ptr [rbx + r8*8 + 8] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpx.d[4]}t32_1127078 <- mpx.d[4]:1ffefff8b8
+0x4CC33EE: __mul_fma (mpa.c:728) | add rdx, qword ptr [rbx + rcx*8 + 8] | Load | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpx.d[1]}t6_2160912 <- mpx.d[1]:1ffefff8a0
+0x4CC33F3: __mul_fma (mpa.c:728) | Mul64 | 0x35 | t18_1799643 <- t5_2969441
+0x4CC3408: __mul_fma (mpa.c:730) | t2_2686991 <- r2_3460686
+0x4CC3419: __mul_fma (mpa.c:732) | mov qword ptr [r13 + rsi*8 + 0x10], rdx | Store | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[5]}mps.d[5]:1ffefff310 <- t34_889773
+0x4CC33BC: __mul_fma (mpa.c:725) | mov rdx, qword ptr [rbx + rcx*8 + 8] | Load | 0x580000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpx.d[2]}t39_1004021 <- mpx.d[2]:1ffefff8a8
+0x4CC33C4: __mul_fma (mpa.c:725) | Mul64 | 0x0 | t13_1475726 <- t8_2711697
+0x4CC3420: __mul_fma (mpa.c:730) | t2_2686997 <- r2_3460693
+0x4CC3431: __mul_fma (mpa.c:732) | mov qword ptr [r13 + 0x18], rdx | Store | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[2]}mps.d[2]:1ffefff2f8 <- t40_1260932
+0x4CC3435: __mul_fma (mpa.c:735) | mov qword ptr [r13 + rsi*8 + 8], rax | Store | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[1]}mps.d[1]:1ffefff2f0 <- t7_2251357
+0x4CC3441: __mul_fma (mpa.c:743) | cmp qword ptr [r13 + 0x10], 0 | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[1]}t23_983308 <- mps.d[1]:1ffefff2f0
+0x4CC3446: __mul_fma (mpa.c:743) | CmpEQ64 | 0x1 | t72_303230 <- t23_983308
+0x401768F: _dl_runtime_resolve_xsave (dl-trampoline.h:92) | t40_1260933 <- r2_3460694
+0x4017737: _dl_runtime_resolve_xsave (dl-trampoline.h:141) | mov rax, qword ptr [rsp] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffee40_unknownobj}t315_5 <- 1ffeffee40_unknownobj
+0x5158AE3: __memcpy_avx_unaligned_erms (memmove-vec-unaligned-erms.S:225) | vmovdqu ymm0, ymmword ptr [rsi] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[2]}
+0x5158AE7: __memcpy_avx_unaligned_erms (memmove-vec-unaligned-erms.S:226) | vmovdqu ymm1, ymmword ptr [rsi + rdx - 0x20] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[4]}
+0x5158AED: __memcpy_avx_unaligned_erms (memmove-vec-unaligned-erms.S:227) | vmovdqu ymmword ptr [rdi], ymm0 | Store | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[1]}
+0x5158AF1: __memcpy_avx_unaligned_erms (memmove-vec-unaligned-erms.S:228) | vmovdqu ymmword ptr [rdi + rdx - 0x20], ymm1 | Store | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[3]}
+0x4CAC5C8: __cpy (mpa.c:116) | mov rdx, qword ptr [rdi + rax*8 + 8] | Load | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[1]}t13_1475797 <- mps.d[1]:1ffefff2f0
+0x4CAC5CD: __cpy (mpa.c:116) | mov qword ptr [rsi + rax*8 + 8], rdx | Store | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt2.d[1]}mpt2.d[1]:1ffefff6e0 <- t13_1475797
+0x4CAC5D9: __cpy (mpa.c:115) | jne 0x4cac5c8 | Load | 0x580000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[2]}t43_1009847 <- mps.d[2]:1ffefff2f8
+0x4CC2AE0: __add_fma (mpa.c:391) | mov rax, qword ptr [rbx + rcx*8 + 8] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt2.d[4]}t52_946468 <- mpt2.d[4]:1ffefff6f8
+0x4CC2AE5: __add_fma (mpa.c:391) | Add64 | 0x0 | t15_1926017 <- t52_946468
+0x4CC2AF3: __add_fma (mpa.c:392) | CmpLE64S | 0x1 | t66_1290465 <- t15_1926017
+0x4CC2B18: __add_fma (mpa.c:395) | t9_1924205 <- r2_3460797
+0x4CC3114: __mul_fma (mpa.c:632) | cmp qword ptr [rsi + r14*8 + 8], 0 | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt1.d[6]}t2_2687067 <- mpt1.d[6]:1ffefff5b8
+0x4CC311A: __mul_fma (mpa.c:632) | CmpEQ64 | 0x1 | t17_2411068 <- t2_2687067
+0x4CC3131: __mul_fma (mpa.c:632) | cmp qword ptr [r12 + rax*8 + 8], 0 | Load | 0x9c4 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt1.d[5]}t2_2687069 <- mpt1.d[5]:1ffefff5b0
+0x4CC3137: __mul_fma (mpa.c:632) | CmpEQ64 | 0x0 | t17_2411069 <- t2_2687069
+0x4CC34A0: __mul_fma (mpa.c:639) | cmp qword ptr [rdx + r15*8 + 8], 0 | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[4]}t2_2687072 <- mps.d[4]:1ffefff308
+0x4CC34A6: __mul_fma (mpa.c:639) | CmpEQ64 | 0x1 | t17_2411070 <- t2_2687072
+0x4CC31F1: __mul_fma (mpa.c:679) | jne 0x4cc31d8 | Load | 0x9c4 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[3]}t61_539205 <- mps.d[3]:1ffefff300
+0x4CC32E5: __mul_fma (mpa.c:685) | t12_1068803 <- r3_1146990
+0x4CC32F3: __mul_fma (mpa.c:685) | t12_1068804 <- r3_1146990
+0x4CC3355: __mul_fma (mpa.c:697) | mov r9, qword ptr [r12 + r8*8 + 8] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt1.d[6]}t43_1009853 <- mpt1.d[6]:1ffefff5b8
+0x4CC335E: __mul_fma (mpa.c:697) | add rdx, qword ptr [rbx + rcx*8 + 8] | Load | 0x9c4 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[3]}t7_2251476 <- mps.d[3]:1ffefff300
+0x4CC3363: __mul_fma (mpa.c:697) | add r9, qword ptr [r12 + rcx*8 + 8] | Load | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt1.d[3]}t11_1738606 <- mpt1.d[3]:1ffefff5a0
+0x4CC3378: __mul_fma (mpa.c:699) | t2_2687083 <- r2_3460817
+0x4CC338E: __mul_fma (mpa.c:701) | mov qword ptr [r13 + rsi*8 + 8], rdx | Store | 0xffff96 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt2.d[9]}mpt2.d[9]:1ffefff720 <- t42_984786
+0x4CC332B: __mul_fma (mpa.c:694) | mov rcx, qword ptr [rbx + rdx*8 + 8] | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[4]}t55_1336951 <- mps.d[4]:1ffefff308
+0x4CC3333: __mul_fma (mpa.c:694) | imul rcx, qword ptr [r12 + rdx*8 + 8] | Load | 0x580000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt1.d[4]}t21_1621510 <- mpt1.d[4]:1ffefff5a8
+0x4CC3344: __mul_fma (mpa.c:696) | t30_1039334 <- r2_3460819
+0x4CC3376: __mul_fma (mpa.c:696) | jl 0x4cc3350 | Load | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mps.d[4]}t87_617438 <- mps.d[4]:1ffefff308
+0x4CC33E5: __mul_fma (mpa.c:728) | mov r9, qword ptr [r12 + r8*8 + 8] | Load | 0x9c4 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt1.d[5]}t38_1300255 <- mpt1.d[5]:1ffefff5b0
+0x4CC3100: __mul_fma (mpa.c:631) | mov rax, qword ptr [rdi + r14*8 + 8] | Load | 0xc00000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt2.d[6]}t14_1277689 <- mpt2.d[6]:1ffefff708
+0x4CC310B: __mul_fma (mpa.c:632) | t2_2687302 <- r2_3461041
+0x4CC310E: __mul_fma (mpa.c:632) | CmpEQ64 | 0x0 | t11_1738843 <- t2_2687302
+0x4CC3249: __mul_fma (mpa.c:685) | t7_2251638 <- r3_1147062
+0x4CC3256: __mul_fma (mpa.c:685) | t12_1068986 <- r3_1147062
+0x4CC3269: __mul_fma (mpa.c:685) | t34_889888 <- r3_1147062
+0x4CC3273: __mul_fma (mpa.c:685) | vpbroadcastq ymm0, qword ptr [rbp - 0x48] | Load | 0x35000000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffede8_unknownobj}t7_2251640 <- 1ffeffede8_unknownobj
+0x4CC328C: __mul_fma (mpa.c:685) | vmovdqa ymmword ptr [rdx], ymm0 | Store | 0x0 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffeda0_unknownobj}
+0x4CC3350: __mul_fma (mpa.c:697) | mov rdx, qword ptr [rbx + r8*8 + 8] | Load | 0xc00000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt2.d[6]}t37_875962 <- mpt2.d[6]:1ffefff708
+0x4CC2A55: __add_fma (mpa.c:391) | add rax, qword ptr [r12 + rcx*8 + 8] | Load | 0xc72000 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpt1.d[4]}t16_1978541 <- mpt1.d[4]:1ffefff5a8
+0x4CC2A63: __add_fma (mpa.c:392) | CmpLE64S | 0x1 | t69_713055 <- t15_1926157
+0x4CC2A88: __add_fma (mpa.c:395) | t9_1924418 <- r2_3461077
+0x4CC2A50: __add_fma (mpa.c:391) | mov rax, qword ptr [r11 + rcx*8 + 8] | Load | 0xc72000 | {mpy.d[6]}t55_1337012 <- mpy.d[6]:1ffefffa18
+0x4CC2A65: __add_fma (mpa.c:394) | t0_1830805 <- r2_3461147
+0x4CC2A6B: __add_fma (mpa.c:394) | mov qword ptr [r10 + rcx*8 + 0x10], rax | Store | 0x9f69c1 | {mpw.d[7]}mpw.d[7]:1ffefffcc0 <- t2_2687416
+0x4CC2B7B: __add_fma (mpa.c:406) | add rax, qword ptr [rbx + rcx*8 + 8] | Load | 0x580000 | {mpy.d[4]}t5_2969767 <- mpy.d[4]:1ffefffa08
+0x4CC2B86: __add_fma (mpa.c:407) | CmpLE64S | 0x1 | t29_1137951 <- t4_2172950
+0x4CC2BAB: __add_fma (mpa.c:407) | t9_1924471 <- r2_3461151
+0x4CC26D0: sub_magnitudes (mpa.c:457) | mov rax, qword ptr [rsi + r10*8 + 0x10] | Load | 0x8e16c5 | {mpcor.d[3]}t9_1924482 <- mpcor.d[3]:1ffeffff40
+0x4CC26D8: sub_magnitudes (mpa.c:457) | jle 0x4cc2306 | amd64g_calculate_condition | 0x0 | t15_1926215 <- t9_1924482
+0x4CC26DE: sub_magnitudes (mpa.c:459) | t1_1344997 <- r2_3461160
+0x4CC26ED: sub_magnitudes (mpa.c:459) | mov qword ptr [r8 + rbx*8 + 8], rdx | Store | 0x71e93b | {mpz.d[7]}mpz.d[7]:1ffefffb70 <- t0_1830809
+0x4CC2330: sub_magnitudes (mpa.c:468) | add rax, qword ptr [r11 + rdx*8 + 8] | Load | 0xc72000 | {mpy.d[6]}t20_1711545 <- mpy.d[6]:1ffefffa18
+0x4CC2335: sub_magnitudes (mpa.c:469) | sub rax, qword ptr [rsi + rdx*8 + 8] | Load | 0xd849c1 | {mpcor.d[2]}t24_1035958 <- mpcor.d[2]:1ffeffff38
+0x4CC233A: sub_magnitudes (mpa.c:469) | Sub64 | 0xffffffffffeed63e | t69_713060 <- t19_2124306 t24_1035958
+0x4CC23A0: sub_magnitudes (mpa.c:471) | t0_1830810 <- r2_3461161
+0x4CC23A6: sub_magnitudes (mpa.c:471) | mov qword ptr [rcx + rdx*8 + 8], rax | Store | 0xeed63e | {mpz.d[6]}mpz.d[6]:1ffefffb68 <- t2_2687427
+0x4CC233C: sub_magnitudes (mpa.c:469) | t12_1069047 <- r2_3461163
+0x4CC235B: sub_magnitudes (mpa.c:484) | add rax, qword ptr [rdi + rdx*8 + 8] | Load | 0x580000 | {mpy.d[4]}t1_1345000 <- mpy.d[4]:1ffefffa08
+0x4CC2367: sub_magnitudes (mpa.c:485) | js 0x4cc2383 | amd64g_calculate_condition | 0x0 | t20_1711548 <- t0_1830813
+0x4CC236C: sub_magnitudes (mpa.c:482) | t9_1924486 <- r2_3461165
+0x4CC2375: sub_magnitudes (mpa.c:484) | add rax, qword ptr [rdi + rdx*8 + 8] | Load | 0x35 | {mpy.d[3]}t4_2172974 <- mpy.d[3]:1ffefffa00
+0x4CC2381: sub_magnitudes (mpa.c:485) | jns 0x4cc2369 | amd64g_calculate_condition | 0x0 | t30_1039396 <- t4_2172974
+0x4CC276C: sub_magnitudes (mpa.c:502) | mov rdx, qword ptr [r8 + rax*8] | Load | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpz.d[3]}t41_570846 <- mpz.d[3]:1ffefffb50
+0x4CC2773: sub_magnitudes (mpa.c:502) | mov qword ptr [rcx + rax*8 + 8], rdx | Store | 0x35 | --6279-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{mpz.d[3]}mpz.d[3]:1ffefffb50 <- t41_570846
+0x4CACA30: __mp_dbl (mpa.c:153) | mov rax, qword ptr [rdi + 0x20] | Load | 0x35 | {mpw.d[3]}t75_250045 <- mpw.d[3]:1ffefffca0
+0x4CACA3C: __mp_dbl (mpa.c:153) | imul r8, qword ptr [rdi + 0x28] | Load | 0x580000 | {mpw.d[4]}t10_1392171 <- mpw.d[4]:1ffefffca8
+0x4CACA5B: __mp_dbl (mpa.c:156) | Add64 | 0x1a | t38_1300364 <- t30_1039400
+0x4CACA84: __mp_dbl (mpa.c:162) | CmpEQ64 | 0x1 | t144_86700 <- t126_10140
+0x4CACB90: __mp_dbl (mpa.c:164) | t2_2687448 <- r5_648178
+0x4CACB93: __mp_dbl (mpa.c:164) | CmpEQ64 | 0x1 | t11_1738971 <- t2_2687448
+0x4CACB95: __mp_dbl (mpa.c:168) | cmp qword ptr [rdi + 0x30], 0 | Load | 0x189b | {mpw.d[5]}t2_2687449 <- mpw.d[5]:1ffefffcb0
+0x4CACB9A: __mp_dbl (mpa.c:168) | CmpEQ64 | 0x0 | t14_1277768 <- t2_2687449
+0x4CACBC0: __mp_dbl (mpa.c:178) | t2_2687450 <- r2_3461204
+0x4CACA92: __mp_dbl (mpa.c:181) | I64StoF64 | 0x0 | t14_1277768 <- t0_1830826
+0x4CAC980: __mp_dbl (mpa.c:184) | t16_1978593 <- r28_1706160
+0x4CAC9BD: __mp_dbl (mpa.c:191) | t6_2161240 <- r28_1706160
+0x4CC3987: __slowexp_fma (slowexp.c:64) | vmovsd xmm0, qword ptr [rsp + 0x18] | Load | 0x3ff0000000000356 | {w}t7_2251749 <- w:1ffefff878
+0x4CC398D: __slowexp_fma (slowexp.c:64) | vucomisd xmm0, qword ptr [rsp + 0x20] | Load | 0x0 | {z}
+0x4CC3993: __slowexp_fma (slowexp.c:64) | Shr64 | 0x10 | t24_1035974 <- t10_1392178
+0x4CC3995: __slowexp_fma (slowexp.c:64) | t2_2687466 <- r19_5542613
+0x4CC399D: __slowexp_fma (slowexp.c:69) | vmovsd xmm0, qword ptr [rsp + 0x18] | Load | 0x3ff0000000000356 | {w}t12_1069066 <- w:1ffefff878
+0x4CB2FD5: __ieee754_exp_fma (e_exp.c:104) | t3_2029453 <- r28_1706162
+0x4CB3838: __ieee754_log_fma (e_log.c:214) | t10_9152758 <- r32_27832292
+0x4CB3867: __ieee754_log_fma (e_log.c:216) | Shr64 | 0x0 | t47_4801018 <- t30_7432574
+0x4CB386D: __ieee754_log_fma (e_log.c:216) | t11_11681349 <- r36_16845560
+0x4CB3882: __ieee754_log_fma (e_log.c:219) | Mul64F0x2 | 0x0 | t27_8335064 <- t25_8281541
+0x4CB38B7: __ieee754_log_fma (e_log.c:221) | Shr64 | 0x0 | t69_5253390 <- t50_9205866
+0x4CB38BD: __ieee754_log_fma (e_log.c:221) | t15_12547633 <- r44_3919896
+0x4CB38D5: __ieee754_log_fma (e_log.c:224) | t26_11658561 <- r36_16845560
+0x4CB38DE: __ieee754_log_fma (e_log.c:224) | MAddF64 | 0x0 | t51_3367754 <- t22_9017861 t28_10737455
+0x4CB3905: __ieee754_log_fma (e_log.c:225) | Shr64 | 0x0 | t57_5273539 <- t40_9370833
+0x4CB390B: __ieee754_log_fma (e_log.c:225) | t9_13347273 <- r32_27832292
+0x4CB397D: __ieee754_log_fma (e_log.c:228) | Shr64 | 0x0 | t96_4611862 <- t75_1518619
+0x4CB3BC0: __ieee754_log_fma (e_log.c:228) | t9_13347273 <- r40_11695431
+0x4CB39B6: __ieee754_log_fma (e_log.c:229) | Shr64 | 0x0 | t48_4093199 <- t33_6708183
+0x4CB3BA0: __ieee754_log_fma (e_log.c:229) | t5_20107922 <- r40_11695431
+0x4CB39D8: __ieee754_log_fma (e_log.c:232) | Add64F0x2 | 0x0 | t26_11658561 <- t28_10737455 t22_9017861
+0x4CB39F4: __ieee754_log_fma (e_log.c:232) | Shr64 | 0x10 | t52_6766993 <- t38_9556249
+0x4CB39F6: __ieee754_log_fma (e_log.c:232) | t2_19034064 <- r19_39000962
+0x4CB3D28: __ieee754_log_fma (e_log.c:127) | t29_9488234 <- r32_32367338
+0x4CB3D31: __ieee754_log_fma (e_log.c:128) | MAddF64 | 0x0 | t95_5328252 <- t29_9488234 t25_9583829 t31_11825396
+0x4CB3D3A: __ieee754_log_fma (e_log.c:129) | MAddF64 | 0x0 | t96_5359331 <- t29_9488234 t30_8621847 t36_7164520
+0x4CB3D43: __ieee754_log_fma (e_log.c:130) | MAddF64 | 0x0 | t97_2262358 <- t29_9488234 t41_4751908
+0x4CB3D4C: __ieee754_log_fma (e_log.c:131) | MAddF64 | 0x0 | t98_5254738 <- t29_9488234 t40_10881580
+0x4CB3D55: __ieee754_log_fma (e_log.c:132) | MAddF64 | 0x0 | t99_4494318 <- t29_9488234
+0x4CB3D5E: __ieee754_log_fma (e_log.c:133) | MAddF64 | 0x0 | t100_3913658 <- t29_9488234
+0x4CB3D67: __ieee754_log_fma (e_log.c:134) | MAddF64 | 0x0 | t101_3758668 <- t29_9488234 t61_4621287
+0x4CB3D70: __ieee754_log_fma (e_log.c:135) | MAddF64 | 0x0 | t102_6858419 <- t29_9488234 t66_11387406
+0x4CB3D82: __ieee754_log_fma (e_log.c:138) | t78_4675329 <- r56_260
+0x4CB3DA4: __ieee754_log_fma (e_log.c:138) | Shr64 | 0x0 | t110_3748661 <- t84_8409002
+0x4CB3DAA: __ieee754_log_fma (e_log.c:138) | t13_10782039 <- r40_13604398
+0x4CB3DD8: __ieee754_log_fma (e_log.c:140) | t48_4749528 <- r68_1494961
+0x4CB3DF2: __ieee754_log_fma (e_log.c:140) | Add64F0x2 | 0x0 | t55_11483218 <- t28_12456005
+0x4CB3E17: __ieee754_log_fma (e_log.c:140) | Shr64 | 0x0 | t86_4043811 <- t62_4632460
+0x4CB3E1D: __ieee754_log_fma (e_log.c:140) | t13_10782039 <- r36_19593261
+0x4CB3E58: __ieee754_log_fma (e_log.c:141) | Add64F0x2 | 0x0 | t53_8513959 <- t31_11825396
+0x4CB3E74: __ieee754_log_fma (e_log.c:142) | Add64F0x2 | 0x0 | t65_1658858 <- t64_7705438
+0x4CB3E8D: __ieee754_log_fma (e_log.c:142) | Shr64 | 0x0 | t86_4043812 <- t68_8427073
+0x4CB3E93: __ieee754_log_fma (e_log.c:142) | t13_10782039 <- r36_19593261
+0x4CB3ECE: __ieee754_log_fma (e_log.c:143) | Add64F0x2 | 0x0 | t53_8513959 <- t31_11825396
+0x4CB3EEA: __ieee754_log_fma (e_log.c:144) | Add64F0x2 | 0x0 | t65_1658858 <- t64_7705438
+0x4CB3F03: __ieee754_log_fma (e_log.c:144) | Shr64 | 0x0 | t86_4043813 <- t68_8427074
+0x4CB3F09: __ieee754_log_fma (e_log.c:144) | t13_10782039 <- r36_19593261
+0x4CB3F44: __ieee754_log_fma (e_log.c:145) | Add64F0x2 | 0x0 | t53_8513959 <- t31_11825396
+0x4CB3F60: __ieee754_log_fma (e_log.c:146) | Add64F0x2 | 0x0 | t65_1658858 <- t64_7705438
+0x4CB3F79: __ieee754_log_fma (e_log.c:146) | Shr64 | 0x0 | t86_4043814 <- t68_8427075
+0x4CB3F7F: __ieee754_log_fma (e_log.c:146) | t13_10782039 <- r36_19593261
+0x4CB3FBA: __ieee754_log_fma (e_log.c:147) | Add64F0x2 | 0x0 | t53_8513959 <- t31_11825396
+0x4CB3FD6: __ieee754_log_fma (e_log.c:148) | Add64F0x2 | 0x0 | t65_1658858 <- t64_7705438
+0x4CB3FEF: __ieee754_log_fma (e_log.c:148) | Shr64 | 0x0 | t86_4043815 <- t68_8427076
+0x4CB3FF5: __ieee754_log_fma (e_log.c:148) | t13_10782039 <- r36_19593261
+0x4CB4030: __ieee754_log_fma (e_log.c:149) | Add64F0x2 | 0x0 | t53_8513959 <- t31_11825396
+0x4CB404C: __ieee754_log_fma (e_log.c:150) | Add64F0x2 | 0x0 | t65_1658858 <- t64_7705438
+0x4CB4065: __ieee754_log_fma (e_log.c:150) | Shr64 | 0x0 | t86_4043816 <- t68_8427077
+0x4CB406B: __ieee754_log_fma (e_log.c:150) | t13_10782039 <- r36_19593261
+0x4CB40A6: __ieee754_log_fma (e_log.c:151) | Add64F0x2 | 0x0 | t53_8513959 <- t31_11825396
+0x4CB40C2: __ieee754_log_fma (e_log.c:152) | Add64F0x2 | 0x0 | t65_1658858 <- t64_7705438
+0x4CB40DB: __ieee754_log_fma (e_log.c:152) | Shr64 | 0x0 | t86_4043817 <- t68_8427078
+0x4CB40E1: __ieee754_log_fma (e_log.c:152) | t13_10782039 <- r36_19593261
+0x4CB411A: __ieee754_log_fma (e_log.c:153) | Add64F0x2 | 0x0 | t53_8513959 <- t31_11825396
+0x4CB4136: __ieee754_log_fma (e_log.c:154) | Add64F0x2 | 0x0 | t65_1658858 <- t64_7705438
+0x4CB4150: __ieee754_log_fma (e_log.c:154) | Shr64 | 0x0 | t86_4043818 <- t68_8427079
+0x4CB4156: __ieee754_log_fma (e_log.c:154) | t6_16116050 <- r40_13604398
+0x4CB41D1: __ieee754_log_fma (e_log.c:157) | Shr64 | 0x0 | t106_8422873 <- t79_10626869
+0x4CB41D3: __ieee754_log_fma (e_log.c:157) | t5_23293748 <- r56_267
+0x4CB41E7: __ieee754_log_fma (e_log.c:160) | Sub64F0x2 | 0x0 | t21_12594741 <- t5_23293748 t16_15330032
+0x4CB4211: __ieee754_log_fma (e_log.c:160) | Shr64 | 0x10 | t61_4621288 <- t43_8621866
+==6279== 
+==6279== Process terminating with default action of signal 2 (SIGINT)
+==6279==    at 0x4C3B1FF: exp (w_exp_compat.c:30)
+==6279==    by 0x1170DC: predict (protdist.c:1693)
+==6279==    by 0x11792F: makedists (protdist.c:1772)
+==6279==    by 0x118CB8: main0 (protdist.c:2082)
+==6279==    by 0x118FB5: main (run.c:32)
+==6279== 

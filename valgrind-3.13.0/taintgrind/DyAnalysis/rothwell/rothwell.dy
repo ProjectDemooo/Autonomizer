@@ -1,0 +1,23 @@
+[Dependency root]main:sigma:NON_INPUT
+[Useful internal data]
+main:image:non-scalar:
+
+[Dependency root]main:low:NON_INPUT
+[Useful internal data]
+Smooth_image:tmp:non-scalar:  store float** %call8, float*** %tmp, align 8
+Sub_pixel_interpolation:dnewy:scalar:  store float %mul162, float* %dnewy, align 4
+Sub_pixel_interpolation:dnewx:scalar:  store float %llvm-tmp158, float* %dnewx, align 4
+Sub_pixel_interpolation:dx:non-scalar:  store float* null, float** %dx, align 8
+Sub_pixel_interpolation:dy:non-scalar:  store float* null, float** %dy, align 8
+Sub_pixel_interpolation:h1:scalar:  store float 0.000000e+00, float* %h1, align 4
+Sub_pixel_interpolation:fraction:scalar:  store float %conv155, float* %fraction, align 4
+
+[Dependency root]main:alpha:NON_INPUT
+[Useful internal data]
+Smooth_image:tmp:non-scalar:  store float** %call8, float*** %tmp, align 8
+Sub_pixel_interpolation:dnewy:scalar:  store float %mul162, float* %dnewy, align 4
+Sub_pixel_interpolation:dnewx:scalar:  store float %llvm-tmp158, float* %dnewx, align 4
+Sub_pixel_interpolation:dx:non-scalar:  store float* null, float** %dx, align 8
+Sub_pixel_interpolation:dy:non-scalar:  store float* null, float** %dy, align 8
+Sub_pixel_interpolation:h1:scalar:  store float 0.000000e+00, float* %h1, align 4
+Sub_pixel_interpolation:fraction:scalar:  store float %conv155, float* %fraction, align 4

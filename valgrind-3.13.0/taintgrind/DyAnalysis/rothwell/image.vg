@@ -1,0 +1,511 @@
+==29989== Taintgrind, the taint analysis tool
+==29989== Copyright (C) 2010-2018, and GNU GPL'd, by Wei Ming Khoo.
+==29989== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==29989== Command: ../../rothwell/a.out ../../rothwell/lenagrey.pgm 0.5 18 0.8
+==29989== 
+0x506409E: calloc (malloc.c:3415) | mov rbx, qword ptr [r13 + 8] | Load | 0x1fb71 | {422b498_unknownobj}t30_13528 <- 422b498_unknownobj
+0x505E2D9: _int_malloc (malloc.c:3521) | push rbx | Store | 0x1fb70 | {1fff0000c8_unknownobj}1fff0000c8_unknownobj <- t3_18766
+0x505EDDB: _int_malloc (malloc.c:4091) | mov rdx, qword ptr [rcx + 8] | Load | 0x1fb71 | {422b498_unknownobj}t16_18264 <- 422b498_unknownobj
+0x505EDE6: _int_malloc (malloc.c:4093) | CmpLE64U | 0x1 | t25_13702 <- t3_18773
+0x505F0A9: _int_malloc (malloc.c:4095) | t31_275813 <- r4_534332
+0x505F0DD: _int_malloc (malloc.c:4100) | mov qword ptr [rdi + 8], rax | Store | 0x1fb51 | {422b4b8_unknownobj}422b4b8_unknownobj <- t15_23059
+0x505E434: _int_malloc (malloc.c:4131) | pop rbx | Load | 0x1fb70 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff0000c8_unknownobj}t3_18775 <- 1fff0000c8_unknownobj
+0x50641C3: calloc (malloc.c:3472) | t2_285395 <- r5_4528
+0x50641D9: calloc (malloc.c:3485) | CmpLE64U | 0x0 | t47_265929 <- t11_26301
+0x50641DF: calloc (malloc.c:3487) | t2_285396 <- r2_279013
+0x50641E3: calloc (malloc.c:3487) | CmpLE64U | 0x1 | t11_26302 <- t2_285396
+0x50641E9: calloc (malloc.c:3495) | t2_285397 <- r2_279013
+0x5064204: calloc (malloc.c:3495) | CmpLE64U | 0x1 | t18_19057 <- t2_285397
+0x5158F50: __memset_avx2_unaligned_erms (memset-vec-unaligned-erms.S:158) | t6_17412 <- r4_534361
+0x5158F60: __memset_avx2_unaligned_erms (memset-vec-unaligned-erms.S:160) | CmpLT64U | 0x0 | t26_13127 <- t6_17412
+0x5158F66: __memset_avx2_unaligned_erms (memset-vec-unaligned-erms.S:161) | t2_285449 <- r4_534361
+0x5158F6A: __memset_avx2_unaligned_erms (memset-vec-unaligned-erms.S:162) | CmpLE64U | 0x0 | t11_26345 <- t2_285449
+0x5158F7A: __memset_avx2_unaligned_erms (memset-vec-unaligned-erms.S:170) | t2_285450 <- r4_534361
+0x5158F81: __memset_avx2_unaligned_erms (memset-vec-unaligned-erms.S:171) | CmpLE64U | 0x0 | t11_26346 <- t2_285450
+0x5158F20: __memset_avx2_erms (memset-vec-unaligned-erms.S:137) | t5_16964 <- r4_534361
+0x5158F2D: __memset_avx2_erms (memset-vec-unaligned-erms.S:141) | CmpEQ64 | 0x0 | t10_26015 <- t5_16964
+0x10CC93: Smooth_image (Topology.c:850) | mov rax, qword ptr [rax] | Load | 0x4082010 | {422a490_unknownobj}t145_141 <- 422a490_unknownobj
+0x10CC96: Smooth_image (Topology.c:850) | Add64 | 0x4082010 | t40_267139 <- t145_141
+0x10CCA3: Smooth_image (Topology.c:850) | movss xmm2, dword ptr [rax] | Load | 0x42da0000 | {4082010_unknownobj}t162_13 <- (t40_267139)
+0x5061E55: free (malloc.c:4277) | mov rdx, qword ptr [rax + 8] | Load | 0x1db31 | {422d4d8_unknownobj}t12_548885 <- 422d4d8_unknownobj
+0x5061E63: free (malloc.c:4275) | CmpLT64U | 0x1 | t21_2099573 <- t4_17995
+0x5061C6B: free (malloc.c:4280) | mov rax, qword ptr [r15 + 8] | Load | 0x1db31 | {422d4d8_unknownobj}t6_1840715 <- 422d4d8_unknownobj
+0x5061C77: free (malloc.c:4283) | t6_1840716 <- r2_3923594
+0x5061C82: free (malloc.c:4284) | CmpLE64U | 0x0 | t15_284271 <- t6_1840716
+0x5061C88: free (malloc.c:4285) | t2_1327974 <- r3_287894
+0x5061C8F: free (malloc.c:4285) | CmpLT64U | 0x1 | t14_807412 <- t2_1327974
+0x5062015: free (malloc.c:4341) | t1_14687 <- r3_287894
+0x506201F: free (malloc.c:4342) | mov qword ptr [r13 + 8], rax | Store | 0x1eb41 | {422c4c8_unknownobj}422c4c8_unknownobj <- t3_542180
+0x5062023: free (malloc.c:4343) | r19_3951646 <- t0_534594
+0x5061DC9: free (malloc.c:4360) | CmpLE64U | 0x0 | t26_13685 <- t0_534594
+0x5062314: free (malloc.c:4366) | mov rax, qword ptr [rax + 8] | Load | 0x1eb41 | {422c4c8_unknownobj}t14_807415 <- 422c4c8_unknownobj
+0x506231C: free (malloc.c:4366) | r19_3951649 <- t2_1327978
+0x5062323: free (malloc.c:4366) | CmpLT64U | 0x1 | t23_541496 <- t2_1327978
+0x505D9F2: sysmalloc (malloc.c:2388) | mov rax, qword ptr [r13 + 8] | Load | 0x1db31 | {422d4d8_unknownobj}t45_530740 <- 422d4d8_unknownobj
+0x505DA10: sysmalloc (malloc.c:2398) | t2_1328536 <- r16_1079
+0x505DA14: sysmalloc (malloc.c:2398) | CmpLE64U | 0x0 | t11_289138 <- t2_1328536
+0x505DA16: sysmalloc (malloc.c:2398) | t0_535122 <- r2_3923649
+0x505DA1A: sysmalloc (malloc.c:2398) | t2_1328538 <- r13_3428
+0x505DA22: sysmalloc (malloc.c:2398) | CmpEQ64 | 0x1 | t14_807963 <- t1_15217
+0x505DAD0: sysmalloc (malloc.c:2404) | t2_1328539 <- r16_1079
+0x505DADC: sysmalloc (malloc.c:2404) | CmpLE64U | 0x0 | t18_1841396 <- t2_1328539
+0x505DE60: sysmalloc (malloc.c:2469) | t1_15218 <- r16_1079
+0x505DE6D: sysmalloc (malloc.c:2479) | mov qword ptr [rsp + 0x18], r12 | Store | 0x103000 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff000028_unknownobj}1fff000028_unknownobj <- t4_18555
+0x505DE72: sysmalloc (malloc.c:2487) | jg 0x505dd9b | amd64g_calculate_condition | 0x0 | t23_541518 <- t4_18555
+0x505DDA2: sysmalloc (malloc.c:2489) | t9_2367228 <- r13_3428
+0x50E0520: sbrk (sbrk.c:32) | t5_1580748 <- r14_3785
+0x50E052A: sbrk (sbrk.c:32) | t26_13711 <- r9_23892
+0x50E0550: sbrk (sbrk.c:44) | t2_1328542 <- r7_2217
+0x50E0554: sbrk (sbrk.c:44) | CmpEQ64 | 0x0 | t11_289145 <- t2_1328542
+0x50E0556: sbrk (sbrk.c:48) | t2_1328543 <- r19_3951748
+0x50E0558: sbrk (sbrk.c:48) | t1_15220 <- r7_2217
+0x50E0563: sbrk (sbrk.c:48) | And64 | 0x0 | t29_798789 <- t15_284313
+0x50E0588: sbrk (sbrk.c:56) | t5_1580751 <- r7_2217
+0x50E04CB: brk (brk.c:31) | t7_20300 <- r9_23893
+0x50E04D3: brk (brk.c:33) | CmpLE64U | 0x1 | t25_535031 <- t7_20300
+0x50E059A: sbrk (sbrk.c:60) | pop r12 | Load | 0x103000 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffefffff0_unknownobj}t4_18561 <- 1ffefffff0_unknownobj
+0x505DDB3: sysmalloc (malloc.c:2493) | mov r11, qword ptr [rsp + 8] | Load | 0x424b000 | {old_end}t7_20304 <- old_end:1fff000018
+0x505DDE6: sysmalloc (malloc.c:2545) | t2_1328548 <- r14_3787
+0x505DDF3: sysmalloc (malloc.c:2545) | mov qword ptr [rip + 0x3586ce], rcx | Store | 0x124000 | {main_arena.system_mem}main_arena.system_mem:53b64c8 <- t1_15223
+0x505DDFA: sysmalloc (malloc.c:2551) | CmpEQ64 | 0x1 | t18_1841403 <- t6_1841277
+0x505DE08: sysmalloc (malloc.c:2552) | t2_1328550 <- r14_3787
+0x505DE0B: sysmalloc (malloc.c:2552) | Or64 | 0x120b31 | t4_18565 <- t0_535130
+0x505DE16: sysmalloc (malloc.c:2552) | mov qword ptr [r13 + 8], r12 | Store | 0x120b31 | {422d4d8_unknownobj}422d4d8_unknownobj <- t4_18565
+0x505DB65: sysmalloc (malloc.c:2724) | t9_2367237 <- r3_292017
+0x505DB6C: sysmalloc (malloc.c:2724) | CmpLT64U | 0x1 | t26_13715 <- t9_2367237
+0x505DB6E: sysmalloc (malloc.c:2725) | t11_289150 <- r3_292017
+0x505DB75: sysmalloc (malloc.c:2730) | mov rax, qword ptr [rdx + 8] | Load | 0x120b31 | {422d4d8_unknownobj}t14_807968 <- 422d4d8_unknownobj
+0x505DB7D: sysmalloc (malloc.c:2733) | r20_3951760 <- t2_1328551
+0x505DB82: sysmalloc (malloc.c:2733) | CmpLE64U | 0x1 | t25_535034 <- t2_1328551
+0x505DB88: sysmalloc (malloc.c:2738) | t3_542751 <- r2_3923663
+0x505DBB9: sysmalloc (malloc.c:2739) | mov qword ptr [rsi + 8], rax | Store | 0x20b21 | {432d4e8_unknownobj}432d4e8_unknownobj <- t15_284319
+0x505E58F: _int_malloc (malloc.c:3736) | cmp rdx, qword ptr [r14 + 0x888] | Load | 0x225000 | {main_arena.system_mem}t1_304268 <- main_arena.system_mem:53b64c8
+0x505E596: _int_malloc (malloc.c:3736) | CmpLE64U | 0x1 | t14_1354094 <- t1_304268
+0x10C863: Compute_gradient (Topology.c:785) | movss xmm1, dword ptr [rax] | Load | 0x0 | {424b4e8_unknownobj}t109_1586770 <- 424b4e8_unknownobj
+0x10C88B: Compute_gradient (Topology.c:785) | movss xmm0, dword ptr [rax] | Load | 0x0 | {424b4e8_unknownobj}t140_2892653 <- 424b4e8_unknownobj
+0x10C8DF: Compute_gradient (Topology.c:785) | Add32F0x4 | 0x0 | t209_3113051 <-
+0x4C3AEB0: sqrt (w_sqrt_compat.c:30) | t1_321543 <- r28_3171983
+0x4C3AEB8: sqrt (w_sqrt_compat.c:30) | Shr64 | 0x1 | t20_882470 <- t5_1662096
+0x4C3AEBA: sqrt (math_private.h:58) | t0_585459 <- r28_3171983
+0x10C90B: Compute_gradient (Topology.c:785) | t26_271967 <- r28_3171983
+0x10C91C: Compute_gradient (Topology.c:785) | t85_295189 <- r28_3171983
+0x10BDCF: Sub_pixel_interpolation (Topology.c:632) | movss xmm0, dword ptr [rax] | Load | 0x0 | {4504518_unknownobj}t125_1370632 <- 4504518_unknownobj
+0x10BDD6: Sub_pixel_interpolation (Topology.c:632) | Mul32F0x4 | 0x0 | t131_2338613 <-
+0x10BDFC: Sub_pixel_interpolation (Topology.c:632) | Add32F0x4 | 0x0 | t157_529273 <-
+0x10BE08: Sub_pixel_interpolation (Topology.c:632) | t162_1840380 <- r28_4648853
+0x10BE98: Sub_pixel_interpolation (Topology.c:644) | movss xmm0, dword ptr [rbp - 0x54] | Load | 0x41914ace | {h1}t25_1308530 <- h1:1fff00016c
+0x10BE9D: Sub_pixel_interpolation (Topology.c:644) | t31_3100977 <- r28_4648856
+0x10BEA6: Sub_pixel_interpolation (Topology.c:644) | cvtss2sd xmm2, dword ptr [rbp - 0x54] | Load | 0x0 | {h1}
+0x10BEBF: Sub_pixel_interpolation (Topology.c:644) | t56_2461392 <- r36_2975548
+0x10BECF: Sub_pixel_interpolation (Topology.c:644) | Add64F0x2 | 0x0 | t60_2066325 <-
+0x10BEE8: Sub_pixel_interpolation (Topology.c:644) | t76_913298 <- r48_39966
+0x10C00D: Sub_pixel_interpolation (Topology.c:662) | movss xmm1, dword ptr [rbp - 0x2c] | Load | 0xbedbcd3c | {fraction}t22_3297791 <- fraction:1fff000194
+0x10C012: Sub_pixel_interpolation (Topology.c:662) | t25_1308530 <- r32_4299076
+0x10C01D: Sub_pixel_interpolation (Topology.c:662) | t29_1613868 <- r28_4648858
+0x10C061: Sub_pixel_interpolation (Topology.c:663) | movss xmm1, dword ptr [rbp - 0x2c] | Load | 0xbedbcd3c | {fraction}t67_712895 <- fraction:1fff000194
+0x10C06A: Sub_pixel_interpolation (Topology.c:663) | t73_213693 <- r28_4648859
+0x10C0BC: Sub_pixel_interpolation (Topology.c:680) | ucomiss xmm0, dword ptr [rbp - 0x54] | Load | 0x0 | {h1}
+0x10C0C0: Sub_pixel_interpolation (Topology.c:680) | Shr64 | 0x0 | t47_3574399 <- t26_1217861
+0x10C0E8: Sub_pixel_interpolation (Topology.c:680) | movss xmm1, dword ptr [rbp - 0x40] | Load | 0x3edbcd3c | {dnewx}t7_1325742 <- dnewx:1fff000180
+0x10C0ED: Sub_pixel_interpolation (Topology.c:680) | t10_2731934 <- r32_4299080
+0x10C0F8: Sub_pixel_interpolation (Topology.c:680) | t4_1291568 <- r28_4648862
+0x10C103: Sub_pixel_interpolation (Topology.c:680) | Shr64 | 0x0 | t31_3100980 <- t13_2660027
+0x10C109: Sub_pixel_interpolation (Topology.c:680) | movss xmm1, dword ptr [rbp - 0x3c] | Load | 0xbe4ad6a9 | {dnewy}t7_1325743 <- dnewy:1fff000184
+0x10C10E: Sub_pixel_interpolation (Topology.c:680) | t10_2731934 <- r32_4299082
+0x10C119: Sub_pixel_interpolation (Topology.c:680) | t4_1291568 <- r28_4648863
+0x10C124: Sub_pixel_interpolation (Topology.c:680) | Shr64 | 0x0 | t31_3100981 <- t13_2660028
+0x10C1D2: Sub_pixel_interpolation (Topology.c:694) | movss xmm1, dword ptr [rbp - 0x40] | Load | 0x3edbcd3c | {dnewx}t7_1325746 <- dnewx:1fff000180
+0x10C1D7: Sub_pixel_interpolation (Topology.c:694) | t10_2731937 <- r32_4299084
+0x10C1E2: Sub_pixel_interpolation (Topology.c:694) | t4_1291570 <- r28_4648868
+0x10C1ED: Sub_pixel_interpolation (Topology.c:694) | Shr64 | 0x0 | t31_3100985 <- t13_2660034
+0x10C1EF: Sub_pixel_interpolation (Topology.c:694) | movss xmm1, dword ptr [rbp - 0x3c] | Load | 0xbe4ad6a9 | {dnewy}t7_1325747 <- dnewy:1fff000184
+0x10C1F4: Sub_pixel_interpolation (Topology.c:694) | t10_2731937 <- r32_4299086
+0x10C1FF: Sub_pixel_interpolation (Topology.c:694) | t4_1291570 <- r28_4648869
+0x10C20A: Sub_pixel_interpolation (Topology.c:694) | Shr64 | 0x0 | t31_3100986 <- t13_2660035
+0x10C211: Sub_pixel_interpolation (Topology.c:695) | addss xmm0, dword ptr [rbp - 0x40] | Load | 0x3edbcd3c | {dnewx}t36_2387622 <- dnewx:1fff000180
+0x10C22A: Sub_pixel_interpolation (Topology.c:695) | Add32F0x4 | 0x0 | t53_3036226 <-
+0x10C236: Sub_pixel_interpolation (Topology.c:695) | t56_2461398 <- r28_4648869
+0x10C23F: Sub_pixel_interpolation (Topology.c:696) | addss xmm0, dword ptr [rbp - 0x3c] | Load | 0xbe4ad6a9 | {dnewy}t67_712898 <- dnewy:1fff000184
+0x10C258: Sub_pixel_interpolation (Topology.c:696) | Add32F0x4 | 0x0 | t84_2365575 <-
+0x10C264: Sub_pixel_interpolation (Topology.c:696) | t87_929126 <- r28_4648869
+0x10BCDA: Sub_pixel_interpolation (Topology.c:626) | movss xmm0, dword ptr [rax] | Load | 0x0 | {4510d18_unknownobj}t135_2367360 <- 4510d18_unknownobj
+0x10BCE1: Sub_pixel_interpolation (Topology.c:626) | Mul32F0x4 | 0x0 | t141_2014321 <-
+0x10BD07: Sub_pixel_interpolation (Topology.c:626) | movss xmm2, dword ptr [rax] | Load | 0x0 | {4510518_unknownobj}t171_1587465 <- 4510518_unknownobj
+0x10BD13: Sub_pixel_interpolation (Topology.c:626) | t180_1842275 <- r28_4681271
+0x10BFF0: Sub_pixel_interpolation (Topology.c:657) | movss xmm1, dword ptr [rbp - 0x2c] | Load | 0x3f488c44 | {fraction}t51_1991175 <- fraction:1fff000194
+0x10BFF9: Sub_pixel_interpolation (Topology.c:657) | t57_1429385 <- r28_4681276
+0x10BFFE: Sub_pixel_interpolation (Topology.c:658) | movss xmm0, dword ptr [rbp - 0x2c] | Load | 0x3f488c44 | {fraction}t60_2083420 <- fraction:1fff000194
+0x10C003: Sub_pixel_interpolation (Topology.c:658) | movss dword ptr [rbp - 0x3c], xmm0 | Store | 0x3f488c44 | {dnewy}dnewy:1fff000184 <- t60_2083420
+==29989== brk segment overflow in thread #1: can't grow to 0x4a54000
+==29989== (see section Limitations in user manual)
+==29989== NOTE: further instances of this message will not be shown
+0x50E057F: sbrk (sbrk.c:60) | pop r12 | Load | 0x101000 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffff90_unknownobj}t4_1664511 <- 1ffeffff90_unknownobj
+0x505E0E7: sysmalloc (malloc.c:2512) | mov rsi, qword ptr [rsp + 0x18] | Load | 0x101000 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffffc8_unknownobj}t8_1525961 <- 1ffeffffc8_unknownobj
+0x505DE78: sysmalloc (malloc.c:2513) | t20_2982033 <- r16_1179
+0x505DE7F: sysmalloc (malloc.c:2513) | And64 | 0x121000 | t4_1664513 <- t1_894474
+0x505DE84: sysmalloc (malloc.c:2513) | mov qword ptr [rsp + 0x18], r12 | Store | 0x121000 | {size}size:1ffeffffc8 <- t4_1664513
+0x505DEA2: sysmalloc (malloc.c:2520) | CmpLT64U | 0x1 | t48_2151305 <- t28_3408539
+0x505E161: sysmalloc (malloc.c:2522) | t30_2297759 <- r13_5015
+0x50E59E1: mmap (mmap64.c:41) | t5_3370852 <- r16_1179
+0x50E59E6: mmap (mmap64.c:41) | t27_2016098 <- r8_117372
+0x50E59EB: mmap (mmap64.c:41) | t9_2754453 <- r14_3914
+0x50E59FA: mmap (mmap64.c:52) | t10_2838336 <- r15_1600
+0x50E5A1D: mmap (mmap64.c:54) | pop r12 | Load | 0x121000 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffff88_unknownobj}t4_1664516 <- 1ffeffff88_unknownobj
+0x50E5A21: mmap (mmap64.c:54) | pop r14 | Load | 0x1fa60 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffff98_unknownobj}t8_1525964 <- 1ffeffff98_unknownobj
+0x505E172: sysmalloc (malloc.c:2524) | mov r11, qword ptr [rsp + 8] | Load | 0x4953000 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffffb8_unknownobj}t7_1429833 <- 1ffeffffb8_unknownobj
+0x505E18D: sysmalloc (malloc.c:2541) | t1_894477 <- r14_3916
+0x505E126: sysmalloc (malloc.c:2670) | t2_2939891 <- r2_6473685
+0x505E129: sysmalloc (malloc.c:2670) | CmpEQ64 | 0x0 | t11_1453690 <- t2_2939891
+0x505E26A: sysmalloc (malloc.c:292) | t8_1525970 <- r2_6473685
+0x505E072: sysmalloc (malloc.c:2679) | Or64 | 0x121001 | t16_2395122 <- t6_4254730
+0x505E083: sysmalloc (malloc.c:2680) | mov qword ptr [rdx + 8], rax | Store | 0x121001 | {53bb008_unknownobj}53bb008_unknownobj <- t16_2395122
+0x505E087: sysmalloc (malloc.c:2681) | mov qword ptr [rip + 0x35843a], rcx | Store | 0x84a000 | {main_arena.system_mem}main_arena.system_mem:53b64c8 <- t11_1453691
+0x505E08E: sysmalloc (malloc.c:2692) | CmpEQ64 | 0x0 | t52_2201911 <- t21_3309408
+0x505E094: sysmalloc (malloc.c:2699) | t2_2939892 <- r16_1181
+0x505E0A7: sysmalloc (malloc.c:2700) | mov qword ptr [r13 + 8], rax | Store | 0x1fa41 | {49335a8_unknownobj}49335a8_unknownobj <- t6_4254731
+0x505E0AB: sysmalloc (malloc.c:2708) | Add64 | 0x4952fe0 | t20_2982037 <- t3_3147837
+0x505E0B4: sysmalloc (malloc.c:2710) | Add64 | 0x4952fe0 | t25_1359432 <- t3_3147837
+0x505E0BD: sysmalloc (malloc.c:2714) | CmpLE64U | 0x0 | t37_2102388 <- t3_3147837
+0x505CC62: _int_free (malloc.c:4139) | t5_3370859 <- r16_1182
+0x505CC7E: _int_free (malloc.c:4149) | mov rax, qword ptr [rsi + 8] | Load | 0x1fa41 | {49335a8_unknownobj}t66_2299074 <- 49335a8_unknownobj
+0x505CC92: _int_free (malloc.c:4155) | CmpLE64U | 0x1 | t77_347688 <- t30_2297761
+0x505CCA5: _int_free (malloc.c:4160) | t2_2939894 <- r15_1602
+0x505CCA9: _int_free (malloc.c:4160) | CmpLE64U | 0x0 | t11_1453694 <- t2_2939894
+0x505CCAF: _int_free (malloc.c:4160) | t0_1567009 <- r2_6473688
+0x505CCCA: _int_free (malloc.c:4167) | t13_3076780 <- r15_1602
+0x505CCD2: _int_free (malloc.c:4170) | r20_8111596 <- t4_1664521
+0x505CCD9: _int_free (malloc.c:4170) | CmpLE64U | 0x1 | t31_3191281 <- t4_1664521
+0x505CD40: _int_free (malloc.c:4184) | t2_2939896 <- r15_1602
+0x505CD47: _int_free (malloc.c:4184) | CmpLE64U | 0x0 | t12_2386516 <- t2_2939896
+0x505CDF0: _int_free (malloc.c:4259) | t0_1567010 <- r2_6473688
+0x505CE13: _int_free (malloc.c:4272) | t11_1453700 <- r15_1602
+0x505CE2E: _int_free (malloc.c:4280) | t5_3370864 <- r16_1183
+0x505CE4B: _int_free (malloc.c:4285) | cmp qword ptr [rbx + 0x888], r15 | Load | 0x84a000 | {main_arena.system_mem}t2_2939899 <- main_arena.system_mem:53b64c8
+0x505CE52: _int_free (malloc.c:4285) | CmpLE64U | 0x0 | t14_3248421 <- t2_2939899
+0x505CE66: _int_free (malloc.c:4291) | test byte ptr [r12 + 8], 1 | Load | 0x41 | {49335a8_unknownobj}t2_2939900 <- 49335a8_unknownobj
+0x505CF00: _int_free (malloc.c:4298) | t1_894482 <- r16_1183
+0x505CF04: _int_free (malloc.c:4298) | CmpEQ64 | 0x0 | t14_3248423 <- t1_894482
+0x505CF0A: _int_free (malloc.c:4303) | t9_2754461 <- r16_1183
+0x505CF10: _int_free (malloc.c:4303) | Add64 | 0x4952fe8 | t11_1453704 <- t9_2754461
+0x505CF1E: _int_free (malloc.c:4307) | t11_1453705 <- r16_1183
+0x505CF37: _int_free (malloc.c:4321) | t2_2939904 <- r15_1602
+0x505CF48: _int_free (malloc.c:4321) | CmpLE64U | 0x0 | t19_2068025 <- t2_2939904
+0x505CF60: _int_free (malloc.c:4327) | t22_3675604 <- r15_1602
+0x505CF6B: _int_free (malloc.c:4329) | mov qword ptr [r12 + 8], rax | Store | 0x1fa41 | {49335a8_unknownobj}49335a8_unknownobj <- t4_1664530
+0x505CF70: _int_free (malloc.c:4330) | Add64 | 0x4952fe0 | t26_1348760 <- t22_3675604
+0x505CF7B: _int_free (malloc.c:4360) | CmpLE64U | 0x0 | t39_1476305 <- t22_3675604
+0x505D536: _int_free (malloc.c:4366) | mov rax, qword ptr [rax + 8] | Load | 0x121001 | {53bb008_unknownobj}t14_3248427 <- 53bb008_unknownobj
+0x505D53E: _int_free (malloc.c:4366) | r19_8111614 <- t2_2939905
+0x505D545: _int_free (malloc.c:4366) | CmpLT64U | 0x1 | t23_1427891 <- t2_2939905
+0x505CD36: _int_free (malloc.c:4390) | pop r14 | Load | 0x1fa40 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1ffeffff98_unknownobj}t11_1453709 <- 1ffeffff98_unknownobj
+0x505DEA8: sysmalloc (malloc.c:2520) | mov rcx, qword ptr [rip + 0x358619] | Load | 0x84a000 | {main_arena.system_mem}t6_4254748 <- main_arena.system_mem:53b64c8
+0x505E581: _int_malloc (malloc.c:3735) | mov rdx, qword ptr [rax + 8] | Load | 0x1fa41 | {49335a8_unknownobj}t6_4385839 <- 49335a8_unknownobj
+0x505E589: _int_malloc (malloc.c:3735) | CmpLE64U | 0x0 | t15_2592250 <- t6_4385839
+0x505E59C: _int_malloc (malloc.c:3739) | t2_3071005 <- r4_5377489
+0x505E5B6: _int_malloc (malloc.c:3783) | t1_1025566 <- r4_5377490
+0x505E5C1: _int_malloc (malloc.c:3783) | CmpEQ64 | 0x0 | t19_2068042 <- t1_1025566
+0x505E5C7: _int_malloc (malloc.c:3812) | t2_3071007 <- r4_5377490
+0x505E5CE: _int_malloc (malloc.c:3812) | CmpLE64U | 0x0 | t11_1454247 <- t2_3071007
+0x505E5D4: _int_malloc (malloc.c:3820) | t10_2838372 <- r4_5377490
+0x505E5DF: _int_malloc (malloc.c:3820) | CmpLE64U | 0x0 | t28_3540135 <- t3_3279457
+0x505E998: _int_malloc (malloc.c:3820) | t10_2838373 <- r4_5377490
+0x505E9A3: _int_malloc (malloc.c:3820) | CmpLE64U | 0x0 | t28_3540136 <- t3_3279458
+0x505E9A9: _int_malloc (malloc.c:3820) | t10_2838374 <- r4_5377490
+0x505E9B4: _int_malloc (malloc.c:3820) | CmpLE64U | 0x0 | t28_3540137 <- t3_3279459
+0x505ECC0: _int_malloc (malloc.c:3820) | t10_2838375 <- r4_5377490
+0x505ECCB: _int_malloc (malloc.c:3820) | CmpLE64U | 0x1 | t28_3540138 <- t3_3279460
+0x505ECCD: _int_malloc (malloc.c:3820) | t12_2517621 <- r3_4536160
+0x505E5F4: _int_malloc (malloc.c:3822) | mov rbp, qword ptr [r8] | Load | 0x53b6430 | {main_arena.bins[242]}t31_3191802 <- (t26_1348772)
+0x505E603: _int_malloc (malloc.c:3825) | CmpEQ64 | 0x1 | t51_2051022 <- t32_1869621
+0x505EB44: _int_malloc (malloc.c:3865) | t36_2887454 <- r9_4221118
+0x505E65B: _int_malloc (malloc.c:3868) | Shl64 | 0xc | t76_979167 <- t71_463808
+0x505E666: _int_malloc (malloc.c:3869) | mov qword ptr [rax + 0x18], r8 | Store | 0x53b6430 | {49335b8_unknownobj}49335b8_unknownobj <- t36_2887454
+0x505E66A: _int_malloc (malloc.c:3870) | mov qword ptr [rax + 0x10], rdi | Store | 0x53b6430 | {49335b0_unknownobj}49335b0_unknownobj <- t36_2887454
+0x505E66E: _int_malloc (malloc.c:3871) | Add64 | 0x53b6448 | t93_1129319 <- t36_2887454
+0x505E672: _int_malloc (malloc.c:3872) | Add64 | 0x53b6440 | t96_3707444 <- t36_2887454
+0x505E913: _int_malloc (malloc.c:3980) | mov edx, dword ptr [r14 + rax*4 + 0x860] | Load | 0x4000000 | {main_arena.binmap[3]}t70_2570749 <- main_arena.binmap[3]:53b64ac
+0x505E924: _int_malloc (malloc.c:3986) | t123_2474087 <- t93_1129320
+0x505E932: _int_malloc (malloc.c:4000) | t4_1795631 <- r4_5377493
+0x505E934: _int_malloc (malloc.c:4000) | t20_3113652 <- t7_1429871
+0x505EEF2: _int_malloc (malloc.c:4020) | mov r8, qword ptr [rcx + 8] | Load | 0x1fa41 | {49335a8_unknownobj}t9_2754483 <- 49335a8_unknownobj
+0x505EF00: _int_malloc (malloc.c:4023) | CmpLE64U | 0x1 | t19_2068069 <- t1_1025567
+0x505EF06: _int_malloc (malloc.c:4028) | t10_2838400 <- r2_6474263
+0x505EF10: _int_malloc (malloc.c:4028) | cmp qword ptr [rsi], rax | Load | 0x1fa40 | {4952fe0_unknownobj}t6_4385891 <- 4952fe0_unknownobj (t8_1526054)
+0x505EF13: _int_malloc (malloc.c:4028) | CmpEQ64 | 0x1 | t21_3440528 <- t6_4385891 t10_2838400
+0x505EF19: _int_malloc (malloc.c:4028) | mov rax, qword ptr [rcx + 0x10] | Load | 0x53b6430 | {49335b0_unknownobj}t8_1526055 <- 49335b0_unknownobj
+0x505EF1D: _int_malloc (malloc.c:4028) | mov rdx, qword ptr [rcx + 0x18] | Load | 0x53b6430 | {49335b8_unknownobj}t11_1454275 <- 49335b8_unknownobj
+0x505EF21: _int_malloc (malloc.c:4028) | Add64 | 0x53b6448 | t12_2517647 <- t8_1526055
+0x505EF2B: _int_malloc (malloc.c:4028) | t5_3502505 <- r4_5377494
+0x505EF35: _int_malloc (malloc.c:4028) | t2_3071035 <- r10_72837
+0x505EF3C: _int_malloc (malloc.c:4028) | t6_4385894 <- r2_6474264
+0x505EF40: _int_malloc (malloc.c:4028) | Add64 | 0x53b6440 | t8_1526056 <- t7_1429919
+0x505EF44: _int_malloc (malloc.c:4028) | CmpLE64U | 0x0 | t19_2068071 <- t2_3071035
+0x505F21E: _int_malloc (malloc.c:4028) | t5_3502510 <- r2_6474264
+0x505F22D: _int_malloc (malloc.c:4028) | t5_3502511 <- r9_4221120
+0x505EF57: _int_malloc (malloc.c:4031) | CmpLE64U | 0x0 | t23_1427908 <- t5_3502511
+0x505F04E: _int_malloc (malloc.c:4057) | t2_3071039 <- r9_4221120
+0x505F055: _int_malloc (malloc.c:4057) | CmpLE64U | 0x0 | t11_1454282 <- t2_3071039
+0x505F086: _int_malloc (malloc.c:4062) | t60_2545007 <- r9_4221120
+0x505F091: _int_malloc (malloc.c:4064) | mov qword ptr [rax + 8], rdx | Store | 0x1ea31 | {49345b8_unknownobj}49345b8_unknownobj <- t24_1651378
+0x505F095: _int_malloc (malloc.c:4065) | t28_3540144 <- r8_117922
+0x505E5FE: _int_malloc (malloc.c:3822) | mov qword ptr [rsp + 0x78], rbp | Store | 0x53b6430 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff0000a8_unknownobj}1fff0000a8_unknownobj <- t31_3191813
+0x505D9A8: sysmalloc (malloc.c:2274) | t10_2838431 <- r7_133971
+0x505DC74: sysmalloc (malloc.c:2747) | pop rbp | Load | 0x4000000 | --29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+--29989-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0xf3
+{1fff000000_unknownobj}t5_3503080 <- 1fff000000_unknownobj
+0x505E60D: _int_malloc (malloc.c:3830) | mov rbp, qword ptr [r8 + 8] | Load | 0x20fd1 | {54bb018_unknownobj}t9_2754621 <- 54bb018_unknownobj
+0x505E61B: _int_malloc (malloc.c:3828) | t5_4291192 <- r7_134027
+0x505E622: _int_malloc (malloc.c:3831) | CmpLE64U | 0x1 | t14_4168657 <- t5_4291192
+0x505EBF5: _int_malloc (malloc.c:3843) | mov rdi, qword ptr [rdi + 8] | Load | 0x20fd1 | {54bb018_unknownobj}t9_2754622 <- 54bb018_unknownobj
+0x505EC03: _int_malloc (malloc.c:3843) | t2_3858760 <- r9_10520857
+0x505EC0B: _int_malloc (malloc.c:3844) | CmpLT64U | 0x0 | t15_3116762 <- t2_3858760
+0x505EE95: _int_malloc (malloc.c:3850) | t7_1954418 <- r20_8113703
+0x505EEBB: _int_malloc (malloc.c:3853) | mov rdi, qword ptr [rbp + 0x10] | Load | 0x53b6440 | {54bb020_unknownobj}t32_1869654 <- 54bb020_unknownobj
+0x505EEB2: _int_malloc (malloc.c:3861) | Add64 | 0x53b6458 | t33_2334866 <- t32_1869654
+0x10A516: Set_thresholds (Topology.c:342) | movss xmm0, dword ptr [rax] | Load | 0x0 | {444c518_unknownobj}t70_3840569 <- 444c518_unknownobj
+0x10A53E: Set_thresholds (Topology.c:342) | t38_4826274 <- r28_5773256
+0x10A545: Set_thresholds (Topology.c:342) | Shr64 | 0x0 | t133_2340873 <- t102_3864278
+0x5061D1A: free (malloc.c:4303) | t8_9976295 <- r3_20664799
+0x5061D20: free (malloc.c:4303) | mov rax, qword ptr [r15 + 8] | Load | 0x20fd1 | {54bb018_unknownobj}t13_11625147 <- 54bb018_unknownobj
+0x5061D2A: free (malloc.c:4304) | t7_10798742 <- r2_19831705
+0x5061D31: free (malloc.c:4304) | Add64 | 0x54dbfe0 | t8_9976296 <- t0_6626062
+0x5061D35: free (malloc.c:4304) | CmpEQ64 | 0x1 | t20_10299664 <- t0_6626062 t4_6214022
+0x5061D3F: free (malloc.c:4304) | mov rsi, qword ptr [r15 + 0x18] | Load | 0x53b6440 | {54bb028_unknownobj}t11_10455053 <- 54bb028_unknownobj
+0x5061D4D: free (malloc.c:4304) | t5_13252040 <- r8_9793683
+0x5061D57: free (malloc.c:4304) | t0_6626063 <- r2_19831705
+0x5061D5D: free (malloc.c:4304) | t7_10798744 <- r8_9793683
+0x5061D61: free (malloc.c:4304) | Add64 | 0x53b6450 | t8_9976298 <- t7_10798744
+0x5061D65: free (malloc.c:4304) | CmpLE64U | 0x0 | t19_4033337 <- t0_6626063
+0x506276B: free (malloc.c:4304) | t3_9600432 <- r3_20664799
+0x5061D89: free (malloc.c:4321) | t2_10450814 <- r16_1274
+0x5061D98: free (malloc.c:4321) | CmpLE64U | 0x0 | t19_4033340 <- t2_10450814
+0x5061DAE: free (malloc.c:4327) | t22_13867827 <- r16_1274
+0x5061DB9: free (malloc.c:4329) | mov qword ptr [r13 + 8], rax | Store | 0x120fe1 | {53bb008_unknownobj}53bb008_unknownobj <- t4_6214028
+0x5061DBD: free (malloc.c:4330) | Add64 | 0x54dbfe0 | t27_10812373 <- t22_13867827
+0x5061D3B: free (malloc.c:4304) | mov rdx, qword ptr [r15 + 0x10] | Load | 0x53b6440 | {55dc020_unknownobj}t8_9976332 <- 55dc020_unknownobj
+0x5061D43: free (malloc.c:4304) | Add64 | 0x53b6458 | t12_6419929 <- t8_9976332
+0x506245D: free (malloc.c:4304) | t5_13252183 <- r4_9935067
+0x5062462: free (malloc.c:4304) | CmpEQ64 | 0x0 | t14_11278580 <- t2_10451013
+0x5062470: free (malloc.c:4304) | t4_6214268 <- r3_20664810
+0x505ED30: _int_malloc (malloc.c:3820) | t23_10503506 <- r4_9935095
+0x505E609: _int_malloc (malloc.c:3830) | t5_13252322 <- r10_1633532
+0x505E8F4: _int_malloc (malloc.c:3910) | cmp qword ptr [rdx + 8], rbx | Load | 0x121a71 | {4831578_unknownobj}t2_10451081 <- 4831578_unknownobj
+0x505E8F8: _int_malloc (malloc.c:3910) | CmpLT64U | 0x1 | t14_11278625 <- t2_10451081
+0x505ED95: _int_malloc (malloc.c:3993) | mov edx, dword ptr [r14 + rdx*4 + 0x860] | Load | 0x4c000000 | {main_arena.binmap[3]}t13_13882220 <- main_arena.binmap[3]:53b64ac
+0x505ED9F: _int_malloc (malloc.c:3993) | t33_4280643 <- t18_10903331
+0x505EEC1: _int_malloc (malloc.c:3993) | t46_7292764 <- r4_11109371
+0x505EE6C: _int_malloc (malloc.c:4008) | mov rcx, qword ptr [rsi + 0x18] | Load | 0x53b6430 | {main_arena.bins[243]}t6_18176731 <- main_arena.bins[243]:53b6448
+0x505EE73: _int_malloc (malloc.c:4011) | CmpEQ64 | 0x1 | t15_15289316 <- t6_18176731
+0x505EE75: _int_malloc (malloc.c:4013) | t29_8957656 <- r4_11109371
+0x505EE83: _int_malloc (malloc.c:4013) | t69_2143201 <- t33_4280645
+==29989== 

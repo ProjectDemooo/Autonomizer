@@ -1,0 +1,552 @@
+digraph main_image {
+ 48 [shape=box, color=black label="gaussian_smooth
+llvm-tmp33
+  %llvm-tmp33 = load float, float* %dot, align 4
+
+"];
+ 28 [shape=box, color=black label="gaussian_smooth
+arrayidx101
+  %arrayidx101 = getelementptr inbounds i16, i16* %llvm-tmp80, i64 %idxprom100
+
+"];
+ 33 [shape=box, color=black label="gaussian_smooth
+llvm-tmp32
+  %llvm-tmp32 = load float, float* %arrayidx35, align 4
+
+"];
+ 15 [shape=box, color=black label="gaussian_smooth
+arrayidx35
+  %arrayidx35 = getelementptr inbounds float, float* %llvm-tmp29, i64 %idxprom34
+
+"];
+ 55 [shape=box, color=black label="gaussian_smooth
+llvm-tmp38
+  %llvm-tmp38 = load float, float* %sum, align 4
+
+"];
+ 56 [shape=box, color=black label="gaussian_smooth
+llvm-tmp41
+  %llvm-tmp41 = load float, float* %sum, align 4
+
+"];
+ 42 [shape=box, color=black label="gaussian_smooth
+add88
+  %add88 = fadd float %llvm-tmp75, %llvm-tmp74
+
+"];
+ 57 [shape=box, color=black label="gaussian_smooth
+llvm-tmp75
+  %llvm-tmp75 = load float, float* %sum, align 4
+
+"];
+ 21 [shape=box, color=black label="gaussian_smooth
+arrayidx47
+  %arrayidx47 = getelementptr inbounds float, float* %llvm-tmp42, i64 %idxprom46
+
+"];
+ 45 [shape=box, color=black label="gaussian_smooth
+add84
+  %add84 = fadd float %llvm-tmp70, %mul83
+
+"];
+ 41 [shape=box, color=black label="gaussian_smooth
+mul83
+  %mul83 = fmul float %llvm-tmp65, %llvm-tmp69
+
+"];
+ 35 [shape=box, color=black label="gaussian_smooth
+llvm-tmp65
+  %llvm-tmp65 = load float, float* %arrayidx79, align 4
+
+"];
+ 17 [shape=box, color=black label="gaussian_smooth
+arrayidx79
+  %arrayidx79 = getelementptr inbounds float, float* %llvm-tmp60, i64 %idxprom78
+
+"];
+ 36 [shape=box, color=black label="gaussian_smooth
+llvm-tmp69
+  %llvm-tmp69 = load float, float* %arrayidx82, align 4
+
+"];
+ 23 [shape=box, color=black label="gaussian_smooth
+arrayidx82
+  %arrayidx82 = getelementptr inbounds float, float* %llvm-tmp66, i64 %idxprom81
+
+"];
+ 37 [shape=box, color=black label="gaussian_smooth
+llvm-tmp74
+  %llvm-tmp74 = load float, float* %arrayidx87, align 4
+
+"];
+ 25 [shape=box, color=black label="gaussian_smooth
+arrayidx87
+  %arrayidx87 = getelementptr inbounds float, float* %llvm-tmp71, i64 %idxprom86
+
+"];
+ 43 [shape=box, color=black label="gaussian_smooth
+cmp8
+  %cmp8 = icmp eq i16* %llvm-tmp8, null
+
+"];
+ 14 [shape=box, color=black label="gaussian_smooth
+llvm-tmp29
+  %llvm-tmp29 = load float*, float** %kernel, align 8
+
+"];
+ 16 [shape=box, color=black label="gaussian_smooth
+llvm-tmp34
+  %llvm-tmp34 = load float*, float** %kernel, align 8
+
+"];
+ 22 [shape=box, color=black label="gaussian_smooth
+llvm-tmp66
+  %llvm-tmp66 = load float*, float** %kernel, align 8
+
+"];
+ 24 [shape=box, color=black label="gaussian_smooth
+llvm-tmp71
+  %llvm-tmp71 = load float*, float** %kernel, align 8
+
+"];
+ 31 [shape=box, color=black label="gaussian_smooth
+llvm-tmp89
+  %llvm-tmp89 = bitcast float* %llvm-tmp88 to i8*
+
+"];
+ 30 [shape=box, color=black label="gaussian_smooth
+llvm-tmp88
+  %llvm-tmp88 = load float*, float** %kernel, align 8
+
+"];
+ 13 [shape=box, color=red label="gaussian_smooth
+kernel
+  %llvm-tmp29 = load float*, float** %kernel, align 8
+non-scalar
+"];
+ 9 [shape=box, color=black label="gaussian_smooth
+llvm-tmp10
+  %llvm-tmp10 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+
+"];
+ 11 [shape=box, color=black label="gaussian_smooth
+llvm-tmp23
+  %llvm-tmp23 = load i8*, i8** %image.addr, align 8
+
+"];
+ 20 [shape=box, color=black label="gaussian_smooth
+llvm-tmp42
+  %llvm-tmp42 = load float*, float** %tempim, align 8
+
+"];
+ 5 [shape=box, color=black label="gaussian_smooth
+llvm-tmp5
+  %llvm-tmp5 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+
+"];
+ 18 [shape=box, color=black label="gaussian_smooth
+llvm-tmp60
+  %arrayidx79 = getelementptr inbounds float, float* %llvm-tmp60, i64 %idxprom78
+
+"];
+ 27 [shape=box, color=black label="gaussian_smooth
+llvm-tmp80
+  %llvm-tmp80 = load i16*, i16** %llvm-tmp79, align 8
+
+"];
+ 26 [shape=box, color=black label="gaussian_smooth
+llvm-tmp79
+  %llvm-tmp79 = load i16**, i16*** %smoothedim.addr, align 8
+
+"];
+ 29 [shape=box, color=black label="gaussian_smooth
+llvm-tmp87
+  %llvm-tmp87 = bitcast float* %llvm-tmp86 to i8*
+
+"];
+ 10 [shape=box, color=black label="gaussian_smooth
+llvm-tmp86
+  %llvm-tmp86 = load float*, float** %tempim, align 8
+
+"];
+ 8 [shape=box, color=black label="gaussian_smooth
+llvm-tmp9
+  %llvm-tmp9 = load i16**, i16*** %smoothedim.addr, align 8
+
+"];
+ 4 [shape=box, color=black label="gaussian_smooth
+stderr
+  %llvm-tmp5 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+
+"];
+ 3 [shape=box, color=black label="gaussian_smooth
+smoothedim
+  store i16** %smoothedim, i16*** %smoothedim.addr, align 8
+
+"];
+ 2 [shape=box, color=black label="gaussian_smooth
+image
+  %image.addr = alloca i8*, align 8
+
+"];
+ 7 [shape=box, color=black label="gaussian_smooth
+llvm-tmp8
+  %llvm-tmp8 = bitcast i8* %call7 to i16*
+
+"];
+ 6 [shape=box, color=black label="gaussian_smooth
+call7
+  %call7 = call noalias i8* @calloc(i64 %conv6, i64 2) #4
+
+"];
+ 61 [shape=box, color=black label="gaussian_smooth
+conv97
+  %conv97 = fptosi double %add96 to i16
+
+"];
+ 60 [shape=box, color=black label="gaussian_smooth
+add96
+  %add96 = fadd double %conv95, 5.000000e-01
+
+"];
+ 59 [shape=box, color=black label="gaussian_smooth
+conv95
+  %conv95 = fpext float %div94 to double
+
+"];
+ 54 [shape=box, color=black label="gaussian_smooth
+div94
+  %div94 = fdiv float %mul93, %llvm-tmp78
+
+"];
+ 58 [shape=box, color=black label="gaussian_smooth
+llvm-tmp78
+  %llvm-tmp78 = load float, float* %sum, align 4
+
+"];
+ 47 [shape=box, color=red label="gaussian_smooth
+sum
+  %sum = alloca float, align 4
+scalar
+"];
+ 40 [shape=box, color=black label="gaussian_smooth
+add41
+  %add41 = fadd float %llvm-tmp38, %llvm-tmp37
+
+"];
+ 34 [shape=box, color=black label="gaussian_smooth
+llvm-tmp37
+  %llvm-tmp37 = load float, float* %arrayidx40, align 4
+
+"];
+ 19 [shape=box, color=black label="gaussian_smooth
+arrayidx40
+  %arrayidx40 = getelementptr inbounds float, float* %llvm-tmp34, i64 %idxprom39
+
+"];
+ 52 [shape=box, color=black label="gaussian_smooth
+div43
+  %div43 = fdiv float %llvm-tmp40, %llvm-tmp41
+
+"];
+ 49 [shape=box, color=black label="gaussian_smooth
+llvm-tmp40
+  %llvm-tmp40 = load float, float* %dot, align 4
+
+"];
+ 50 [shape=box, color=black label="gaussian_smooth
+llvm-tmp70
+  %llvm-tmp70 = load float, float* %dot, align 4
+
+"];
+ 53 [shape=box, color=black label="gaussian_smooth
+mul93
+  %mul93 = fmul float %llvm-tmp77, 1.000000e+00
+
+"];
+ 51 [shape=box, color=black label="gaussian_smooth
+llvm-tmp77
+  %llvm-tmp77 = load float, float* %dot, align 4
+
+"];
+ 46 [shape=box, color=red label="gaussian_smooth
+dot
+  %dot = alloca float, align 4
+scalar
+"];
+ 44 [shape=box, color=black label="gaussian_smooth
+add37
+  %add37 = fadd float %llvm-tmp33, %mul36
+
+"];
+ 39 [shape=box, color=black label="gaussian_smooth
+mul36
+  %mul36 = fmul float %conv32, %llvm-tmp32
+
+"];
+ 38 [shape=box, color=black label="gaussian_smooth
+conv32
+  %conv32 = uitofp i8 %llvm-tmp28 to float
+
+"];
+ 32 [shape=box, color=black label="gaussian_smooth
+llvm-tmp28
+  %llvm-tmp28 = load i8, i8* %arrayidx, align 1
+
+"];
+ 12 [shape=box, color=black label="gaussian_smooth
+arrayidx
+  %arrayidx = getelementptr inbounds i8, i8* %llvm-tmp23, i64 %idxprom
+
+"];
+ 1 [shape=box, color=black label="main
+llvm-tmp
+  %llvm-tmp = load i8*, i8** %image, align 8
+
+"];
+ 0 [shape=box, color=red label="main
+image
+
+non-scalar
+"];
+ 48 -> 44 [color=black, style=solid];
+ 46 -> 48 [color=black, style=solid];
+ 52 -> 12 [color=black, style=solid];
+ 52 -> 28 [color=black, style=solid];
+ 33 -> 39 [color=black, style=solid];
+ 15 -> 33 [color=black, style=solid];
+ 52 -> 15 [color=black, style=solid];
+ 55 -> 40 [color=black, style=solid];
+ 47 -> 55 [color=black, style=solid];
+ 56 -> 52 [color=black, style=solid];
+ 47 -> 56 [color=black, style=solid];
+ 42 -> 47 [color=black, style=solid];
+ 57 -> 42 [color=black, style=solid];
+ 47 -> 57 [color=black, style=solid];
+ 61 -> 12 [color=black, style=solid];
+ 61 -> 28 [color=black, style=solid];
+ 61 -> 15 [color=black, style=solid];
+ 61 -> 19 [color=black, style=solid];
+ 61 -> 21 [color=black, style=solid];
+ 45 -> 46 [color=black, style=solid];
+ 41 -> 45 [color=black, style=solid];
+ 35 -> 41 [color=black, style=solid];
+ 17 -> 35 [color=black, style=solid];
+ 61 -> 17 [color=black, style=solid];
+ 36 -> 41 [color=black, style=solid];
+ 23 -> 36 [color=black, style=solid];
+ 61 -> 23 [color=black, style=solid];
+ 37 -> 42 [color=black, style=solid];
+ 25 -> 37 [color=black, style=solid];
+ 61 -> 25 [color=black, style=solid];
+ 7 -> 12 [color=black, style=solid];
+ 7 -> 28 [color=black, style=solid];
+ 7 -> 15 [color=black, style=solid];
+ 7 -> 19 [color=black, style=solid];
+ 7 -> 21 [color=black, style=solid];
+ 7 -> 17 [color=black, style=solid];
+ 7 -> 23 [color=black, style=solid];
+ 7 -> 25 [color=black, style=solid];
+ 7 -> 6 [color=black, style=solid];
+ 7 -> 43 [color=black, style=solid];
+ 2 -> 12 [color=black, style=solid];
+ 2 -> 28 [color=black, style=solid];
+ 2 -> 15 [color=black, style=solid];
+ 2 -> 19 [color=black, style=solid];
+ 2 -> 21 [color=black, style=solid];
+ 2 -> 17 [color=black, style=solid];
+ 2 -> 23 [color=black, style=solid];
+ 2 -> 25 [color=black, style=solid];
+ 2 -> 6 [color=black, style=solid];
+ 2 -> 2 [color=black, style=solid];
+ 14 -> 15 [color=black, style=solid];
+ 13 -> 14 [color=black, style=solid];
+ 16 -> 19 [color=black, style=solid];
+ 13 -> 16 [color=black, style=solid];
+ 22 -> 23 [color=black, style=solid];
+ 13 -> 22 [color=black, style=solid];
+ 24 -> 25 [color=black, style=solid];
+ 13 -> 24 [color=black, style=solid];
+ 30 -> 31 [color=black, style=solid];
+ 13 -> 30 [color=black, style=solid];
+ 2 -> 13 [color=black, style=solid];
+ 2 -> 9 [color=black, style=solid];
+ 11 -> 12 [color=black, style=solid];
+ 2 -> 11 [color=black, style=solid];
+ 2 -> 14 [color=black, style=solid];
+ 2 -> 16 [color=black, style=solid];
+ 20 -> 21 [color=black, style=solid];
+ 2 -> 20 [color=black, style=solid];
+ 2 -> 5 [color=black, style=solid];
+ 18 -> 17 [color=black, style=solid];
+ 2 -> 18 [color=black, style=solid];
+ 2 -> 22 [color=black, style=solid];
+ 2 -> 24 [color=black, style=solid];
+ 27 -> 28 [color=black, style=solid];
+ 26 -> 27 [color=black, style=solid];
+ 2 -> 26 [color=black, style=solid];
+ 2 -> 7 [color=black, style=solid];
+ 2 -> 27 [color=black, style=solid];
+ 10 -> 29 [color=black, style=solid];
+ 2 -> 10 [color=black, style=solid];
+ 2 -> 29 [color=black, style=solid];
+ 2 -> 30 [color=black, style=solid];
+ 2 -> 31 [color=black, style=solid];
+ 2 -> 8 [color=black, style=solid];
+ 3 -> 12 [color=black, style=solid];
+ 3 -> 28 [color=black, style=solid];
+ 3 -> 15 [color=black, style=solid];
+ 3 -> 19 [color=black, style=solid];
+ 3 -> 21 [color=black, style=solid];
+ 3 -> 17 [color=black, style=solid];
+ 3 -> 23 [color=black, style=solid];
+ 3 -> 25 [color=black, style=solid];
+ 3 -> 6 [color=black, style=solid];
+ 3 -> 2 [color=black, style=solid];
+ 3 -> 13 [color=black, style=solid];
+ 3 -> 9 [color=black, style=solid];
+ 3 -> 11 [color=black, style=solid];
+ 3 -> 14 [color=black, style=solid];
+ 3 -> 16 [color=black, style=solid];
+ 3 -> 20 [color=black, style=solid];
+ 3 -> 5 [color=black, style=solid];
+ 3 -> 18 [color=black, style=solid];
+ 3 -> 22 [color=black, style=solid];
+ 3 -> 24 [color=black, style=solid];
+ 3 -> 26 [color=black, style=solid];
+ 3 -> 7 [color=black, style=solid];
+ 3 -> 27 [color=black, style=solid];
+ 3 -> 10 [color=black, style=solid];
+ 3 -> 29 [color=black, style=solid];
+ 3 -> 30 [color=black, style=solid];
+ 3 -> 31 [color=black, style=solid];
+ 3 -> 8 [color=black, style=solid];
+ 3 -> 3 [color=black, style=solid];
+ 4 -> 9 [color=black, style=solid];
+ 4 -> 5 [color=black, style=solid];
+ 3 -> 4 [color=black, style=solid];
+ 2 -> 3 [color=black, style=solid];
+ 2 -> 4 [color=black, style=solid];
+ 7 -> 2 [color=black, style=solid];
+ 7 -> 13 [color=black, style=solid];
+ 7 -> 9 [color=black, style=solid];
+ 7 -> 11 [color=black, style=solid];
+ 7 -> 14 [color=black, style=solid];
+ 7 -> 16 [color=black, style=solid];
+ 7 -> 20 [color=black, style=solid];
+ 7 -> 5 [color=black, style=solid];
+ 7 -> 18 [color=black, style=solid];
+ 7 -> 22 [color=black, style=solid];
+ 7 -> 24 [color=black, style=solid];
+ 7 -> 26 [color=black, style=solid];
+ 7 -> 7 [color=black, style=solid];
+ 7 -> 27 [color=black, style=solid];
+ 7 -> 10 [color=black, style=solid];
+ 7 -> 29 [color=black, style=solid];
+ 7 -> 30 [color=black, style=solid];
+ 7 -> 31 [color=black, style=solid];
+ 7 -> 8 [color=black, style=solid];
+ 7 -> 3 [color=black, style=solid];
+ 7 -> 4 [color=black, style=solid];
+ 6 -> 7 [color=black, style=solid];
+ 61 -> 6 [color=black, style=solid];
+ 61 -> 2 [color=black, style=solid];
+ 61 -> 13 [color=black, style=solid];
+ 61 -> 9 [color=black, style=solid];
+ 61 -> 11 [color=black, style=solid];
+ 61 -> 14 [color=black, style=solid];
+ 61 -> 16 [color=black, style=solid];
+ 61 -> 20 [color=black, style=solid];
+ 61 -> 5 [color=black, style=solid];
+ 61 -> 18 [color=black, style=solid];
+ 61 -> 22 [color=black, style=solid];
+ 61 -> 24 [color=black, style=solid];
+ 61 -> 26 [color=black, style=solid];
+ 61 -> 7 [color=black, style=solid];
+ 61 -> 27 [color=black, style=solid];
+ 61 -> 10 [color=black, style=solid];
+ 61 -> 29 [color=black, style=solid];
+ 61 -> 30 [color=black, style=solid];
+ 61 -> 31 [color=black, style=solid];
+ 61 -> 8 [color=black, style=solid];
+ 61 -> 3 [color=black, style=solid];
+ 61 -> 4 [color=black, style=solid];
+ 60 -> 61 [color=black, style=solid];
+ 59 -> 60 [color=black, style=solid];
+ 54 -> 59 [color=black, style=solid];
+ 58 -> 54 [color=black, style=solid];
+ 47 -> 58 [color=black, style=solid];
+ 40 -> 47 [color=black, style=solid];
+ 34 -> 40 [color=black, style=solid];
+ 19 -> 34 [color=black, style=solid];
+ 52 -> 19 [color=black, style=solid];
+ 52 -> 21 [color=black, style=solid];
+ 52 -> 17 [color=black, style=solid];
+ 52 -> 23 [color=black, style=solid];
+ 52 -> 25 [color=black, style=solid];
+ 52 -> 6 [color=black, style=solid];
+ 52 -> 2 [color=black, style=solid];
+ 52 -> 13 [color=black, style=solid];
+ 52 -> 9 [color=black, style=solid];
+ 52 -> 11 [color=black, style=solid];
+ 52 -> 14 [color=black, style=solid];
+ 52 -> 16 [color=black, style=solid];
+ 52 -> 20 [color=black, style=solid];
+ 52 -> 5 [color=black, style=solid];
+ 52 -> 18 [color=black, style=solid];
+ 52 -> 22 [color=black, style=solid];
+ 52 -> 24 [color=black, style=solid];
+ 52 -> 26 [color=black, style=solid];
+ 52 -> 7 [color=black, style=solid];
+ 52 -> 27 [color=black, style=solid];
+ 52 -> 10 [color=black, style=solid];
+ 52 -> 29 [color=black, style=solid];
+ 52 -> 30 [color=black, style=solid];
+ 52 -> 31 [color=black, style=solid];
+ 52 -> 8 [color=black, style=solid];
+ 52 -> 3 [color=black, style=solid];
+ 52 -> 4 [color=black, style=solid];
+ 49 -> 52 [color=black, style=solid];
+ 46 -> 49 [color=black, style=solid];
+ 50 -> 45 [color=black, style=solid];
+ 46 -> 50 [color=black, style=solid];
+ 53 -> 54 [color=black, style=solid];
+ 51 -> 53 [color=black, style=solid];
+ 46 -> 51 [color=black, style=solid];
+ 44 -> 46 [color=black, style=solid];
+ 39 -> 44 [color=black, style=solid];
+ 38 -> 39 [color=black, style=solid];
+ 32 -> 38 [color=black, style=solid];
+ 12 -> 32 [color=black, style=solid];
+ 1 -> 12 [color=black, style=solid];
+ 1 -> 28 [color=black, style=solid];
+ 1 -> 15 [color=black, style=solid];
+ 1 -> 19 [color=black, style=solid];
+ 1 -> 21 [color=black, style=solid];
+ 1 -> 17 [color=black, style=solid];
+ 1 -> 23 [color=black, style=solid];
+ 1 -> 25 [color=black, style=solid];
+ 1 -> 6 [color=black, style=solid];
+ 1 -> 2 [color=black, style=solid];
+ 1 -> 13 [color=black, style=solid];
+ 1 -> 9 [color=black, style=solid];
+ 1 -> 11 [color=black, style=solid];
+ 1 -> 14 [color=black, style=solid];
+ 1 -> 16 [color=black, style=solid];
+ 1 -> 20 [color=black, style=solid];
+ 1 -> 5 [color=black, style=solid];
+ 1 -> 18 [color=black, style=solid];
+ 1 -> 22 [color=black, style=solid];
+ 1 -> 24 [color=black, style=solid];
+ 1 -> 26 [color=black, style=solid];
+ 1 -> 7 [color=black, style=solid];
+ 1 -> 27 [color=black, style=solid];
+ 1 -> 10 [color=black, style=solid];
+ 1 -> 29 [color=black, style=solid];
+ 1 -> 30 [color=black, style=solid];
+ 1 -> 31 [color=black, style=solid];
+ 1 -> 8 [color=black, style=solid];
+ 1 -> 3 [color=black, style=solid];
+ 1 -> 4 [color=black, style=solid];
+ 0 -> 1 [color=black, style=solid];
+}
