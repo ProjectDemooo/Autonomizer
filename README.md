@@ -54,6 +54,9 @@ Torcs:
 Testing with internal data model (20 hr):
 https://drive.google.com/open?id=18Hh1rppHq1pdOMCpuWYFds6ucwYF4Ih8
 
+Testing with raw data model with raw image (40 hr):
+https://drive.google.com/open?id=1w_eJV9z66OeAz3Vw_ChEvyLwhNoqxTlQ
+
 KVM:
 0. Setup
   - Check support:
